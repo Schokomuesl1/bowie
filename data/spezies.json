@@ -1,0 +1,59 @@
+{"spezies":
+[
+    {
+        "name": "Mensch",
+        "LE": 5,
+        "SK": -5,
+        "GS": 8,
+        "Eigenschaften": [
+            {"Eigenschaft": ["MU", "KL", "CH", "IN", "KK", "GE", "FF", "KO"], "Mod": 1}
+        ],
+        "Vorteile": [],
+        "Nachteile": [],
+        "AP-Kosten": 0
+    },
+    {
+        "name": "Elf",
+        "LE": 2,
+        "SK": -4,
+        "GS": 8,
+        "Eigenschaften": [
+            {"Eigenschaft": ["IN"], "Mod": 1},
+            {"Eigenschaft": ["GE"], "Mod": 1},
+            {"Eigenschaft": ["KL", "KK"], "Mod": -2}
+        ],
+        "Vorteile": [
+            "Zauberer",
+            "Zweistimmiger Gesang"
+        ],
+        "Nachteile": [],
+        "AP-Kosten": 18
+    },
+    {
+        "name": "Halbelf",
+        "LE": 5,
+        "SK": -4,
+        "GS": 8,
+        "Eigenschaften": [
+            {"Eigenschaft": ["MU", "KL", "CH", "IN", "KK", "GE", "FF", "KO"], "Mod": 1}
+        ],
+        "Vorteile": [],
+        "Nachteile": [],
+        "AP-Kosten": 0
+    },
+    {
+        "name": "Zwerg",
+        "LE": 8,
+        "SK": -4,
+        "GS": 6,
+        "Eigenschaften": [
+            {"Eigenschaft": ["KO"], "Mod": 1},
+            {"Eigenschaft": ["KK"], "Mod": 1},
+            {"Eigenschaft": ["CH", "GE"], "Mod": -2}
+        ],
+        "Vorteile": [],
+        "Nachteile": [],
+        "AP-Kosten": 61
+    }
+]
+}
