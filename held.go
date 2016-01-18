@@ -10,6 +10,7 @@ import (
 var AlleEigenschaften map[string]string
 var AlleSpezies map[string]SpeziesType
 var AlleTalente []TalentType
+var AlleKulturen map[string]KulturType
 
 func init() {
     file, _ := ioutil.ReadFile("data/eigenschaften.json")
@@ -26,15 +27,24 @@ func init() {
     file3, _ := ioutil.ReadFile("data/talente.json")
     AlleTalente = make([]TalentType, 0)
     json.Unmarshal([]byte(string(file3)), &AlleTalente)
+    file4, _ := ioutil.ReadFile("data/kulturen.json")
+    kulturTmp := make([]KulturType, 0)
+    AlleKulturen = make(map[string]KulturType)
+    json.Unmarshal([]byte(string(file4)), &kulturTmp)
+    for _, v := range kulturTmp {
+        AlleKulturen[v.Name] = v
+    }
 }
 
-type modPair struct {
+type ModPair struct {
     Id    string
-    Value int32
+    Value int
 }
+
 type KulturType struct {
-    Name          string
-    Modifications []modPair
+    Name    string
+    Talente []ModPair
+    Kosten  int
 }
 
 type EigenschaftHandler struct {
@@ -92,6 +102,13 @@ func (t *TalentHandler) Add(talent *Talent) bool {
     }
     t.Talente[talent.Name] = talent
     return true
+}
+
+func (t *TalentHandler) Get(talent string) *Talent {
+    if !t.Exists(talent) {
+        return nil
+    }
+    return t.Talente[talent]
 }
 
 //func MakeCalculatedDependentValue(name string, mult float32, base []DependentValue) *CalculatedDependentValue {
@@ -175,6 +192,24 @@ func (h *Held) SetSpezies(spezies string) error {
     }
     h.Spezies = AlleSpezies[spezies]
     h.Basiswerte = *InitBerechneteWerte(&h.Spezies, &h.Eigenschaften)
+    return nil
+}
+
+func (h *Held) SetKultur(kultur string) error {
+    _, existing := AlleKulturen[kultur]
+    if !existing {
+        return errors.New("Kultur unbekannt!")
+    }
+    h.Kultur = AlleKulturen[kultur]
+    for _, v := range h.Kultur.Talente {
+        tmp := h.Talente.Get(v.Id)
+        if tmp == nil {
+            fmt.Printf("Talent %s not found!\n", v.Id)
+        } else {
+            tmp.AddValue(v.Value)
+        }
+
+    }
     return nil
 }
 

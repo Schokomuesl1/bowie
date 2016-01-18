@@ -45,13 +45,7 @@ func main() {
     h.Eigenschaften.Set("CH", 14)
     h.Eigenschaften.Set("KO", 15)
     h.SetSpezies("Mensch")
-    //h.NewTalent("Selbstbeherrschung", [3]string{"MU", "KK", "KO"})
-    fmt.Print(h)
-    h.Eigenschaften.Set("KO", 15)
-    fmt.Print(h) /*file, _ := ioutil.ReadFile("data/eigenschaften.json")
-      //tmp := make([]EigenschaftEntry, 0)
-      tmp := make(map[string]string)
-      json.Unmarshal([]byte(string(file)), &tmp)
-      fmt.Print(tmp)*/
-    fmt.Print(h)
+    h.SetKultur("Aranier")
+    h.Eigenschaften.Set("GE", 15)
+    fmt.Println(h)
 }

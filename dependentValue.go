@@ -59,7 +59,7 @@ type WurfUndZiel struct {
     Ziel int
 }
 
-func (w WurfUndZiel) String() string { return fmt.Sprintf("%d(%d)", w.Wurf, w.Ziel) }
+func (w WurfUndZiel) String() string { return fmt.Sprintf("%2d(%2d)", w.Wurf, w.Ziel) }
 
 type ProbenErgebnis struct {
     Ergebnis  []WurfUndZiel
@@ -195,7 +195,7 @@ func (e *Eigenschaft) ProbeMod(mod int) (bool, ProbenErgebnis) {
 }
 
 func (e *Eigenschaft) String() string {
-    return fmt.Sprintf("%s(%d)", e.Name, e.Wert)
+    return fmt.Sprintf("%2s(%2d)", e.Name, e.Wert)
 }
 
 type Talent struct {
@@ -218,6 +218,10 @@ func (t *Talent) Update() {
     for _, e := range t.Eigenschaften {
         fmt.Println(e.Name, e.Wert)
     }
+}
+
+func (t *Talent) AddValue(value int) {
+    t.Wert += value
 }
 
 // Talent CTor
@@ -283,7 +287,7 @@ func (t *Talent) ProbeMod(mod int) (bool, ProbenErgebnis) {
 }
 
 func (t *Talent) String() string {
-    return fmt.Sprintf("%s: %d - (%s/%s/%s)", t.Name, t.Value(), t.Eigenschaften[0], t.Eigenschaften[1], t.Eigenschaften[2])
+    return fmt.Sprintf("%25s: %2d - (%s/%s/%s)", t.Name, t.Value(), t.Eigenschaften[0], t.Eigenschaften[1], t.Eigenschaften[2])
 }
 
 type CalculatedDependentValue struct {

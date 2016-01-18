@@ -1,42 +1,42 @@
 [
     {
-        "Kultur": "Andergaster",
-        "Talente": {
-            "Holzbearbeitung":  2,
-            "Orientierung":     1,
-            "Pflanzenkunde":    1,
-            "Sagen & Legenden": 1,
-            "Tierkunde":        1,
-            "Wildnisleben":     2
-        },
-        "AP-Kosten": 20
+        "Name": "Andergaster",
+        "Talente": [
+            {"Id": "Holzbearbeitung", "Value": 2},
+            {"Id": "Orientierung", "Value": 1},
+            {"Id": "Pflanzenkunde", "Value": 1},
+            {"Id": "Sagen& Legenden", "Value": 1},
+            {"Id": "Tierkunde", "Value": 1},
+            {"Id": "Wildnisleben", "Value": 2}
+        ],
+        "Kosten": 20
     },
     {
-        "Kultur": "Aranier",
-        "Talente": {
-            "Betören":              1,
-            "Brett- & Glücksspiel": 1,
-            "Gassenwissen":         2,
-            "Handel":               2,
-            "Menschenkenntnis":     1,
-            "Rechnen":              1,
-            "Sagen & Legenden":     1,
-            "Stoffbearbeitung":     1,
-            "Überreden":            2
-        },
-        "AP-Kosten": 26
+        "Name": "Aranier",
+        "Talente": [
+            {"Id":"Betören", "Value": 1},
+            {"Id":"Brett-& Glücksspiel", "Value": 1},
+            {"Id":"Gassenwissen", "Value": 2},
+            {"Id":"Handel", "Value": 2},
+            {"Id":"Menschenkenntnis", "Value": 1},
+            {"Id":"Rechnen", "Value": 1},
+            {"Id":"Sagen& Legenden", "Value": 1},
+            {"Id":"Stoffbearbeitung", "Value": 1},
+            {"Id":"Überreden", "Value": 2}
+        ],
+        "Kosten": 26
     },
     {
-        "Kultur": "Bornländer",
-        "Talente": {
-            "Fährtensuchen":           1,
-            "Holzbearbeitung":         2,
-            "Lebensmittelbearbeitung": 1,
-            "Orientierung":            1,
-            "Pflanzenkunde":           1,
-            "Wildnisleben":            1,
-            "Zechen":                  2
-        },
-        "AP-Kosten": 18
+        "Name": "Bornländer",
+        "Talente": [
+            {"Id": "Fährtensuchen", "Value":1},
+            {"Id": "Holzbearbeitung", "Value":2},
+            {"Id": "Lebensmittelbearbeitung", "Value":1},
+            {"Id": "Orientierung", "Value":1},
+            {"Id": "Pflanzenkunde", "Value":1},
+            {"Id": "Wildnisleben", "Value":1},
+            {"Id": "Zechen", "Value":2}
+        ],
+        "Kosten": 18
     }
 ]
