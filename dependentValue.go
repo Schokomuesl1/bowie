@@ -317,7 +317,7 @@ func (c *CalculatedDependentValue) Value() int {
     for _, v := range c.BaseValues {
         sum += v.Value()
     }
-    return int(float32(sum) * c.Mult)
+    return int((float32(sum) * c.Mult) + 0.5) // rounding 
 }
 
 func (c CalculatedDependentValue) Update() {
