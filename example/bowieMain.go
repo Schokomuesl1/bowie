@@ -59,4 +59,11 @@ func main() {
 		h.NewTalent(v.Name, v.Probe)
 	}
 	fmt.Print(h)
+
+	file2, _ := ioutil.ReadFile("data/spezies.json")
+	AlleSpezies := make([]bowie.Spezies, 0)
+	json.Unmarshal([]byte(string(file2)), &AlleSpezies)
+	for _, v := range AlleSpezies {
+		fmt.Println(v)
+	}
 }

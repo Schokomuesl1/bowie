@@ -75,6 +75,7 @@ func (t *TalentHandler) Add(talent *Talent) bool {
 
 type Held struct {
 	Name          string
+	Spezies       string
 	Kultur        KulturType
 	Eigenschaften EigenschaftHandler
 	Talente       TalentHandler
@@ -124,4 +125,20 @@ type TalentParse struct {
 	Probe     [3]string
 	Belastung string
 	Kosten    string
+}
+
+type EigenschaftenModSpezies struct {
+	Eigenschaft []string
+	Mod         int
+}
+
+type Spezies struct {
+	Name                       string
+	LE                         int
+	SK                         int
+	GS                         int
+	EigenschaftsModifikationen []EigenschaftenModSpezies
+	Vorteile                   []string
+	Nachteile                  []string
+	AP                         int
 }
