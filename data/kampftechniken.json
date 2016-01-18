@@ -1,0 +1,16 @@
+[
+    {"Name": "Armbrüste",          "Leiteigenschaft": ["FF"],       "Kosten":"B"},
+    {"Name": "Bögen",              "Leiteigenschaft": ["FF"],       "Kosten":"C"},
+    {"Name": "Dolche",             "Leiteigenschaft": ["GE"],       "Kosten":"B"},
+    {"Name": "Fechtwaffen",        "Leiteigenschaft": ["GE"],       "Kosten":"C"},
+    {"Name": "Hiebwaffen",         "Leiteigenschaft": ["KK"],       "Kosten":"C"},
+    {"Name": "Kettenwaffen",       "Leiteigenschaft": ["KK"],       "Kosten":"C"},
+    {"Name": "Lanzen",             "Leiteigenschaft": ["KK"],       "Kosten":"B"},
+    {"Name": "Raufen",             "Leiteigenschaft": ["GE", "KK"], "Kosten":"B"},
+    {"Name": "Schilde",            "Leiteigenschaft": ["KO"],       "Kosten":"C"},
+    {"Name": "Schwerter",          "Leiteigenschaft": ["GE", "KK"], "Kosten":"C"},
+    {"Name": "Stangenwaffen",      "Leiteigenschaft": ["GE", "KK"], "Kosten":"C"},
+    {"Name": "Wurfwaffen",         "Leiteigenschaft": ["FF"],       "Kosten":"B"},
+    {"Name": "Zweihand-Hiebwaffen","Leiteigenschaft": ["KK"],       "Kosten":"C"},
+    {"Name": "Zweihand-Schwerter", "Leiteigenschaft": ["KK"],       "Kosten":"C"}
+]
