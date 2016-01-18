@@ -1,0 +1,415 @@
+[
+{
+	"Name":"Fliegen",
+	"Kategorie": "Körpertalente",
+	"Probe": ["MU","IN","GE"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Gaukeleien",
+	"Kategorie": "Körpertalente",
+	"Probe": ["MU","CH","FF"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Klettern",
+	"Kategorie": "Körpertalente",
+	"Probe": ["MU","GE","KK"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Körperbeherrschung",
+	"Kategorie": "Körpertalente",
+	"Probe": ["GE","GE","KO"],
+	"Belastung": "ja",
+	"Kosten": "D"
+},
+{
+	"Name":"Kraftakt",
+	"Kategorie": "Körpertalente",
+	"Probe": ["KO","KK","KK"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Reiten",
+	"Kategorie": "Körpertalente",
+	"Probe": ["CH","GE","KK"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Schwimmen",
+	"Kategorie": "Körpertalente",
+	"Probe": ["GE","KO","KK"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Selbstbeherrschung",
+	"Kategorie": "Körpertalente",
+	"Probe": ["MU","MU","KO"],
+	"Belastung": "nein",
+	"Kosten": "D"
+},
+{
+	"Name":"Singen",
+	"Kategorie": "Körpertalente",
+	"Probe": ["KL","CH","KO"],
+	"Belastung": "eventuell",
+	"Kosten": "A"
+},
+{
+	"Name":"Sinnesschärfe",
+	"Kategorie": "Körpertalente",
+	"Probe": ["KL","IN","IN"],
+	"Belastung": "eventuell",
+	"Kosten": "D"
+},
+{
+	"Name":"Tanzen",
+	"Kategorie": "Körpertalente",
+	"Probe": ["KL","CH","GE"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Taschendiebstahl",
+	"Kategorie": "Körpertalente",
+	"Probe": ["MU","FF","GE"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Verbergen",
+	"Kategorie": "Körpertalente",
+	"Probe": ["MU","IN","GE"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Zechen",
+	"Kategorie": "Körpertalente",
+	"Probe": ["KL","KO","KK"],
+	"Belastung": "nein",
+	"Kosten": "A"
+},
+{
+	"Name":"Bekehren& Überzeugen",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["MU","KL","CH"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Betören",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["MU","CH","CH"],
+	"Belastung": "eventuell",
+	"Kosten": "B"
+},
+{
+	"Name":"Einschüchtern",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["MU","IN","CH"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Etikette",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["KL","IN","CH"],
+	"Belastung": "eventuell",
+	"Kosten": "B"
+},
+{
+	"Name":"Gassenwissen",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["KL","IN","CH"],
+	"Belastung": "eventuell",
+	"Kosten": "C"
+},
+{
+	"Name":"Menschenkenntnis",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["KL","IN","CH"],
+	"Belastung": "nein",
+	"Kosten": "C"
+},
+{
+	"Name":"Überreden",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["MU","IN","CH"],
+	"Belastung": "nein",
+	"Kosten": "C"
+},
+{
+	"Name":"Verkleiden",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["IN","CH","GE"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Willenskraft",
+	"Kategorie": "Gesellschaftstalente",
+	"Probe": ["MU","IN","CH"],
+	"Belastung": "nein",
+	"Kosten": "D"
+},
+{
+	"Name":"Fährtensuchen",
+	"Kategorie": "Naturtalente",
+	"Probe": ["MU","IN","GE"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Fesseln",
+	"Kategorie": "Naturtalente",
+	"Probe": ["KL","FF","KK"],
+	"Belastung": "eventuell",
+	"Kosten": "A"
+},
+{
+	"Name":"Fischen& Angeln",
+	"Kategorie": "Naturtalente",
+	"Probe": ["FF","GE","KO"],
+	"Belastung": "eventuell",
+	"Kosten": "A"
+},
+{
+	"Name":"Orientierung",
+	"Kategorie": "Naturtalente",
+	"Probe": ["KL","IN","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Pflanzenkunde",
+	"Kategorie": "Naturtalente",
+	"Probe": ["KL","FF","KO"],
+	"Belastung": "eventuell",
+	"Kosten": "C"
+},
+{
+	"Name":"Tierkunde",
+	"Kategorie": "Naturtalente",
+	"Probe": ["MU","MU","CH"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Wildnisleben",
+	"Kategorie": "Naturtalente",
+	"Probe": ["MU","GE","KO"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Brett-& Glücksspiel",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "A"
+},
+{
+	"Name":"Geographie",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Geschichtswissen",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Götter& Kulte",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Kriegskunst",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["MU","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Magiekunde",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "C"
+},
+{
+	"Name":"Mechanik",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","FF"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Rechnen",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "A"
+},
+{
+	"Name":"Rechtskunde",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "A"
+},
+{
+	"Name":"Sagen& Legenden",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Sphärenkunde",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Sternkunde",
+	"Kategorie": "Wissenstalente",
+	"Probe": ["KL","KL","IN"],
+	"Belastung": "nein",
+	"Kosten": "A"
+},
+{
+	"Name":"Alchemie",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["MU","KL","FF"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Boote& Schiffe",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["FF","GE","KK"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Fahrzeuge",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["CH","FF","KO"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Handel",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["KL","IN","CH"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Heilkunde Gift",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["MU","KL","IN"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Heilkunde Krankheiten",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["MU","IN","KO"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Heilkunde Seele",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["IN","CH","KO"],
+	"Belastung": "nein",
+	"Kosten": "B"
+},
+{
+	"Name":"Heilkunde Wunden",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["KL","FF","FF"],
+	"Belastung": "ja",
+	"Kosten": "D"
+},
+{
+	"Name":"Holzbearbeitung",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["FF","GE","KK"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Lebensmittelbearbeitung",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["IN","FF","FF"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Lederbearbeitung",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["FF","GE","KO"],
+	"Belastung": "ja",
+	"Kosten": "B"
+},
+{
+	"Name":"Malen& Zeichnen",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["IN","FF","FF"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Metallbearbeitung",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["FF","KO","KK"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Musizieren",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["CH","FF","KO"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Schlösserknacken",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["IN","FF","FF"],
+	"Belastung": "ja",
+	"Kosten": "C"
+},
+{
+	"Name":"Steinbearbeitung",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["FF","FF","KK"],
+	"Belastung": "ja",
+	"Kosten": "A"
+},
+{
+	"Name":"Stoffbearbeitung",
+	"Kategorie": "Handwerkstalente",
+	"Probe": ["KL","FF","FF"],
+	"Belastung": "ja",
+	"Kosten": "A"
+}
+]
