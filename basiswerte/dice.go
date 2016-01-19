@@ -1,4 +1,4 @@
-package bowie
+package basiswerte
 
 import (
     "math/rand"
