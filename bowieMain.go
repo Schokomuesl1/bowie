@@ -4,7 +4,7 @@ import (
 	//"encoding/json"
 	"fmt"
 	"github.com/Schokomuesl1/bowie/erschaffung"
-	"github.com/Schokomuesl1/bowie/held"
+	//"github.com/Schokomuesl1/bowie/held"
 
 	//"io/ioutil"
 )
@@ -36,8 +36,9 @@ func main() {
 	    }
 	    fmt.Println("Probe: KK: ", KK.Value(), success, ergebnis)
 	    fmt.Println(t.Probe())*/
-	h := held.NewHeld()
-	validator := erschaffung.MakeErschaffungsValidator(h, "Kompetent")
+	/*h := held.NewHeld()
+	validator := erschaffung.MakeErschaffungsValidator(h, "Kompetent")*/
+	h, validator := erschaffung.ErschaffeHeld("Kompetent")
 	validator.AddValidator(erschaffung.EPValidator{})
 	validator.AddValidator(erschaffung.FertigkeitsValidator{})
 	h.Eigenschaften.Set("MU", 8)
