@@ -85,8 +85,8 @@ type BerechneteWerte struct {
 func InitBerechneteWerte(spezies *SpeziesType, eigenschaften *EigenschaftHandler) *BerechneteWerte {
     return &BerechneteWerte{
         Lebensenergie:   MakeBasiswert("Lebensenergie", 2, []DependentValue{eigenschaften.Get("KO")}, spezies.LE),
-        Astralenergie:   nil, // check this
-        Karmaenergie:    nil, // check this
+        Astralenergie:   MakeBasiswert("Astralenergie", 0, []DependentValue{}, 0),
+        Karmaenergie:    MakeBasiswert("Karmaenergie", 0, []DependentValue{}, 0),
         Seelenkraft:     MakeBasiswert("Seelenkraft", (1.0 / 6.0), []DependentValue{eigenschaften.Get("MU"), eigenschaften.Get("KL"), eigenschaften.Get("IN")}, spezies.SK),
         Zaehigkeit:      MakeBasiswert("Zaehigkeit", (1.0 / 6.0), []DependentValue{eigenschaften.Get("KO"), eigenschaften.Get("KO"), eigenschaften.Get("KK")}, spezies.ZK),
         Ausweichen:      MakeBasiswert("Ausweichen", 0.5, []DependentValue{eigenschaften.Get("GE")}, 0),
