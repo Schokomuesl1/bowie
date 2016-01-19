@@ -2,7 +2,6 @@ package erschaffung
 
 import (
 	"fmt"
-	//	"github.com/Schokomuesl1/bowie/basiswerte"
 	"github.com/Schokomuesl1/bowie/held"
 )
 
@@ -31,7 +30,7 @@ func (e ValidatorMessageType) String() string {
 }
 
 type Validator interface {
-	Validate(*held.Held) (bool, ValidatorMessage)
+	Validate(*Erfahrungsgrad, *held.Held) (bool, ValidatorMessage)
 }
 
 type ValidatorMessage struct {
@@ -62,10 +61,8 @@ func MakeErschaffungsValidator(held *held.Held, erfahrungsgrad string) *Erschaff
 func (e *ErschaffungsValidator) Validate() (result bool, messages []ValidatorMessage) {
 	result = true
 	messages = make([]ValidatorMessage, 0, 1)
-	fmt.Println("before loop")
-	fmt.Println(e.Validatoren)
 	for _, v := range e.Validatoren {
-		validatorResult, message := v.Validate(e.Held)
+		validatorResult, message := v.Validate(&e.Grad, e.Held)
 		result = result && validatorResult
 		if len(message.Msg) != 0 {
 			n := len(messages)
@@ -79,7 +76,6 @@ func (e *ErschaffungsValidator) Validate() (result bool, messages []ValidatorMes
 			messages[n] = message
 		}
 	}
-	fmt.Println("after loop")
 	n := len(messages)
 	if n == cap(messages) {
 		newMessages := make([]ValidatorMessage, len(messages), len(messages)+1) // we only need one more
@@ -93,14 +89,25 @@ func (e *ErschaffungsValidator) Validate() (result bool, messages []ValidatorMes
 	return
 }
 
+func (e *ErschaffungsValidator) AddValidator(v Validator) {
+	n := len(e.Validatoren)
+	// possibly extend slice/buffer
+	if n == cap(e.Validatoren) {
+		newValidators := make([]Validator, len(e.Validatoren), 2*len(e.Validatoren)+1)
+		copy(newValidators, e.Validatoren)
+		e.Validatoren = newValidators
+	}
+	e.Validatoren = e.Validatoren[0 : n+1]
+	e.Validatoren[n] = v
+}
+
 // validators here
 
 // validate max. Eigenschaftspunkte
 type EPValidator struct {
-	maxEP int
 }
 
-func (e *EPValidator) Validate(held *held.Held) (result bool, message ValidatorMessage) {
+func (e EPValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -108,10 +115,35 @@ func (e *EPValidator) Validate(held *held.Held) (result bool, message ValidatorM
 	for _, v := range held.Eigenschaften.Eigenschaften {
 		sum += v.Value()
 	}
-	result = sum <= e.maxEP
+	result = sum <= grad.EP
 	if !result {
-		message.Msg = fmt.Sprintf("Zu viele EP verbraucht: %d von %d verfügbaren!", sum, e.maxEP)
+		message.Msg = fmt.Sprintf("Zu viele EP verbraucht: %d von %d verfügbaren!", sum, grad.EP)
+		message.Type = ERROR
+	} else {
+		message.Msg = fmt.Sprintf("Aktuell verbraucht: %d von %d verfügbaren.", sum, grad.EP)
+		message.Type = INFO
 	}
 	return
+}
 
+// validate max. Fertigkeitslevel
+type FertigkeitsValidator struct {
+}
+
+func (e FertigkeitsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+	result = true
+	message.Msg = ""
+	message.Type = NONE
+
+	for _, v := range held.Talente.Talente {
+		if v.Value() > grad.Fertigkeit {
+			result = false
+			message.Type = ERROR
+			message.Msg = fmt.Sprintf("Talent %s hat einen Wert von %d. Maximum für Erfahrungsstufe %s ist %d.", v.Name, v.Value(), grad.Name, grad.Fertigkeit)
+			return
+		}
+	}
+	message.Type = INFO
+	message.Msg = fmt.Sprintf("Keine Fertigkeit mit einem Wert größer %d gefunden!", grad.Fertigkeit)
+	return
 }

@@ -1,9 +1,9 @@
 [
-    {"grad": "Unerfahren",       "AP":  900, "Eigenschaft": 11, "Fertigkeit": 10, "Kampftechnik":  8,  "EP":  95, "Zauber": [ 8,0]},
-    {"grad": "Durchschnittlich", "AP": 1000, "Eigenschaft": 13, "Fertigkeit": 10, "Kampftechnik": 10,  "EP":  98, "Zauber": [10,1]},
-    {"grad": "Erfahren",         "AP": 1100, "Eigenschaft": 14, "Fertigkeit": 10, "Kampftechnik": 12,  "EP": 100, "Zauber": [12,2]},
-    {"grad": "Kompetent",        "AP": 1200, "Eigenschaft": 15, "Fertigkeit": 13, "Kampftechnik": 14,  "EP": 102, "Zauber": [14,3]},
-    {"grad": "Meisterlich",      "AP": 1400, "Eigenschaft": 16, "Fertigkeit": 16, "Kampftechnik": 16,  "EP": 105, "Zauber": [16,4]},
-    {"grad": "Brilliant",        "AP": 1700, "Eigenschaft": 17, "Fertigkeit": 19, "Kampftechnik": 18,  "EP": 109, "Zauber": [18,5]},
-    {"grad": "Legendär",         "AP": 2100, "Eigenschaft": 18, "Fertigkeit": 20, "Kampftechnik": 20,  "EP": 114, "Zauber": [20,6]}
+    {"Name": "Unerfahren",       "AP":  900, "Eigenschaft": 11, "Fertigkeit": 10, "Kampftechnik":  8,  "EP":  95, "Zauber": [ 8,0]},
+    {"Name": "Durchschnittlich", "AP": 1000, "Eigenschaft": 13, "Fertigkeit": 10, "Kampftechnik": 10,  "EP":  98, "Zauber": [10,1]},
+    {"Name": "Erfahren",         "AP": 1100, "Eigenschaft": 14, "Fertigkeit": 10, "Kampftechnik": 12,  "EP": 100, "Zauber": [12,2]},
+    {"Name": "Kompetent",        "AP": 1200, "Eigenschaft": 15, "Fertigkeit": 13, "Kampftechnik": 14,  "EP": 102, "Zauber": [14,3]},
+    {"Name": "Meisterlich",      "AP": 1400, "Eigenschaft": 16, "Fertigkeit": 16, "Kampftechnik": 16,  "EP": 105, "Zauber": [16,4]},
+    {"Name": "Brilliant",        "AP": 1700, "Eigenschaft": 17, "Fertigkeit": 19, "Kampftechnik": 18,  "EP": 109, "Zauber": [18,5]},
+    {"Name": "Legendär",         "AP": 2100, "Eigenschaft": 18, "Fertigkeit": 20, "Kampftechnik": 20,  "EP": 114, "Zauber": [20,6]}
 ]

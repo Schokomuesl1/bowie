@@ -38,6 +38,8 @@ func main() {
 	    fmt.Println(t.Probe())*/
 	h := held.NewHeld()
 	validator := erschaffung.MakeErschaffungsValidator(h, "Kompetent")
+	validator.AddValidator(erschaffung.EPValidator{})
+	validator.AddValidator(erschaffung.FertigkeitsValidator{})
 	h.Eigenschaften.Set("MU", 8)
 	h.Eigenschaften.Set("KL", 9)
 	h.Eigenschaften.Set("GE", 10)
@@ -52,5 +54,16 @@ func main() {
 	fmt.Println(h)
 	result, messages := validator.Validate()
 	fmt.Println(result)
-	fmt.Println(messages)
+	for _, v := range messages {
+		fmt.Println(v)
+	}
+	h.Talente.Get("Verbergen").Wert = 20
+	h.Eigenschaften.Set("MU", 13)
+	h.Eigenschaften.Set("KL", 15)
+	h.Eigenschaften.Set("GE", 15)
+	result, messages = validator.Validate()
+	fmt.Println(result)
+	for _, v := range messages {
+		fmt.Println(v)
+	}
 }
