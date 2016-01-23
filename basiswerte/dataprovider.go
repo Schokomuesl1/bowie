@@ -9,6 +9,7 @@ var AlleEigenschaften map[string]string
 var AlleSpezies map[string]SpeziesType
 var AlleTalente []TalentType
 var AlleKulturen map[string]KulturType
+var AlleLiturgien map[string]LiturgieType
 var kosten map[string][26]int
 
 func init() {
@@ -39,21 +40,29 @@ func init() {
 	kosten = make(map[string][26]int)
 	json.Unmarshal([]byte(string(file5)), &kostenTmp)
 	for _, v := range kostenTmp {
-		kosten[v.SK] = v.Kosten
+		kosten[v.SK] = v.APKosten
+	}
+
+	file6, _ := ioutil.ReadFile("regeln/liturgien.json")
+	liturgieTmp := make([]LiturgieType, 0)
+	AlleLiturgien = make(map[string]LiturgieType)
+	json.Unmarshal([]byte(string(file6)), &liturgieTmp)
+	for _, v := range liturgieTmp {
+		AlleLiturgien[v.Name] = v
 	}
 }
 
 type TalentType struct {
-	Name      string
-	Kategorie string
-	Probe     [3]string
-	Belastung string
-	Kosten    string
+	Name              string
+	Kategorie         string
+	Probe             [3]string
+	Belastung         string
+	Steigerungsfaktor string
 }
 
 type SKType struct {
-	SK     string
-	Kosten [26]int
+	SK       string
+	APKosten [26]int
 }
 
 type EigenschaftenModSpezies struct {
@@ -70,7 +79,7 @@ type SpeziesType struct {
 	EigenschaftsModifikationen []EigenschaftenModSpezies
 	Vorteile                   []string
 	Nachteile                  []string
-	AP                         int
+	APKosten                   int
 }
 
 type ModPair struct {
@@ -79,7 +88,30 @@ type ModPair struct {
 }
 
 type KulturType struct {
-	Name    string
-	Talente []ModPair
-	Kosten  int
+	Name     string
+	Talente  []ModPair
+	APKosten int
+}
+
+type LiturgieType struct {
+	Name              string
+	Probe             ProbeMitMod
+	Wirkung           string
+	Dauer             string
+	Kosten            []string
+	Reichweite        ReichweiteMitMod
+	Wirkungsdauer     string
+	Zielkategorie     []string
+	Verbreitung       [][2]string
+	Steigerungsfaktor string
+}
+
+type ProbeMitMod struct {
+	Eigenschaften [3]string
+	Mod           string
+}
+
+type ReichweiteMitMod struct {
+	Reichweite string
+	Mod        string
 }

@@ -4,412 +4,412 @@
 	"Kategorie": "Körpertalente",
 	"Probe": ["MU","IN","GE"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Gaukeleien",
 	"Kategorie": "Körpertalente",
 	"Probe": ["MU","CH","FF"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Klettern",
 	"Kategorie": "Körpertalente",
 	"Probe": ["MU","GE","KK"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Körperbeherrschung",
 	"Kategorie": "Körpertalente",
 	"Probe": ["GE","GE","KO"],
 	"Belastung": "ja",
-	"Kosten": "D"
+	"Steigerungsfaktor": "D"
 },
 {
 	"Name":"Kraftakt",
 	"Kategorie": "Körpertalente",
 	"Probe": ["KO","KK","KK"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Reiten",
 	"Kategorie": "Körpertalente",
 	"Probe": ["CH","GE","KK"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Schwimmen",
 	"Kategorie": "Körpertalente",
 	"Probe": ["GE","KO","KK"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Selbstbeherrschung",
 	"Kategorie": "Körpertalente",
 	"Probe": ["MU","MU","KO"],
 	"Belastung": "nein",
-	"Kosten": "D"
+	"Steigerungsfaktor": "D"
 },
 {
 	"Name":"Singen",
 	"Kategorie": "Körpertalente",
 	"Probe": ["KL","CH","KO"],
 	"Belastung": "eventuell",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Sinnesschärfe",
 	"Kategorie": "Körpertalente",
 	"Probe": ["KL","IN","IN"],
 	"Belastung": "eventuell",
-	"Kosten": "D"
+	"Steigerungsfaktor": "D"
 },
 {
 	"Name":"Tanzen",
 	"Kategorie": "Körpertalente",
 	"Probe": ["KL","CH","GE"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Taschendiebstahl",
 	"Kategorie": "Körpertalente",
 	"Probe": ["MU","FF","GE"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Verbergen",
 	"Kategorie": "Körpertalente",
 	"Probe": ["MU","IN","GE"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Zechen",
 	"Kategorie": "Körpertalente",
 	"Probe": ["KL","KO","KK"],
 	"Belastung": "nein",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Bekehren& Überzeugen",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["MU","KL","CH"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Betören",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["MU","CH","CH"],
 	"Belastung": "eventuell",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Einschüchtern",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["MU","IN","CH"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Etikette",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["KL","IN","CH"],
 	"Belastung": "eventuell",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Gassenwissen",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["KL","IN","CH"],
 	"Belastung": "eventuell",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Menschenkenntnis",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["KL","IN","CH"],
 	"Belastung": "nein",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Überreden",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["MU","IN","CH"],
 	"Belastung": "nein",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Verkleiden",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["IN","CH","GE"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Willenskraft",
 	"Kategorie": "Gesellschaftstalente",
 	"Probe": ["MU","IN","CH"],
 	"Belastung": "nein",
-	"Kosten": "D"
+	"Steigerungsfaktor": "D"
 },
 {
 	"Name":"Fährtensuchen",
 	"Kategorie": "Naturtalente",
 	"Probe": ["MU","IN","GE"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Fesseln",
 	"Kategorie": "Naturtalente",
 	"Probe": ["KL","FF","KK"],
 	"Belastung": "eventuell",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Fischen& Angeln",
 	"Kategorie": "Naturtalente",
 	"Probe": ["FF","GE","KO"],
 	"Belastung": "eventuell",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Orientierung",
 	"Kategorie": "Naturtalente",
 	"Probe": ["KL","IN","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Pflanzenkunde",
 	"Kategorie": "Naturtalente",
 	"Probe": ["KL","FF","KO"],
 	"Belastung": "eventuell",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Tierkunde",
 	"Kategorie": "Naturtalente",
 	"Probe": ["MU","MU","CH"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Wildnisleben",
 	"Kategorie": "Naturtalente",
 	"Probe": ["MU","GE","KO"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Brett-& Glücksspiel",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Geographie",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Geschichtswissen",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Götter& Kulte",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Kriegskunst",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["MU","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Magiekunde",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Mechanik",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","FF"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Rechnen",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Rechtskunde",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Sagen& Legenden",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Sphärenkunde",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Sternkunde",
 	"Kategorie": "Wissenstalente",
 	"Probe": ["KL","KL","IN"],
 	"Belastung": "nein",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Alchemie",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["MU","KL","FF"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Boote& Schiffe",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["FF","GE","KK"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Fahrzeuge",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["CH","FF","KO"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Handel",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["KL","IN","CH"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Heilkunde Gift",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["MU","KL","IN"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Heilkunde Krankheiten",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["MU","IN","KO"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Heilkunde Seele",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["IN","CH","KO"],
 	"Belastung": "nein",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Heilkunde Wunden",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["KL","FF","FF"],
 	"Belastung": "ja",
-	"Kosten": "D"
+	"Steigerungsfaktor": "D"
 },
 {
 	"Name":"Holzbearbeitung",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["FF","GE","KK"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Lebensmittelbearbeitung",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["IN","FF","FF"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Lederbearbeitung",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["FF","GE","KO"],
 	"Belastung": "ja",
-	"Kosten": "B"
+	"Steigerungsfaktor": "B"
 },
 {
 	"Name":"Malen& Zeichnen",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["IN","FF","FF"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Metallbearbeitung",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["FF","KO","KK"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Musizieren",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["CH","FF","KO"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Schlösserknacken",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["IN","FF","FF"],
 	"Belastung": "ja",
-	"Kosten": "C"
+	"Steigerungsfaktor": "C"
 },
 {
 	"Name":"Steinbearbeitung",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["FF","FF","KK"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 },
 {
 	"Name":"Stoffbearbeitung",
 	"Kategorie": "Handwerkstalente",
 	"Probe": ["KL","FF","FF"],
 	"Belastung": "ja",
-	"Kosten": "A"
+	"Steigerungsfaktor": "A"
 }
 ]

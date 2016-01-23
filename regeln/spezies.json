@@ -10,7 +10,7 @@
         ],
         "Vorteile": [],
         "Nachteile": [],
-        "AP": 0
+        "APKosten": 0
     },
     {
         "name": "Elf",
@@ -28,7 +28,7 @@
             "Zweistimmiger Gesang"
         ],
         "Nachteile": [],
-        "AP": 18
+        "APKosten": 18
     },
     {
         "name": "Halbelf",
@@ -41,7 +41,7 @@
         ],
         "Vorteile": [],
         "Nachteile": [],
-        "AP": 0
+        "APKosten": 0
     },
     {
         "name": "Zwerg",
@@ -56,6 +56,6 @@
         ],
         "Vorteile": [],
         "Nachteile": [],
-        "AP": 61
+        "APKosten": 61
     }
 ]

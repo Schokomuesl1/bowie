@@ -5,11 +5,12 @@ import (
 	"fmt"
 	"github.com/Schokomuesl1/bowie/erschaffung"
 	"github.com/Schokomuesl1/bowie/held"
-	"github.com/Schokomuesl1/bowie/web"
+	//"github.com/Schokomuesl1/bowie/web"
 	"html/template"
 	"net/http"
 	//"os"
 	//"github.com/Schokomuesl1/bowie/held"
+	"github.com/Schokomuesl1/bowie/basiswerte"
 
 	//"io/ioutil"
 )
@@ -64,7 +65,10 @@ func heldHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	bowieweb.Serve()
+	//bowieweb.Serve()
 	//http.HandleFunc("/held/", heldHandler)
 	//http.ListenAndServe(":8080", nil)
+	for _, v := range basiswerte.AlleLiturgien {
+		fmt.Println(v)
+	}
 }

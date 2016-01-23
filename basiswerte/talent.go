@@ -30,6 +30,14 @@ func (t *Talent) AddValue(value int) {
     t.Wert += value
 }
 
+func (t *Talent) Increment() {
+    t.Wert ++
+}
+
+func (t *Talent) Decrement() {
+    t.Wert ++
+}
+
 // Talent CTor
 func MakeTalent(name string, wert int, e1 *Eigenschaft, e2 *Eigenschaft, e3 *Eigenschaft) *Talent {
     var tal Talent

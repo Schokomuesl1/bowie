@@ -9,7 +9,7 @@
             {"Id": "Tierkunde", "Value": 1},
             {"Id": "Wildnisleben", "Value": 2}
         ],
-        "Kosten": 20
+        "APKosten": 20
     },
     {
         "Name": "Aranier",
@@ -24,7 +24,7 @@
             {"Id":"Stoffbearbeitung", "Value": 1},
             {"Id":"Überreden", "Value": 2}
         ],
-        "Kosten": 26
+        "APKosten": 26
     },
     {
         "Name": "Bornländer",
@@ -37,6 +37,6 @@
             {"Id": "Wildnisleben", "Value":1},
             {"Id": "Zechen", "Value":2}
         ],
-        "Kosten": 18
+        "APKosten": 18
     }
 ]
