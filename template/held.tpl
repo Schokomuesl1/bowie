@@ -28,7 +28,7 @@
 		</table>
 		<h2>Validierung</h2>
 		<ul>
-			{{range .Msg}} <li>{{.Msg}}</li>{{end}}
+			{{range .ValidatorMsg}} <li>{{.Msg}}</li>{{end}}
 		</ul>
 		<h2>Talente</h2>
 		<table>

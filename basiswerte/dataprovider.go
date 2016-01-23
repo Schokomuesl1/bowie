@@ -10,7 +10,7 @@ var AlleSpezies map[string]SpeziesType
 var AlleTalente []TalentType
 var AlleKulturen map[string]KulturType
 var AlleLiturgien map[string]LiturgieType
-var kosten map[string][26]int
+var Kostentable map[string][26]int
 
 func init() {
 	file, _ := ioutil.ReadFile("regeln/eigenschaften.json")
@@ -37,10 +37,10 @@ func init() {
 	}
 	file5, _ := ioutil.ReadFile("regeln/kosten.json")
 	kostenTmp := make([]SKType, 0)
-	kosten = make(map[string][26]int)
+	Kostentable = make(map[string][26]int)
 	json.Unmarshal([]byte(string(file5)), &kostenTmp)
 	for _, v := range kostenTmp {
-		kosten[v.SK] = v.APKosten
+		Kostentable[v.SK] = v.APKosten
 	}
 
 	file6, _ := ioutil.ReadFile("regeln/liturgien.json")

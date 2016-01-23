@@ -124,6 +124,7 @@ func (h *Held) NewTalent(name string, eigenschaften [3]string) bool {
 	e1 := h.Eigenschaften.Eigenschaften[eigenschaften[0]]
 	e2 := h.Eigenschaften.Eigenschaften[eigenschaften[1]]
 	e3 := h.Eigenschaften.Eigenschaften[eigenschaften[2]]
+	fmt.Println(name, eigenschaften)
 	h.Talente.Add(basiswerte.MakeTalent(name, 0, e1, e2, e3))
 	if h.Talente.Exists(name) {
 		return true
