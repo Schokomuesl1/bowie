@@ -130,7 +130,7 @@ func modEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
 
 	eigenMod := make([]EigenschaftenModSet, len(PageData.Held.Spezies.EigenschaftsModifikationen))
 	for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
-		eigenMod[i].Label = i + 1
+		eigenMod[i].Label = i
 		eigenMod[i].Modifikation = v
 
 	}
