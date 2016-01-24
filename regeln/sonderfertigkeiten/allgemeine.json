@@ -1,0 +1,225 @@
+[
+	{
+		"Name":"Anführer",
+		"Vorraussetzung":{
+			"Talente":[
+				["Kriegskunst", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Dokumentenfälscher",
+		"Vorraussetzung":{
+			"Talente":[
+				["Malen& Zeichnen", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":["Blind"],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Eiserner Wille I",
+		"Vorraussetzung":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Eiserner Wille II",
+		"Vorraussetzung":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":["Eiserner Wille I"],
+			"Sonstiges":""
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Fächersprache",
+		"Vorraussetzung":{
+			"Talente":[
+				["Etikette", "8"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":["Blind"],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":3
+	},
+	{
+		"Name":"Fischer",
+		"Vorraussetzung":{
+			"Talente":[
+				["Fischen& Angeln", "4"],
+				["Verbergen", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":["Blind"],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":3
+	},
+	{
+		"Name":"Füchsisch",
+		"Vorraussetzung":{
+			"Talente":[
+				["Gassenwissen", "8"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":["Blind"],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":3
+	},
+	{
+		"Name":"Geländekunde",
+		"Vorraussetzung":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"Held hat mind. 6 Monate in entsprechender Umgebung gelebt."
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Gildenrecht",
+		"Vorraussetzung":{
+			"Talente":[
+				["Rechtskunde", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Glasbläserei",
+		"Vorraussetzung":{
+			"Talente":[
+				["Steinbearbeitung", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Hehlerei",
+		"Vorraussetzung":{
+			"Talente":[
+				["Gassenwissen", "8"],
+				["Handel", "4"]
+			],
+			"Vorteile":["Ortskenntnis"],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"Ortskenntnis für den Ort an dem die Ware verkauft werden soll."
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Instrumente bauen",
+		"Vorraussetzung":{
+			"Talente":[
+				["Holzbearbeitung", "6"],
+				["Metallbearbeitung", "6"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"FW von Holz- und Metallbearbeitung muss zusammen 12 ergeben"
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Jäger",
+		"Vorraussetzung":{
+			"Talente":[
+				["Fährtensuchen", "4"],
+				["Tierkunde", "4"],
+				["Verbergen", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"Fernkampfwert 10"
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Kartographie",
+		"Vorraussetzung":{
+			"Talente":[
+				["Geographie", "8"],
+				["Rechnen", "4"],
+				["Malen& Zeichnen", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Lippenlesen",
+		"Vorraussetzung":{
+			"Talente":[
+				["Sinnenschärfe", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":["Blind"],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Meister der Improvisation",
+		"Vorraussetzung":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	}
+]
