@@ -58,6 +58,7 @@ func init() {
 	for _, v := range kampftechnikTmp {
 		AlleKampftechniken[v.Name] = v
 	}
+
 }
 
 type TalentType struct {

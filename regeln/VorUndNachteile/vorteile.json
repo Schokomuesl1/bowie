@@ -1,0 +1,610 @@
+[
+	{
+		"Name":"Adel I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Kultur muss über passenden Adel verfügen"
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Adel II",
+		"Vorraussetzungen": {
+			"Vorteile":["Adel I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Kultur muss über passenden Adel verfügen"
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Adel III",
+		"Vorraussetzungen": {
+			"Vorteile":["Adel II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Kultur muss über passenden Adel verfügen"
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Altersresistenz",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schnelle Alterung"],
+			"Sonstiges":"Speziell über Kultur, Profession oder Spezies."
+			
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Angenehmer Geruch",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+			
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Beidhändig",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+			
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Dunkelsicht I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Nachtblind"],
+			"Sonstiges":"Speziell über Kultur, Profession oder Spezies."
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Dunkelsicht II",
+		"Vorraussetzungen": {
+			"Vorteile":["Dunkelsicht I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Nachtblind"],
+			"Sonstiges":"Speziell über Kultur, Profession oder Spezies."
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Eisenaffine Aura",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Entfernungssinn",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Blind", "Eingeschränkter Sinn (Blind)", "Farbenblind", "Verstümmelt (Einäugig)"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Flink",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Behäbig", "Fettleibig", "Verstämmelt (Einbeinig)"],
+			"Sonstiges":""
+		},
+		"APKosten":8
+	},
+	{
+		"Name":"Fuchssinn",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Geborener Redner",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Stumm"],
+			"Sonstiges":""
+		},
+		"APKosten":4
+	},
+	{
+		"Name":"Geweihter",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":25
+	},
+	{
+		"Name":"Giftresistenz I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Giftanfällig"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Giftresistenz II",
+		"Vorraussetzungen": {
+			"Vorteile":["Giftresistenz I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Giftanfällig"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Glück I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Pech"],
+			"Sonstiges":""
+		},
+		"APKosten":30
+	},
+	{
+		"Name":"Glück II",
+		"Vorraussetzungen": {
+			"Vorteile":["Glück I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Pech"],
+			"Sonstiges":""
+		},
+		"APKosten":30
+	},
+	{
+		"Name":"Glück III",
+		"Vorraussetzungen": {
+			"Vorteile":["Glück II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Pech"],
+			"Sonstiges":""
+		},
+		"APKosten":30
+	},
+	{
+		"Name":"Gutaussehend I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Hässlich"],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Gutaussehend II",
+		"Vorraussetzungen": {
+			"Vorteile":["Gutaussehend I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Hässlich"],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Herausragender Sinn (Sicht)",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Blind", "Eingeschränkter Sinn (Sicht)"],
+			"Sonstiges":""
+		},
+		"APKosten":12
+	},
+	{
+		"Name":"Herausragender Sinn (Gehör)",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Eingeschränkter Sinn (Gehör)", "Taub"],
+			"Sonstiges":""
+		},
+		"APKosten":12
+	},
+	{
+		"Name":"Herausragender Sinn (Geruch& Geschmack)",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Eingeschränkter Sinn (Geruch& Geschmack)"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Herausragender Sinn (Tastsinn)",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Eingeschränkter Sinn (Tastsinn)"],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Hitzeresistenz",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Hitzeempfindlich"],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Hohe Astralkraft I",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Astralkraft II",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Hohe Astralkraft I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Astralkraft III",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Hohe Astralkraft II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Astralkraft IV",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Hohe Astralkraft III"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Astralkraft V",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Hohe Astralkraft IV"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Astralkraft VI",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Hohe Astralkraft V"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Astralkraft VII",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Hohe Astralkraft VI"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Astralkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft I",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft II",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Hohe Karmalkraft I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft III",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Hohe Karmalkraft II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft IV",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Hohe Karmalkraft III"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft V",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Hohe Karmalkraft IV"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft VI",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Hohe Karmalkraft V"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Karmalkraft VII",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Hohe Karmalkraft VI"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Karmalkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft II",
+		"Vorraussetzungen": {
+			"Vorteile":["Hohe Lebenskraft I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft III",
+		"Vorraussetzungen": {
+			"Vorteile":["Hohe Lebenskraft II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft IV",
+		"Vorraussetzungen": {
+			"Vorteile":["Hohe Lebenskraft III"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft V",
+		"Vorraussetzungen": {
+			"Vorteile":["Hohe Lebenskraft IV"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft VI",
+		"Vorraussetzungen": {
+			"Vorteile":["Hohe Lebenskraft V"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Lebenskraft VII",
+		"Vorraussetzungen": {
+			"Vorteile":["Hohe Lebenskraft VI"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Lebenskraft"],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Hohe Seelenkraft",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Seelenkraft"],
+			"Sonstiges":""
+		},
+		"APKosten":25
+	},
+	{
+		"Name":"Hohe Zähigkeit",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Niedrige Zähigkeit"],
+			"Sonstiges":""
+		},
+		"APKosten":25
+	},
+	{
+		"Name":"Kälteresistenz",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Kälteempfindlich"],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Krankzeitsresistenz I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Kälteempfindlich"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Krankzeitsresistenz II",
+		"Vorraussetzungen": {
+			"Vorteile":["Krankzeitsresistenz I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Krankheitsanfällig"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Mystiker",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter"],
+			"Nachteile":[],
+			"NichtVorteile":["Pragmatiker"],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Nichtschläfer",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Speziell über Kultur, Profession oder Spezies."
+		},
+		"APKosten":8
+	},
+	{
+		"Name":"Pragmatiker",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter"],
+			"Nachteile":[],
+			"NichtVorteile":["Mystiker"],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	}
+]

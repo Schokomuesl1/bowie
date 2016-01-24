@@ -1,7 +1,7 @@
 [
 	{
 		"Name":"Anführer",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Kriegskunst", "4"]
 			],
@@ -15,7 +15,7 @@
 	},
 	{
 		"Name":"Dokumentenfälscher",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Malen& Zeichnen", "4"]
 			],
@@ -29,7 +29,7 @@
 	},
 	{
 		"Name":"Eiserner Wille I",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[],
 			"Vorteile":[],
 			"NichtNachteil":[],
@@ -41,7 +41,7 @@
 	},
 	{
 		"Name":"Eiserner Wille II",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[],
 			"Vorteile":[],
 			"NichtNachteil":[],
@@ -53,7 +53,7 @@
 	},
 	{
 		"Name":"Fächersprache",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Etikette", "8"]
 			],
@@ -67,7 +67,7 @@
 	},
 	{
 		"Name":"Fischer",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Fischen& Angeln", "4"],
 				["Verbergen", "4"]
@@ -82,7 +82,7 @@
 	},
 	{
 		"Name":"Füchsisch",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Gassenwissen", "8"]
 			],
@@ -96,7 +96,7 @@
 	},
 	{
 		"Name":"Geländekunde",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[],
 			"Vorteile":[],
 			"NichtNachteil":[],
@@ -108,7 +108,7 @@
 	},
 	{
 		"Name":"Gildenrecht",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Rechtskunde", "4"]
 			],
@@ -122,7 +122,7 @@
 	},
 	{
 		"Name":"Glasbläserei",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Steinbearbeitung", "4"]
 			],
@@ -136,7 +136,7 @@
 	},
 	{
 		"Name":"Hehlerei",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Gassenwissen", "8"],
 				["Handel", "4"]
@@ -151,7 +151,7 @@
 	},
 	{
 		"Name":"Instrumente bauen",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Holzbearbeitung", "6"],
 				["Metallbearbeitung", "6"]
@@ -166,7 +166,7 @@
 	},
 	{
 		"Name":"Jäger",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Fährtensuchen", "4"],
 				["Tierkunde", "4"],
@@ -182,7 +182,7 @@
 	},
 	{
 		"Name":"Kartographie",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Geographie", "8"],
 				["Rechnen", "4"],
@@ -198,7 +198,7 @@
 	},
 	{
 		"Name":"Lippenlesen",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[
 				["Sinnenschärfe", "4"]
 			],
@@ -212,7 +212,7 @@
 	},
 	{
 		"Name":"Meister der Improvisation",
-		"Vorraussetzung":{
+		"Vorraussetzungen":{
 			"Talente":[],
 			"Vorteile":[],
 			"NichtNachteil":[],
