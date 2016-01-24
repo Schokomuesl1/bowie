@@ -92,7 +92,21 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 					PageData.Held.AP_spent += kosten
 					PageData.Held.AP -= kosten
 				}
-
+			}
+		}
+	case "kampftechnik":
+		{
+			t := PageData.Held.Kampftechniken.Get(item)
+			if t != nil {
+				if basiswerte.Kosten(t.SK, t.Value()+val) > -1 {
+					kosten := basiswerte.Kosten(t.SK, t.Value()+val)
+					if val < 0 {
+						kosten *= -1
+					}
+					t.AddValue(val)
+					PageData.Held.AP_spent += kosten
+					PageData.Held.AP -= kosten
+				}
 			}
 		}
 	}

@@ -40,8 +40,8 @@
 				<td>{{.Value}}</td>
 				<td>Min: {{.Min}}, Max: {{.Max}}</td>
 				<td>AT: {{.AT}}</td><td>PA: {{.PA}}</td><td>FK: {{.FK}}</td>
-				<td><input  {{.KannSenken}} type="button" value="-" onClick="Javascript:decEigen({{.Name}})"/></td>
-				<td><input  {{.KannSteigern}} type="button" value="+" onClick="Javascript:incEigen({{.Name}})"/></td>
+				<td><input  {{.KannSenken}} type="button" value="-" onClick="Javascript:decKampftechnik({{.Name}})"/></td>
+				<td><input  {{.KannSteigern}} type="button" value="+" onClick="Javascript:incKampftechnik({{.Name}})"/></td>
 			</tr>
 		{{end}}
 		</table>
@@ -95,6 +95,12 @@
 	}
 	function incTalent(item) {
 		doStuff("increment", "talent", item);
+	}
+	function decKampftechnik(item) {
+		doStuff("decrement", "kampftechnik", item);
+	}
+	function incKampftechnik(item) {
+		doStuff("increment", "kampftechnik", item);
 	}
 	
 	// this is a hack - each click replaces the whole page. Rework this after switchung to a sensible API
