@@ -5,10 +5,12 @@ import (
 )
 
 type Talent struct {
-	Name          string
-	Wert          int
-	Eigenschaften [3]*Eigenschaft
-	dependingOnMe dependenceStorage
+	Name           string
+	Wert           int
+	maxErschaffung int
+	SK             string
+	Eigenschaften  [3]*Eigenschaft
+	dependingOnMe  dependenceStorage
 }
 
 func (t Talent) Register(d DependingValue) {
@@ -21,39 +23,66 @@ func (t Talent) NotifyValueChanged() {
 
 func (t *Talent) Update() {
 	// one of the Eigenschaften changed :-)
-	for _, e := range t.Eigenschaften {
-		fmt.Println(e.Name, e.Wert)
-	}
 }
 
 func (t *Talent) AddValue(value int) {
-	t.Wert += value
+	tmp := t.Wert + value
+	if tmp >= t.Min() && tmp <= t.Max() {
+		t.Wert += value
+	}
 }
 
+func (t *Talent) SetMaxErschaffung(max int) { t.maxErschaffung = max }
 func (t *Talent) Increment() {
-	t.Wert++
+	t.AddValue(1)
 }
 
 func (t *Talent) Decrement() {
-	t.Wert++
+	t.AddValue(-1)
+}
+func (t *Talent) Value() int { return t.Wert }
+func (t *Talent) Min() int   { return 0 }
+func (t *Talent) Max() int {
+	max := 0
+	for _, v := range t.Eigenschaften {
+		if v.Value() > max {
+			max = v.Value()
+		}
+	}
+	max += 2 //  höchste eigenschaft +2
+	if max < t.maxErschaffung {
+		return max
+	}
+	return t.maxErschaffung
+}
+
+func (t *Talent) KannSteigern() string {
+	if t.Value()+1 <= t.Max() {
+		return ""
+	}
+	return "disabled"
+}
+
+func (t *Talent) KannSenken() string {
+	if t.Value()-1 >= t.Min() {
+		return ""
+	}
+	return "disabled"
 }
 
 // Talent CTor
-func MakeTalent(name string, wert int, e1 *Eigenschaft, e2 *Eigenschaft, e3 *Eigenschaft) *Talent {
+func MakeTalent(name string, wert int, e1 *Eigenschaft, e2 *Eigenschaft, e3 *Eigenschaft, sf string) *Talent {
 	var tal Talent
 	tal.Name = name
 	tal.Wert = wert
 	tal.Eigenschaften[0] = e1
 	tal.Eigenschaften[1] = e2
 	tal.Eigenschaften[2] = e3
+	tal.SK = sf
 	for _, e := range tal.Eigenschaften {
 		e.dependingOnMe.Register(&tal)
 	}
 	return &tal
-}
-
-func (t *Talent) Value() int {
-	return t.Wert
 }
 
 func (t *Talent) Probe() (bool, ProbenErgebnis) {
@@ -111,7 +140,7 @@ func (t *Talent) ProbeMod(mod int) (bool, ProbenErgebnis) {
 }
 
 func (t *Talent) String() string {
-	return fmt.Sprintf("%25s: %2d - (%s/%s/%s)", t.Name, t.Value(), t.Eigenschaften[0], t.Eigenschaften[1], t.Eigenschaften[2])
+	return fmt.Sprintf("%25s: %2d [%2d,%2d] - (%s/%s/%s)", t.Name, t.Value(), t.Min(), t.Max(), t.Eigenschaften[0], t.Eigenschaften[1], t.Eigenschaften[2])
 }
 
 type TalentHandler struct {
@@ -140,4 +169,10 @@ func (t *TalentHandler) Get(talent string) *Talent {
 		return nil
 	}
 	return t.Talente[talent]
+}
+
+func (t *TalentHandler) SetErschaffungsMax(max int) {
+	for _, v := range t.Talente {
+		v.SetMaxErschaffung(max)
+	}
 }

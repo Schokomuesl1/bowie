@@ -7,23 +7,27 @@ import (
 )
 
 type Held struct {
-	Name          string
-	Spezies       basiswerte.SpeziesType
-	Basiswerte    basiswerte.BerechneteWerte
-	AP            int
-	AP_spent      int
-	Kultur        basiswerte.KulturType
-	Eigenschaften basiswerte.EigenschaftHandler
-	Talente       basiswerte.TalentHandler
+	Name           string
+	Spezies        basiswerte.SpeziesType
+	Basiswerte     basiswerte.BerechneteWerte
+	AP             int
+	AP_spent       int
+	Kultur         basiswerte.KulturType
+	Eigenschaften  basiswerte.EigenschaftHandler
+	Kampftechniken basiswerte.KampftechnikHandler
+	Talente        basiswerte.TalentHandler
 }
 
 func NewHeld() *Held {
-	h := Held{Eigenschaften: *basiswerte.NewEigenschaftHandler(), Talente: *basiswerte.NewTalentHandler()}
+	h := Held{Eigenschaften: *basiswerte.NewEigenschaftHandler(), Kampftechniken: *basiswerte.NewKampftechnikHandler(), Talente: *basiswerte.NewTalentHandler()}
 	for k, _ := range basiswerte.AlleEigenschaften {
 		h.Eigenschaften.Add(k)
 	}
 	for _, v := range basiswerte.AlleTalente {
-		h.NewTalent(v.Name, v.Probe)
+		h.NewTalent(v.Name, v.Probe, v.Steigerungsfaktor)
+	}
+	for _, v := range basiswerte.AlleKampftechniken {
+		h.NewKampftechnik(v.Name, v.Typ == "Fernkampf", v.Leiteigenschaft, v.Steigerungsfaktor)
 	}
 	return &h
 }
@@ -55,6 +59,8 @@ func (h *Held) SetKultur(kultur string) error {
 	}
 	return nil
 }
+
+func (h *Held) APGesamt() int { return (h.AP + h.AP_spent) }
 
 //String prints an overview of the hero
 func (h *Held) String() string {
@@ -109,7 +115,12 @@ func (h *Held) String() string {
 	ret += "Abenteuerpunkte\n"
 	ret += "-------\n"
 	ret += fmt.Sprintf("AP gesamt: %d, AP ausgegeben: %d, AP verfügbar: %d\n", h.AP+h.AP_spent, h.AP_spent, h.AP)
-	ret += "Talente\n"
+	ret += "Kampftechniken\n"
+	ret += "-------\n"
+	for _, v := range h.Kampftechniken.Kampftechniken {
+		ret += fmt.Sprintf("%s\n", v.String())
+	}
+	ret += "Kampftechniken\n"
 	ret += "-------\n"
 	for _, v := range h.Talente.Talente {
 		ret += fmt.Sprintf("%s\n", v.String())
@@ -117,17 +128,29 @@ func (h *Held) String() string {
 	return ret
 }
 
-func (h *Held) NewTalent(name string, eigenschaften [3]string) bool {
+func (h *Held) NewTalent(name string, eigenschaften [3]string, sf string) bool {
 	if h.Talente.Exists(name) {
 		return false
 	}
 	e1 := h.Eigenschaften.Eigenschaften[eigenschaften[0]]
 	e2 := h.Eigenschaften.Eigenschaften[eigenschaften[1]]
 	e3 := h.Eigenschaften.Eigenschaften[eigenschaften[2]]
-	fmt.Println(name, eigenschaften)
-	h.Talente.Add(basiswerte.MakeTalent(name, 0, e1, e2, e3))
-	if h.Talente.Exists(name) {
-		return true
+	h.Talente.Add(basiswerte.MakeTalent(name, 0, e1, e2, e3, sf))
+	return h.Talente.Exists(name)
+}
+
+func (h *Held) NewKampftechnik(name string, isFernkampf bool, leiteigenschaften []string, sf string) bool {
+	if h.Kampftechniken.Exists(name) {
+		return false
 	}
-	return false
+	lt := make([]*basiswerte.Eigenschaft, len(leiteigenschaften))
+	for i, v := range leiteigenschaften {
+		lt[i] = h.Eigenschaften.Eigenschaften[v]
+	}
+	if isFernkampf {
+		h.Kampftechniken.Add(basiswerte.MakeFernkampf(name, 6, lt, h.Eigenschaften.Eigenschaften["FF"], sf))
+	} else {
+		h.Kampftechniken.Add(basiswerte.MakeNahkampf(name, 6, lt, h.Eigenschaften.Eigenschaften["MU"], sf))
+	}
+	return h.Kampftechniken.Exists(name)
 }

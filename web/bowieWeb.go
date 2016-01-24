@@ -9,8 +9,8 @@ import (
 	"github.com/zenazn/goji/web"
 	"html/template"
 	"net/http"
-	//"net/http/httputil"
 	"strconv"
+	"strings"
 )
 
 type PageDataType struct {
@@ -54,34 +54,77 @@ func resetHero(c web.C, w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Received request: resetHero")
 }
 
-func incrementValue(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: incrementValue with parameters: name: %s", c.URLParams["name"])
+func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string, val int) {
+	if len(addTo) != 2 {
+		return
+	}
+	group := addTo[0]
+	item := addTo[1]
+	switch group {
+	case "eigenschaft":
+		{
+			e := PageData.Held.Eigenschaften.Get(item)
+			if e != nil {
+				if basiswerte.Kosten("E", e.Wert+val) > -1 {
+					kosten := basiswerte.Kosten("E", e.Wert+val)
+					if val < 0 {
+						kosten *= -1
+					}
+					e.Add(val)
+					PageData.Held.AP_spent += kosten
+					PageData.Held.AP -= kosten
+					fmt.Println(item, kosten, PageData.Held.AP_spent, PageData.Held.AP)
+				}
+
+			}
+		}
+	// if we have not found it in eigenschaften, it might be a Talent...
+	case "talent":
+		{
+			t := PageData.Held.Talente.Get(item)
+			if t != nil {
+				if basiswerte.Kosten(t.SK, t.Value()+val) > -1 {
+					kosten := basiswerte.Kosten(t.SK, t.Value()+val)
+					if val < 0 {
+						kosten *= -1
+					}
+					t.AddValue(val)
+					PageData.Held.AP_spent += kosten
+					PageData.Held.AP -= kosten
+				}
+
+			}
+		}
+	}
 }
 
-func decrementValue(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: decrementValue with parameters: name: %s", c.URLParams["name"])
+func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action string, params []string) {
+	switch action {
+	case "increment":
+		{
+			addToValue(c, w, r, params, 1)
+		}
+	case "decrement":
+		{
+			addToValue(c, w, r, params, -1)
+		}
+	}
 }
 
-func canIncrementValue(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: canIncrementValue with parameters: name: %s", c.URLParams["name"])
-	fmt.Fprintf(w, "{\"CanIncrement\":\"true\", \"Name\":\"%s\"}", c.URLParams["name"])
-}
-
-func canDecrementValue(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: canDecrementValue with parameters: name: %s", c.URLParams["name"])
-}
-
-func setValue(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: setValue with parameters: name: %s and tail %s.", c.URLParams["name"], c.URLParams["*"])
-}
-
-func getValue(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: getValue with parameters: name: %s and tail %s", c.URLParams["name"], c.URLParams["*"])
+func runAction(c web.C, w http.ResponseWriter, r *http.Request) {
+	//fmt.Printf("Received request: runAction with parameters: action: %s, rest: %s", c.URLParams["action"], c.URLParams["*"])
+	action := c.URLParams["action"]
+	params := strings.Split(c.URLParams["*"], "/")
+	if len(params) > 1 {
+		runActionParams(c, w, r, action, params[1:])
+	}
+	if PageData.Validator != nil {
+		_, PageData.ValidatorMsg = PageData.Validator.Validate()
+	}
+	renderTemplate(w, "held", &PageData)
 }
 
 func isValid(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Received request: isValid with no parameters")
-	fmt.Fprintf(w, "{\"IsValid\":\"false\", \"Msg\":[\"Too many EP spent!\", \"Selbstbeherrschung too high!\"]}")
 }
 
 func startPage(c web.C, w http.ResponseWriter, r *http.Request) {
@@ -98,7 +141,11 @@ func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 		result := r.FormValue(strconv.Itoa(i))
 		eigenschaft := PageData.Held.Eigenschaften.Get(result)
 		if eigenschaft != nil {
+			fmt.Println("start", eigenschaft)
+			eigenschaft.SetMin(eigenschaft.Min() + v.Mod)
+			eigenschaft.SetMax(eigenschaft.Max() + v.Mod)
 			PageData.Held.Eigenschaften.Set(result, eigenschaft.Wert+v.Mod)
+			fmt.Println("stop", eigenschaft)
 		}
 	}
 	renderTemplate(w, "held", &PageData)
@@ -111,19 +158,19 @@ func modEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
 	}
 
 	PageData.Held, PageData.Validator = erschaffung.ErschaffeHeld(r.FormValue("erfahrungsgrad"))
-	PageData.Validator.AddValidator(erschaffung.EPValidator{})
-	PageData.Validator.AddValidator(erschaffung.FertigkeitsValidator{})
+	PageData.Validator.AddAllValidators()
 	PageData.Held.Name = r.FormValue("heldName")
 	PageData.Held.SetSpezies(r.FormValue("spezies"))
 	PageData.Held.SetKultur(r.FormValue("kultur"))
-	PageData.Held.Eigenschaften.Set("MU", 8)
-	PageData.Held.Eigenschaften.Set("KL", 8)
-	PageData.Held.Eigenschaften.Set("GE", 8)
-	PageData.Held.Eigenschaften.Set("KK", 8)
-	PageData.Held.Eigenschaften.Set("FF", 8)
-	PageData.Held.Eigenschaften.Set("IN", 8)
-	PageData.Held.Eigenschaften.Set("CH", 8)
-	PageData.Held.Eigenschaften.Set("KO", 8)
+	PageData.Held.Eigenschaften.Init("MU", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("KL", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("GE", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("KK", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("FF", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("IN", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("CH", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Eigenschaften.Init("KO", PageData.Validator.Grad.Eigenschaft)
+	PageData.Held.Talente.SetErschaffungsMax(PageData.Validator.Grad.Fertigkeit)
 	_, PageData.ValidatorMsg = PageData.Validator.Validate()
 
 	t, _ := template.ParseFiles("template/modSpeziesEigenschaften.tpl")
@@ -139,17 +186,11 @@ func modEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
 
 func initRoutes() {
 	// prepare routes, get/post stuff etc
-	//e.g. goji.Post("/held/reset", resetHero) // initial state (select name/species/culture...)
 	goji.Get("/", startPage)
 	goji.Post("/held/reset", resetHero)
 	goji.Post("/held/new", newHero)
 	goji.Post("/held/modEigenschaften", modEigenschaften)
-	goji.Post("/held/increment/:name", incrementValue)
-	goji.Post("/held/decrement/:name", decrementValue)
-	goji.Get("/held/canincrement/:name", canIncrementValue) // true if enough AP available
-	goji.Get("/held/candecrement/:name", canDecrementValue) // true if not at min value
-	goji.Post("/held/set/:value/*", setValue)
-	goji.Get("/held/get/:value/*", getValue)
+	goji.Get("/held/action/:action/*", runAction)
 	goji.Get("/held/isValid", isValid)
 }
 

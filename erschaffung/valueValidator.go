@@ -101,6 +101,12 @@ func (e *ErschaffungsValidator) AddValidator(v Validator) {
 	e.Validatoren[n] = v
 }
 
+func (e *ErschaffungsValidator) AddAllValidators() {
+	e.AddValidator(EPValidator{})
+	e.AddValidator(FertigkeitsValidator{})
+	e.AddValidator(APValidator{})
+}
+
 // validators here
 
 // validate max. Eigenschaftspunkte
@@ -145,5 +151,21 @@ func (e FertigkeitsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (r
 	}
 	message.Type = INFO
 	message.Msg = fmt.Sprintf("Keine Fertigkeit mit einem Wert größer %d gefunden!", grad.Fertigkeit)
+	return
+}
+
+type APValidator struct {
+}
+
+func (e APValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+	result = true
+	message.Msg = ""
+	message.Type = NONE
+
+	if held.AP < 0 {
+		result = false
+		message.Type = ERROR
+		message.Msg = fmt.Sprintf("%d AP zuviel verbraucht!", held.AP)
+	}
 	return
 }

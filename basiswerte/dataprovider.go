@@ -10,6 +10,7 @@ var AlleSpezies map[string]SpeziesType
 var AlleTalente []TalentType
 var AlleKulturen map[string]KulturType
 var AlleLiturgien map[string]LiturgieType
+var AlleKampftechniken map[string]KampftechnikType
 var Kostentable map[string][26]int
 
 func init() {
@@ -49,6 +50,13 @@ func init() {
 	json.Unmarshal([]byte(string(file6)), &liturgieTmp)
 	for _, v := range liturgieTmp {
 		AlleLiturgien[v.Name] = v
+	}
+	file7, _ := ioutil.ReadFile("regeln/kampftechniken.json")
+	kampftechnikTmp := make([]KampftechnikType, 0)
+	AlleKampftechniken = make(map[string]KampftechnikType)
+	json.Unmarshal([]byte(string(file7)), &kampftechnikTmp)
+	for _, v := range kampftechnikTmp {
+		AlleKampftechniken[v.Name] = v
 	}
 }
 
