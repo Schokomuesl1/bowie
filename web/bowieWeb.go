@@ -131,9 +131,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 						kosten *= -1
 					}
 					e.Add(val)
-					PageData.Held.AP_spent += kosten
-					PageData.Held.AP -= kosten
-					fmt.Println(item, kosten, PageData.Held.AP_spent, PageData.Held.AP)
+					PageData.Held.APAusgeben(kosten)
 				}
 
 			}
@@ -149,8 +147,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 						kosten *= -1
 					}
 					t.AddValue(val)
-					PageData.Held.AP_spent += kosten
-					PageData.Held.AP -= kosten
+					PageData.Held.APAusgeben(kosten)
 				}
 			}
 		}
@@ -164,8 +161,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 						kosten *= -1
 					}
 					t.AddValue(val)
-					PageData.Held.AP_spent += kosten
-					PageData.Held.AP -= kosten
+					PageData.Held.APAusgeben(kosten)
 				}
 			}
 		}
@@ -189,6 +185,8 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) {
 					}
 				}
 				PageData.Held.Vorteile = append(PageData.Held.Vorteile, vorteil)
+				PageData.Held.APAusgeben(vorteil.APKosten)
+
 			}
 		}
 	case "nachteil":
@@ -201,6 +199,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) {
 					}
 				}
 				PageData.Held.Nachteile = append(PageData.Held.Nachteile, nachteil)
+				PageData.Held.APAusgeben(nachteil.APKosten)
 			}
 		}
 	case "sf":
@@ -213,6 +212,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) {
 					}
 				}
 				PageData.Held.Sonderfertigkeiten = append(PageData.Held.Sonderfertigkeiten, sf)
+				PageData.Held.APAusgeben(sf.APKosten)
 			}
 		}
 	}
