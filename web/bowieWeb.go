@@ -250,49 +250,6 @@ func runAction(c web.C, w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "held", &PageData)
 }
 
-/*func addSF(c web.C, w http.ResponseWriter, r *http.Request) {
-
-	err := r.ParseForm()
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	defer calculateAvailable()
-	renderTemplate(w, "held", &PageData)
-
-}
-
-func addVN(c web.C, w http.ResponseWriter, r *http.Request) {
-	a, _ := httputil.DumpRequest(r, true)
-	fmt.Println(string(a[:]))
-	err := r.ParseForm()
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	defer calculateAvailable()
-	renderTemplate(w, "held", &PageData)
-
-	result := r.FormValue("VorteilToAdd")
-	if len(result) > 0 {
-		vorteil := basiswerte.GetVorteil(result)
-		if vorteil != nil {
-			PageData.Held.Vorteile = append(PageData.Held.Vorteile, vorteil)
-		}
-
-		return
-	}
-
-	result = r.FormValue("NachteilToAdd")
-	if len(result) > 0 {
-		nachteil := basiswerte.GetNachteil(result)
-		if nachteil != nil {
-			PageData.Held.Nachteile = append(PageData.Held.Nachteile, nachteil)
-		}
-		return
-	}
-}
-*/
 func isValid(c web.C, w http.ResponseWriter, r *http.Request) {
 }
 
