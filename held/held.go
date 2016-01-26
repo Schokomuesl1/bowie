@@ -16,9 +16,9 @@ type Held struct {
 	Eigenschaften      basiswerte.EigenschaftHandler
 	Kampftechniken     basiswerte.KampftechnikHandler
 	Talente            basiswerte.TalentHandler
-	Sonderfertigkeiten []basiswerte.Sonderfertigkeit
-	Vorteile           []basiswerte.VorUndNachteil
-	Nachteile          []basiswerte.VorUndNachteil
+	Sonderfertigkeiten []*basiswerte.Sonderfertigkeit
+	Vorteile           []*basiswerte.VorUndNachteil
+	Nachteile          []*basiswerte.VorUndNachteil
 }
 
 func NewHeld() *Held {
@@ -41,6 +41,20 @@ func (h *Held) SetSpezies(spezies string) error {
 		return errors.New("Spezies unbekannt!")
 	}
 	h.Spezies = basiswerte.AlleSpezies[spezies]
+	for _, v := range h.Spezies.Vorteile {
+		vorteil := basiswerte.GetVorteil(v)
+		if vorteil != nil {
+			h.Vorteile = append(h.Vorteile, vorteil)
+		}
+	}
+
+	for _, v := range h.Spezies.Nachteile {
+		nachteil := basiswerte.GetNachteil(v)
+		if nachteil != nil {
+			h.Nachteile = append(h.Nachteile, nachteil)
+		}
+	}
+
 	h.Basiswerte = *basiswerte.InitBerechneteWerte(&h.Spezies, &h.Eigenschaften)
 	return nil
 }
@@ -64,6 +78,11 @@ func (h *Held) SetKultur(kultur string) error {
 }
 
 func (h *Held) APGesamt() int { return (h.AP + h.AP_spent) }
+
+func (h *Held) APAusgeben(menge int) {
+	h.AP -= menge
+	h.AP_spent += menge
+}
 
 //String prints an overview of the hero
 func (h *Held) String() string {

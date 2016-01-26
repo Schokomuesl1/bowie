@@ -184,7 +184,7 @@
 			"Vorteile":[],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Pech"],
+			"NichtNachteile":["Pech I"],
 			"Sonstiges":""
 		},
 		"APKosten":30
@@ -195,7 +195,7 @@
 			"Vorteile":["Glück I"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Pech"],
+			"NichtNachteile":["Pech I"],
 			"Sonstiges":""
 		},
 		"APKosten":30
@@ -206,7 +206,7 @@
 			"Vorteile":["Glück II"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Pech"],
+			"NichtNachteile":["Pech I"],
 			"Sonstiges":""
 		},
 		"APKosten":30
@@ -217,7 +217,7 @@
 			"Vorteile":[],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Hässlich"],
+			"NichtNachteile":["Hässlich I"],
 			"Sonstiges":""
 		},
 		"APKosten":20
@@ -228,7 +228,7 @@
 			"Vorteile":["Gutaussehend I"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Hässlich"],
+			"NichtNachteile":["Hässlich I"],
 			"Sonstiges":""
 		},
 		"APKosten":20
@@ -294,7 +294,7 @@
 			"Vorteile":["Zauberer"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -305,7 +305,7 @@
 			"Vorteile":["Zauberer", "Hohe Astralkraft I"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -316,7 +316,7 @@
 			"Vorteile":["Zauberer", "Hohe Astralkraft II"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -327,7 +327,7 @@
 			"Vorteile":["Zauberer", "Hohe Astralkraft III"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -338,7 +338,7 @@
 			"Vorteile":["Zauberer", "Hohe Astralkraft IV"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -349,7 +349,7 @@
 			"Vorteile":["Zauberer", "Hohe Astralkraft V"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -360,7 +360,7 @@
 			"Vorteile":["Zauberer", "Hohe Astralkraft VI"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Astralkraft"],
+			"NichtNachteile":["Niedrige Astralkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -371,7 +371,7 @@
 			"Vorteile":["Geweihter"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -382,7 +382,7 @@
 			"Vorteile":["Geweihter", "Hohe Karmalkraft I"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -393,7 +393,7 @@
 			"Vorteile":["Geweihter", "Hohe Karmalkraft II"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -404,7 +404,7 @@
 			"Vorteile":["Geweihter", "Hohe Karmalkraft III"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -415,7 +415,7 @@
 			"Vorteile":["Geweihter", "Hohe Karmalkraft IV"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -426,7 +426,7 @@
 			"Vorteile":["Geweihter", "Hohe Karmalkraft V"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -437,7 +437,7 @@
 			"Vorteile":["Geweihter", "Hohe Karmalkraft VI"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Karmalkraft"],
+			"NichtNachteile":["Niedrige Karmalkraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -448,7 +448,7 @@
 			"Vorteile":[],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -459,7 +459,7 @@
 			"Vorteile":["Hohe Lebenskraft I"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -470,7 +470,7 @@
 			"Vorteile":["Hohe Lebenskraft II"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -481,7 +481,7 @@
 			"Vorteile":["Hohe Lebenskraft III"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -492,7 +492,7 @@
 			"Vorteile":["Hohe Lebenskraft IV"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -503,7 +503,7 @@
 			"Vorteile":["Hohe Lebenskraft V"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -514,7 +514,7 @@
 			"Vorteile":["Hohe Lebenskraft VI"],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Niedrige Lebenskraft"],
+			"NichtNachteile":["Niedrige Lebenskraft I"],
 			"Sonstiges":""
 		},
 		"APKosten":6
@@ -558,7 +558,7 @@
 			"Vorteile":[],
 			"Nachteile":[],
 			"NichtVorteile":[],
-			"NichtNachteile":["Kälteempfindlich"],
+			"NichtNachteile":["Krankheitsanfällig"],
 			"Sonstiges":""
 		},
 		"APKosten":10
@@ -606,5 +606,390 @@
 			"Sonstiges":""
 		},
 		"APKosten":20
+	},
+	{
+		"Name":"Reich I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich II",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich III",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich IV",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich III"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich V",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich IV"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich VI",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich V"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich VII",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich VI"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich VIII",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich VII"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich IX",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich VIII"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Reich X",
+		"Vorraussetzungen": {
+			"Vorteile":["Reich IX"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Arm I"],
+			"Sonstiges":""
+		},
+		"APKosten":1
+	},
+	{
+		"Name":"Richtungssinn",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Schlangenmensch",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":6
+	},
+	{
+		"Name":"Schwer zu verzaubern",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Unfähigkeit (Orientierung)"],
+			"Sonstiges":"Speziell über Kultur, Profession oder Spezies."
+		},
+		"APKosten":15
+	},
+	{
+		"Name":"Soziale Anpassungefähigkeit",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Keine Unfähigkeit auf einem Gesellschaftstalent"
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Unscheinbar",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":4
+	},
+	{
+		"Name":"Verbesserte Regeneration (Astralenergie) I",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Astralenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Astralenergie) II",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Verbesserte Regeneration (Astralenergie) I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Astralenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Astralenergie) III",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Verbesserte Regeneration (Astralenergie) II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Astralenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Karmaenergie) I",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Karmaenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Karmaenergie) II",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Verbesserte Regeneration (Karmaenergie) I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Karmaenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Karmaenergie) III",
+		"Vorraussetzungen": {
+			"Vorteile":["Geweihter", "Verbesserte Regeneration (Karmaenergie) II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Karmaenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Lebensenergie) I",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Lebensenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Lebensenergie) II",
+		"Vorraussetzungen": {
+			"Vorteile":["Verbesserte Regeneration (Lebensenergie) I"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Lebensenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verbesserte Regeneration (Lebensenergie) III",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer", "Verbesserte Regeneration (Lebensenergie) II"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Schlechte Regeneration (Lebensenergie) I"],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Verhüllte Aura",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Vertrauenserweckend",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Keine Unfähigkeit in einem Gesellschaftstalent"
+		},
+		"APKosten":25
+	},
+	{
+		"Name":"Waffenbegabung B",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Waffenbegabung C",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Waffenbegabung D",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":30
+	},
+	{
+		"Name":"Wohlklang",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Stumm"],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Zäher Hund",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":["Zerbrechlich"],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Zauberer",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":25
+	},
+	{
+		"Name":"Zeitgefühl",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Zweistimmiger Gesang",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":"Speziell über Kultur, Profession oder Spezies."
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Zwergennase",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":8
 	}
 ]

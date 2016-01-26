@@ -27,3 +27,13 @@ func init() {
 	AllgemeineSF = make([]Sonderfertigkeit, 0)
 	json.Unmarshal([]byte(string(vorteileFile)), &AllgemeineSF)
 }
+
+func GetSF(name string) *Sonderfertigkeit {
+	for _, v := range AllgemeineSF {
+		if name == v.Name {
+			return &v
+		}
+	}
+	// more groups here...
+	return nil
+}

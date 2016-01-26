@@ -31,3 +31,21 @@ func init() {
 	Nachteile = make([]VorUndNachteil, 0)
 	json.Unmarshal([]byte(string(nachteileFile)), &Nachteile)
 }
+
+func GetVorteil(name string) *VorUndNachteil {
+	for _, v := range Vorteile {
+		if name == v.Name {
+			return &v
+		}
+	}
+	return nil
+}
+
+func GetNachteil(name string) *VorUndNachteil {
+	for _, v := range Nachteile {
+		if name == v.Name {
+			return &v
+		}
+	}
+	return nil
+}

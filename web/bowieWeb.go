@@ -9,6 +9,7 @@ import (
 	"github.com/zenazn/goji/web"
 	"html/template"
 	"net/http"
+	//	"net/http/httputil"
 	"strconv"
 	"strings"
 )
@@ -24,6 +25,13 @@ type PageDataType struct {
 	Held              *held.Held
 	Validator         *erschaffung.ErschaffungsValidator
 	ValidatorMsg      []erschaffung.ValidatorMessage
+	Available         AvailableItems
+}
+
+type AvailableItems struct {
+	Nachteile    []basiswerte.VorUndNachteil
+	Vorteile     []basiswerte.VorUndNachteil
+	SF_Allgemein []basiswerte.Sonderfertigkeit
 }
 
 type EigenschaftenModSet struct {
@@ -43,6 +51,58 @@ func initPageData() {
 		Grade:         &erschaffung.AlleErfahrungsgrade,
 		Held:          nil,
 		Validator:     nil}
+}
+
+func calculateAvailable() {
+
+	PageData.Available.Nachteile = PageData.Available.Nachteile[:0]
+	PageData.Available.Vorteile = PageData.Available.Vorteile[:0]
+	PageData.Available.SF_Allgemein = PageData.Available.SF_Allgemein[:0]
+	for _, v := range basiswerte.Nachteile {
+		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Nachteile {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.Nachteile = append(PageData.Available.Nachteile, v)
+			}
+		}
+	}
+	for _, v := range basiswerte.Vorteile {
+		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Vorteile {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.Vorteile = append(PageData.Available.Vorteile, v)
+			}
+		}
+	}
+	for _, v := range basiswerte.AllgemeineSF {
+		if erschaffung.SFAvailable(PageData.Held, &v) {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Sonderfertigkeiten {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.SF_Allgemein = append(PageData.Available.SF_Allgemein, v)
+			}
+		}
+	}
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, pd *PageDataType) {
@@ -110,19 +170,50 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 			}
 		}
 	}
+}
 
-	for _, v := range basiswerte.Vorteile {
-		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
-			fmt.Printf("Vorteil: %25s ist verfügbar!\n", v.Name)
-		} else {
-			fmt.Printf("Vorteil: %25s ist NICHT verfügbar!\n", v.Name)
-		}
+func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) {
+	if len(addTo) != 2 {
+		return
 	}
-	for _, v := range basiswerte.Nachteile {
-		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
-			fmt.Printf("Nachteil: %25s ist verfügbar!\n", v.Name)
-		} else {
-			fmt.Printf("Nachteil: %25s ist NICHT verfügbar!\n", v.Name)
+	group := addTo[0]
+	item := addTo[1]
+	switch group {
+	case "vorteil":
+		{
+			vorteil := basiswerte.GetVorteil(item)
+			if vorteil != nil {
+				for _, v := range PageData.Held.Vorteile {
+					if v.Name == vorteil.Name {
+						return
+					}
+				}
+				PageData.Held.Vorteile = append(PageData.Held.Vorteile, vorteil)
+			}
+		}
+	case "nachteil":
+		{
+			nachteil := basiswerte.GetNachteil(item)
+			if nachteil != nil {
+				for _, v := range PageData.Held.Nachteile {
+					if v.Name == nachteil.Name {
+						return
+					}
+				}
+				PageData.Held.Nachteile = append(PageData.Held.Nachteile, nachteil)
+			}
+		}
+	case "sf":
+		{
+			sf := basiswerte.GetSF(item)
+			if sf != nil {
+				for _, v := range PageData.Held.Sonderfertigkeiten {
+					if v.Name == sf.Name {
+						return
+					}
+				}
+				PageData.Held.Sonderfertigkeiten = append(PageData.Held.Sonderfertigkeiten, sf)
+			}
 		}
 	}
 }
@@ -137,6 +228,10 @@ func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action str
 		{
 			addToValue(c, w, r, params, -1)
 		}
+	case "add":
+		{
+			addItem(c, w, r, params)
+		}
 	}
 }
 
@@ -150,9 +245,54 @@ func runAction(c web.C, w http.ResponseWriter, r *http.Request) {
 	if PageData.Validator != nil {
 		_, PageData.ValidatorMsg = PageData.Validator.Validate()
 	}
+
+	calculateAvailable()
 	renderTemplate(w, "held", &PageData)
 }
 
+/*func addSF(c web.C, w http.ResponseWriter, r *http.Request) {
+
+	err := r.ParseForm()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer calculateAvailable()
+	renderTemplate(w, "held", &PageData)
+
+}
+
+func addVN(c web.C, w http.ResponseWriter, r *http.Request) {
+	a, _ := httputil.DumpRequest(r, true)
+	fmt.Println(string(a[:]))
+	err := r.ParseForm()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer calculateAvailable()
+	renderTemplate(w, "held", &PageData)
+
+	result := r.FormValue("VorteilToAdd")
+	if len(result) > 0 {
+		vorteil := basiswerte.GetVorteil(result)
+		if vorteil != nil {
+			PageData.Held.Vorteile = append(PageData.Held.Vorteile, vorteil)
+		}
+
+		return
+	}
+
+	result = r.FormValue("NachteilToAdd")
+	if len(result) > 0 {
+		nachteil := basiswerte.GetNachteil(result)
+		if nachteil != nil {
+			PageData.Held.Nachteile = append(PageData.Held.Nachteile, nachteil)
+		}
+		return
+	}
+}
+*/
 func isValid(c web.C, w http.ResponseWriter, r *http.Request) {
 }
 
@@ -166,7 +306,9 @@ func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println("parse ok")
 	for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
+		fmt.Println(v)
 		result := r.FormValue(strconv.Itoa(i))
 		eigenschaft := PageData.Held.Eigenschaften.Get(result)
 		if eigenschaft != nil {
@@ -178,21 +320,7 @@ func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	for _, v := range basiswerte.Vorteile {
-		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
-			fmt.Printf("Vorteil: %25s ist verfügbar!\n", v.Name)
-		} else {
-			fmt.Printf("Vorteil: %25s ist NICHT verfügbar!\n", v.Name)
-		}
-	}
-	for _, v := range basiswerte.Nachteile {
-		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
-			fmt.Printf("Nachteil: %25s ist verfügbar!\n", v.Name)
-		} else {
-			fmt.Printf("Nachteil: %25s ist NICHT verfügbar!\n", v.Name)
-		}
-	}
-
+	calculateAvailable()
 	renderTemplate(w, "held", &PageData)
 }
 
@@ -206,7 +334,9 @@ func modEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
 	PageData.Validator.AddAllValidators()
 	PageData.Held.Name = r.FormValue("heldName")
 	PageData.Held.SetSpezies(r.FormValue("spezies"))
+	PageData.Held.APAusgeben(basiswerte.AlleSpezies[r.FormValue("spezies")].APKosten)
 	PageData.Held.SetKultur(r.FormValue("kultur"))
+	PageData.Held.APAusgeben(basiswerte.AlleKulturen[r.FormValue("kultur")].APKosten)
 	PageData.Held.Eigenschaften.Init("MU", PageData.Validator.Grad.Eigenschaft)
 	PageData.Held.Eigenschaften.Init("KL", PageData.Validator.Grad.Eigenschaft)
 	PageData.Held.Eigenschaften.Init("GE", PageData.Validator.Grad.Eigenschaft)
@@ -235,6 +365,8 @@ func initRoutes() {
 	goji.Post("/held/reset", resetHero)
 	goji.Post("/held/new", newHero)
 	goji.Post("/held/modEigenschaften", modEigenschaften)
+	/*goji.Post("/held/addSF", addSF)
+	goji.Post("/held/addVN", addVN)*/
 	goji.Get("/held/action/:action/*", runAction)
 	goji.Get("/held/isValid", isValid)
 }
