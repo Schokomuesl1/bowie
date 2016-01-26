@@ -110,6 +110,21 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 			}
 		}
 	}
+
+	for _, v := range basiswerte.Vorteile {
+		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+			fmt.Printf("Vorteil: %25s ist verfügbar!\n", v.Name)
+		} else {
+			fmt.Printf("Vorteil: %25s ist NICHT verfügbar!\n", v.Name)
+		}
+	}
+	for _, v := range basiswerte.Nachteile {
+		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+			fmt.Printf("Nachteil: %25s ist verfügbar!\n", v.Name)
+		} else {
+			fmt.Printf("Nachteil: %25s ist NICHT verfügbar!\n", v.Name)
+		}
+	}
 }
 
 func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action string, params []string) {
@@ -162,6 +177,22 @@ func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 			fmt.Println("stop", eigenschaft)
 		}
 	}
+
+	for _, v := range basiswerte.Vorteile {
+		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+			fmt.Printf("Vorteil: %25s ist verfügbar!\n", v.Name)
+		} else {
+			fmt.Printf("Vorteil: %25s ist NICHT verfügbar!\n", v.Name)
+		}
+	}
+	for _, v := range basiswerte.Nachteile {
+		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+			fmt.Printf("Nachteil: %25s ist verfügbar!\n", v.Name)
+		} else {
+			fmt.Printf("Nachteil: %25s ist NICHT verfügbar!\n", v.Name)
+		}
+	}
+
 	renderTemplate(w, "held", &PageData)
 }
 

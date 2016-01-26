@@ -7,15 +7,18 @@ import (
 )
 
 type Held struct {
-	Name           string
-	Spezies        basiswerte.SpeziesType
-	Basiswerte     basiswerte.BerechneteWerte
-	AP             int
-	AP_spent       int
-	Kultur         basiswerte.KulturType
-	Eigenschaften  basiswerte.EigenschaftHandler
-	Kampftechniken basiswerte.KampftechnikHandler
-	Talente        basiswerte.TalentHandler
+	Name               string
+	Spezies            basiswerte.SpeziesType
+	Basiswerte         basiswerte.BerechneteWerte
+	AP                 int
+	AP_spent           int
+	Kultur             basiswerte.KulturType
+	Eigenschaften      basiswerte.EigenschaftHandler
+	Kampftechniken     basiswerte.KampftechnikHandler
+	Talente            basiswerte.TalentHandler
+	Sonderfertigkeiten []basiswerte.Sonderfertigkeit
+	Vorteile           []basiswerte.VorUndNachteil
+	Nachteile          []basiswerte.VorUndNachteil
 }
 
 func NewHeld() *Held {

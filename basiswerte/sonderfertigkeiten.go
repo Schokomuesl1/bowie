@@ -14,12 +14,12 @@ type Sonderfertigkeit struct {
 }
 
 type VorraussetzungSF struct {
-	Talente          [][2]string
-	Vorteile         []string
-	NichtNachteil    []string
-	Eigenschaften    [][2]string
-	Sonderfertigkeit []string
-	Sonstiges        string
+	Talente            [][2]string
+	Vorteile           []string
+	NichtNachteil      []string
+	Eigenschaften      [][2]string
+	Sonderfertigkeiten []string
+	Sonstiges          string
 }
 
 func init() {
