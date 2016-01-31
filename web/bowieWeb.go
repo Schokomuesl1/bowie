@@ -304,10 +304,10 @@ func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
 func isValid(c web.C, w http.ResponseWriter, r *http.Request) {
 }
 
-/*func startPage(c web.C, w http.ResponseWriter, r *http.Request) {
+func startPage(c web.C, w http.ResponseWriter, r *http.Request) {
 	initPageData()
-	renderTemplate(w, "start", &PageData)
-}*/
+	renderTemplate(w, "index", &PageData)
+}
 
 func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 	err := r.ParseForm()
@@ -536,7 +536,7 @@ func initRoutes() {
 	http.Handle("/static/", static)
 
 	// prepare routes, get/post stuff etc
-	//goji.Get("/", startPage)
+	goji.Get("/", startPage)
 	//goji.Post("/held/reset", resetHero)
 	//goji.Post("/held/new", newHero)
 	//goji.Post("/held/modEigenschaften", modEigenschaften)
