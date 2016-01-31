@@ -2,6 +2,7 @@ package basiswerte
 
 import (
 	"fmt"
+	"sort"
 )
 
 type KampftechnikType struct {
@@ -168,6 +169,34 @@ type KampftechnikHandler struct {
 
 func NewKampftechnikHandler() *KampftechnikHandler {
 	return &KampftechnikHandler{Kampftechniken: make(map[string]*Kampftechnik)}
+}
+
+type KtList []*Kampftechnik
+
+func (k KtList) Len() int           { return len(k) }
+func (k KtList) Swap(i, j int)      { k[i], k[j] = k[j], k[i] }
+func (k KtList) Less(i, j int) bool { return k[i].Name < k[j].Name }
+
+func (k *KampftechnikHandler) Fernkampf() (fk KtList) {
+	fk = make(KtList, 0)
+	for _, v := range k.Kampftechniken {
+		if v.IsFernkampf {
+			fk = append(fk, v)
+		}
+	}
+	sort.Sort(fk)
+	return
+}
+
+func (k *KampftechnikHandler) Nahkampf() (nk KtList) {
+	nk = make(KtList, 0)
+	for _, v := range k.Kampftechniken {
+		if !v.IsFernkampf {
+			nk = append(nk, v)
+		}
+	}
+	sort.Sort(nk)
+	return
 }
 
 func (k *KampftechnikHandler) Exists(name string) bool {

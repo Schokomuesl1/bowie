@@ -27,7 +27,7 @@ func NewHeld() *Held {
 		h.Eigenschaften.Add(k)
 	}
 	for _, v := range basiswerte.AlleTalente {
-		h.NewTalent(v.Name, v.Probe, v.Steigerungsfaktor)
+		h.NewTalent(v.Name, v.Probe, v.Steigerungsfaktor, v.Kategorie)
 	}
 	for _, v := range basiswerte.AlleKampftechniken {
 		h.NewKampftechnik(v.Name, v.Typ == "Fernkampf", v.Leiteigenschaft, v.Steigerungsfaktor)
@@ -150,14 +150,14 @@ func (h *Held) String() string {
 	return ret
 }
 
-func (h *Held) NewTalent(name string, eigenschaften [3]string, sf string) bool {
+func (h *Held) NewTalent(name string, eigenschaften [3]string, sf string, kat string) bool {
 	if h.Talente.Exists(name) {
 		return false
 	}
 	e1 := h.Eigenschaften.Eigenschaften[eigenschaften[0]]
 	e2 := h.Eigenschaften.Eigenschaften[eigenschaften[1]]
 	e3 := h.Eigenschaften.Eigenschaften[eigenschaften[2]]
-	h.Talente.Add(basiswerte.MakeTalent(name, 0, e1, e2, e3, sf))
+	h.Talente.Add(basiswerte.MakeTalent(name, 0, e1, e2, e3, sf, kat))
 	return h.Talente.Exists(name)
 }
 

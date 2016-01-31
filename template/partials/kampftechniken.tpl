@@ -1,0 +1,50 @@
+<h2>Kampftechniken</h2>
+<div class ="row">
+<div class ="col-md-6">
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<td>Wert</td>
+<td>AT/PA</td>
+<td>+/-</td>
+</tr>
+</thead>
+<tbody>
+{{range .Held.Kampftechniken.Nahkampf}}
+	<tr>
+		<td>{{.Name}}</td>
+		<td>{{.Value}}</td>
+		<!--<td>Min: {{.Min}}, Max: {{.Max}}</td>-->
+		<td>{{.AT}}/{{.PA}}</td>
+		<td><input  {{.KannSenken}} type="button" class="btn btn-default btn-xs" value="-" onClick="Javascript:decKampftechnik({{.Name}})"/><input  {{.KannSteigern}} type="button" class="btn btn-default btn-xs" value="+" onClick="Javascript:incKampftechnik({{.Name}})"/></td>
+	</tr>
+{{end}}
+</tbody>
+</table>
+</div>
+<div class ="col-md-6">
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<td>Wert</td>
+<td>FK</td>
+<td>+/-</td>
+</tr>
+</thead>
+<tbody>
+{{range .Held.Kampftechniken.Fernkampf}}
+	<tr>
+		<td>{{.Name}}</td>
+		<td>{{.Value}}</td>
+		<!--<td>Min: {{.Min}}, Max: {{.Max}}</td>-->
+		<td>{{.FK}}</td>
+		<td><input  {{.KannSenken}} type="button" class="btn btn-default btn-xs" value="-" onClick="Javascript:decKampftechnik({{.Name}})"/> <input  {{.KannSteigern}} type="button" class="btn btn-default btn-xs" value="+" onClick="Javascript:incKampftechnik({{.Name}})"/></td>
+	</tr>
+{{end}}
+</tbody>
+</table>
+</div>
+</div>
+

@@ -2,6 +2,7 @@ package basiswerte
 
 import (
 	"fmt"
+	"sort"
 )
 
 type Talent struct {
@@ -11,6 +12,7 @@ type Talent struct {
 	SK             string
 	Eigenschaften  [3]*Eigenschaft
 	dependingOnMe  dependenceStorage
+	Kategorie      string
 }
 
 func (t Talent) Register(d DependingValue) {
@@ -71,7 +73,7 @@ func (t *Talent) KannSenken() string {
 }
 
 // Talent CTor
-func MakeTalent(name string, wert int, e1 *Eigenschaft, e2 *Eigenschaft, e3 *Eigenschaft, sf string) *Talent {
+func MakeTalent(name string, wert int, e1 *Eigenschaft, e2 *Eigenschaft, e3 *Eigenschaft, sf string, kat string) *Talent {
 	var tal Talent
 	tal.Name = name
 	tal.Wert = wert
@@ -79,6 +81,7 @@ func MakeTalent(name string, wert int, e1 *Eigenschaft, e2 *Eigenschaft, e3 *Eig
 	tal.Eigenschaften[1] = e2
 	tal.Eigenschaften[2] = e3
 	tal.SK = sf
+	tal.Kategorie = kat
 	for _, e := range tal.Eigenschaften {
 		e.dependingOnMe.Register(&tal)
 	}
@@ -175,4 +178,41 @@ func (t *TalentHandler) SetErschaffungsMax(max int) {
 	for _, v := range t.Talente {
 		v.SetMaxErschaffung(max)
 	}
+}
+
+type TalentListe []*Talent
+
+func (t TalentListe) Len() int           { return len(t) }
+func (t TalentListe) Swap(i, j int)      { t[i], t[j] = t[j], t[i] }
+func (t TalentListe) Less(i, j int) bool { return t[i].Name < t[j].Name }
+
+func (t *TalentHandler) nachKategorie(kat string) (tl TalentListe) {
+	tl = make(TalentListe, 0)
+	for _, v := range t.Talente {
+		if v.Kategorie == kat {
+			tl = append(tl, v)
+		}
+	}
+	sort.Sort(tl)
+	return
+}
+
+func (t *TalentHandler) Koerpertalente() (tl TalentListe) {
+	return t.nachKategorie("Körpertalente")
+}
+
+func (t *TalentHandler) Gesellschaftstalente() (tl TalentListe) {
+	return t.nachKategorie("Gesellschaftstalente")
+}
+
+func (t *TalentHandler) Handwerkstalente() (tl TalentListe) {
+	return t.nachKategorie("Handwerkstalente")
+}
+
+func (t *TalentHandler) Naturtalente() (tl TalentListe) {
+	return t.nachKategorie("Naturtalente")
+}
+
+func (t *TalentHandler) Wissenstalente() (tl TalentListe) {
+	return t.nachKategorie("Wissenstalente")
 }

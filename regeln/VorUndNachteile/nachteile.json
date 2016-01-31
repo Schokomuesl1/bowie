@@ -1,0 +1,46 @@
+[
+	{
+		"Name":"Arm I",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":[],
+			"NichtVorteile":["Reich I"],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":-1
+	},
+	{
+		"Name":"Arm II",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":["Arm I"],
+			"NichtVorteile":["Reich I"],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":-1
+	},
+	{
+		"Name":"Arm III",
+		"Vorraussetzungen": {
+			"Vorteile":[],
+			"Nachteile":["Arm II"],
+			"NichtVorteile":["Reich I"],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":-1
+	},
+	{
+		"Name":"Artefaktgebunden",
+		"Vorraussetzungen": {
+			"Vorteile":["Zauberer"],
+			"Nachteile":[],
+			"NichtVorteile":[],
+			"NichtNachteile":[],
+			"Sonstiges":""
+		},
+		"APKosten":-1
+	}
+]
