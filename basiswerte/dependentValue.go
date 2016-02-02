@@ -29,6 +29,10 @@ type dependenceStorage struct {
 }
 
 func (s dependenceStorage) Register(d DependingValue) {
+	// d might be nil...
+	if d == nil {
+		return // nothing to add here...
+	}
 	// first check if d is already registered
 	for _, v := range s.dependsOnMe {
 		if d == v {

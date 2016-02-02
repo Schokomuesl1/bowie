@@ -19,10 +19,12 @@ type Held struct {
 	Sonderfertigkeiten []*basiswerte.Sonderfertigkeit
 	Vorteile           []*basiswerte.VorUndNachteil
 	Nachteile          []*basiswerte.VorUndNachteil
+	Liturgien          basiswerte.LiturgieHandler
+	Zauber             basiswerte.ZauberHandler
 }
 
 func NewHeld() *Held {
-	h := Held{Eigenschaften: *basiswerte.NewEigenschaftHandler(), Kampftechniken: *basiswerte.NewKampftechnikHandler(), Talente: *basiswerte.NewTalentHandler()}
+	h := Held{Eigenschaften: *basiswerte.NewEigenschaftHandler(), Kampftechniken: *basiswerte.NewKampftechnikHandler(), Talente: *basiswerte.NewTalentHandler(), Zauber: *basiswerte.NewZauberHandler(), Liturgien: *basiswerte.NewLiturgieHandler()}
 	for k, _ := range basiswerte.AlleEigenschaften {
 		h.Eigenschaften.Add(k)
 	}
@@ -175,4 +177,64 @@ func (h *Held) NewKampftechnik(name string, isFernkampf bool, leiteigenschaften 
 		h.Kampftechniken.Add(basiswerte.MakeNahkampf(name, 6, lt, h.Eigenschaften.Eigenschaften["MU"], sf))
 	}
 	return h.Kampftechniken.Exists(name)
+}
+
+func (h *Held) NewZauber(zauber *basiswerte.ZauberType) bool {
+	if h.Zauber.Exists(zauber.Name) {
+		return false
+	}
+	var e1 *basiswerte.Eigenschaft
+	if zauber.Probe.Eigenschaften[0] != "-" {
+		e1 = h.Eigenschaften.Eigenschaften[zauber.Probe.Eigenschaften[0]]
+	} else {
+		e1 = nil
+	}
+
+	var e2 *basiswerte.Eigenschaft
+	if zauber.Probe.Eigenschaften[1] != "-" {
+		e2 = h.Eigenschaften.Eigenschaften[zauber.Probe.Eigenschaften[1]]
+	} else {
+		e1 = nil
+	}
+
+	var e3 *basiswerte.Eigenschaft
+	if zauber.Probe.Eigenschaften[2] != "-" {
+		e3 = h.Eigenschaften.Eigenschaften[zauber.Probe.Eigenschaften[2]]
+	} else {
+		e1 = nil
+	}
+	fmt.Println(e1, e2, e3)
+	h.Zauber.Add(basiswerte.MakeZauber(zauber.Name, 0, e1, e2, e3, zauber))
+
+	return h.Zauber.Exists(zauber.Name)
+}
+
+func (h *Held) NewLiturgie(liturgie *basiswerte.LiturgieType) bool {
+	if h.Liturgien.Exists(liturgie.Name) {
+		return false
+	}
+	var e1 *basiswerte.Eigenschaft
+	if liturgie.Probe.Eigenschaften[0] != "-" {
+		e1 = h.Eigenschaften.Eigenschaften[liturgie.Probe.Eigenschaften[0]]
+	} else {
+		e1 = nil
+	}
+
+	var e2 *basiswerte.Eigenschaft
+	if liturgie.Probe.Eigenschaften[1] != "-" {
+		e2 = h.Eigenschaften.Eigenschaften[liturgie.Probe.Eigenschaften[1]]
+	} else {
+		e1 = nil
+	}
+
+	var e3 *basiswerte.Eigenschaft
+	if liturgie.Probe.Eigenschaften[2] != "-" {
+		e3 = h.Eigenschaften.Eigenschaften[liturgie.Probe.Eigenschaften[2]]
+	} else {
+		e1 = nil
+	}
+	fmt.Println(e1, e2, e3)
+	h.Liturgien.Add(basiswerte.MakeLiturgie(liturgie.Name, 0, e1, e2, e3, liturgie))
+
+	return h.Liturgien.Exists(liturgie.Name)
 }

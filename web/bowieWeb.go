@@ -21,6 +21,7 @@ type PageDataType struct {
 	AlleTalente       *[]basiswerte.TalentType
 	AlleKulturen      *map[string]basiswerte.KulturType
 	AlleLiturgien     *map[string]basiswerte.LiturgieType
+	AlleZauber        *map[string]basiswerte.ZauberType
 	Kosten            *map[string][26]int
 	Grade             *map[string]erschaffung.Erfahrungsgrad
 	Held              *held.Held
@@ -62,6 +63,7 @@ func initPageData() {
 		AlleTalente:   &basiswerte.AlleTalente,
 		AlleKulturen:  &basiswerte.AlleKulturen,
 		AlleLiturgien: &basiswerte.AlleLiturgien,
+		AlleZauber:    &basiswerte.AlleZauber,
 		Kosten:        &basiswerte.Kostentable,
 		Grade:         &erschaffung.AlleErfahrungsgrade,
 		Held:          nil,
@@ -183,6 +185,14 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 				}
 			}
 		}
+	case "zauber":
+		{
+
+		}
+	case "liturgie":
+		{
+
+		}
 	}
 	return ""
 }
@@ -235,6 +245,38 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 				PageData.Held.APAusgeben(sf.APKosten)
 				return "/held/page/allgemeines"
 			}
+		}
+	case "zauber":
+		{
+			if !erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Zauberer")) {
+				return ""
+			}
+			_, exists := basiswerte.AlleZauber[item]
+			if !exists {
+				return ""
+			}
+			zauber, _ := basiswerte.AlleZauber[item]
+			PageData.Held.NewZauber(&zauber)
+			if zauber.Steigerungsfaktor != "-" {
+				PageData.Held.APAusgeben(basiswerte.Kosten(zauber.Steigerungsfaktor, 0))
+			}
+			return "/held/page/zauber"
+		}
+	case "liturgie":
+		{
+			if !erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Geweihter")) {
+				return ""
+			}
+			_, exists := basiswerte.AlleLiturgien[item]
+			if !exists {
+				return ""
+			}
+			liturgie, _ := basiswerte.AlleLiturgien[item]
+			PageData.Held.NewLiturgie(&liturgie)
+			if liturgie.Steigerungsfaktor != "-" {
+				PageData.Held.APAusgeben(basiswerte.Kosten(liturgie.Steigerungsfaktor, 0))
+			}
+			return "/held/page/liturgien"
 		}
 	}
 	return ""
@@ -487,6 +529,20 @@ func pageTalente(c web.C, w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "partials/talente", &PageData)
 }
 
+func pageLiturgien(c web.C, w http.ResponseWriter, r *http.Request) {
+	if PageData.Held == nil {
+		return // empty page if no held...
+	}
+	renderTemplate(w, "partials/liturgien", &PageData)
+}
+
+func pageZauber(c web.C, w http.ResponseWriter, r *http.Request) {
+	if PageData.Held == nil {
+		return // empty page if no held...
+	}
+	renderTemplate(w, "partials/zauber", &PageData)
+}
+
 func pageFooter(c web.C, w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Page footer")
 	ap_info := apData{AP: 0, AP_spent: 0, AP_total: 0}
@@ -551,6 +607,8 @@ func initRoutes() {
 	goji.Get("/held/page/kampftechniken", pageKampftechniken)
 	goji.Get("/held/page/talente", pageTalente)
 	goji.Get("/held/page/footer", pageFooter)
+	goji.Get("/held/page/liturgien", pageLiturgien)
+	goji.Get("/held/page/zauber", pageZauber)
 
 	// json-accessors/ partial rest-API?
 	goji.Get("/held/data/ap", getAP)

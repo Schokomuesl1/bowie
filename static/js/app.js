@@ -28,6 +28,29 @@ function jumpToPage(pagename)
     	$("#nav_Talente").siblings('li').removeClass('active');
         $("#nav_Talente").addClass('active');
     }
+    else if (pagename == "Liturgien")
+    {
+      putContentToDiv('/held/page/liturgien', '#main_window');
+      $("#nav_Liturgien").siblings('li').removeClass('active');
+        $("#nav_Liturgien").addClass('active');
+    }
+    else if (pagename == "Zauber")
+    {
+      putContentToDiv('/held/page/zauber', '#main_window');
+      $("#nav_Zauber").siblings('li').removeClass('active');
+        $("#nav_Zauber").addClass('active');
+    }
+}
+
+function toggleMenuitemActivity(pagename, active)
+{
+  $("#nav_"+pagename).toggleClass('active', active);
+}
+
+
+function toggleMenuitemVisibility(pagename, visible)
+{
+  $("#nav_"+pagename).toggleClass('hidden', !visible);
 }
 
 // used to load stuff somewhere
@@ -60,11 +83,36 @@ function decTalent(item) {
 function incTalent(item) {
 	doStuff("increment", "talent", item);
 }
+function decZauber(item) {
+  doStuff("decrement", "zauber", item);
+}
+function incZauber(item) {
+  doStuff("increment", "zauber", item);
+}
+function decLiturgie(item) {
+  doStuff("decrement", "liturgie", item);
+}
+function incLiturgie(item) {
+  doStuff("increment", "liturgie", item);
+}
+
 function decKampftechnik(item) {
 	doStuff("decrement", "kampftechnik", item);
 }
 function incKampftechnik(item) {
 	doStuff("increment", "kampftechnik", item);
+}
+
+function addZauber() {
+  var e = document.getElementById("selectZauber") 
+  var selectedItem = e.options[e.selectedIndex].value;
+  doStuff("add", "zauber", selectedItem);
+}
+
+function addLiturgie() {
+  var e = document.getElementById("selectLiturgie") 
+  var selectedItem = e.options[e.selectedIndex].value;
+  doStuff("add", "liturgie", selectedItem);
 }
 
 function addVorteil() {
@@ -100,10 +148,7 @@ function checkForRedirect(data, status)
 // this is a hack - each click replaces the whole page. Rework this after switchung to a sensible API
 function doStuff(action, group, item) {	
 	console.log("/held/action/"+action+"/"+group+"/"+item);
-	//$.get( "/held/action/"+action+"/"+group+"/"+item);
-	//window.location.href = "/held/action/"+action+"/"+group+"/"+item
 
-	//
 	$.post("/held/action/"+action+"/"+group+"/"+item,
     	{},
     	checkForRedirect
@@ -137,6 +182,15 @@ function extractSelectedUpdateEigenschaften() {
 	request.type = "modEigenschaften"
 	console.log(request)
 	sendPostWithJSONTo("/held/complexaction", request)
+  // now we set the active window and make the relevant items visible
+
+  toggleMenuitemVisibility('Allgemeines', true);
+  toggleMenuitemActivity('Allgemeines', true);
+  toggleMenuitemActivity('Neu', false);
+  toggleMenuitemVisibility('Kampftechniken', true);
+  toggleMenuitemVisibility('Talente', true);
+  toggleMenuitemVisibility('Zauber', true);
+  toggleMenuitemVisibility('Liturgien', true);
 }
 
 
@@ -151,7 +205,6 @@ function sendPostWithJSONTo(target, jsonContent)
 // update progress bar
 function updateProgressBar()
 {
-
 	putContentToDiv("/held/page/footer", "#page_footer")
 }
 

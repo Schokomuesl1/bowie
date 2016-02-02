@@ -10,6 +10,7 @@ var AlleSpezies map[string]SpeziesType
 var AlleTalente []TalentType
 var AlleKulturen map[string]KulturType
 var AlleLiturgien map[string]LiturgieType
+var AlleZauber map[string]ZauberType
 var AlleKampftechniken map[string]KampftechnikType
 var Kostentable map[string][26]int
 
@@ -51,6 +52,7 @@ func init() {
 	for _, v := range liturgieTmp {
 		AlleLiturgien[v.Name] = v
 	}
+
 	file7, _ := ioutil.ReadFile("regeln/kampftechniken.json")
 	kampftechnikTmp := make([]KampftechnikType, 0)
 	AlleKampftechniken = make(map[string]KampftechnikType)
@@ -59,6 +61,13 @@ func init() {
 		AlleKampftechniken[v.Name] = v
 	}
 
+	file8, _ := ioutil.ReadFile("regeln/zauber.json")
+	zauberTmp := make([]ZauberType, 0)
+	AlleZauber = make(map[string]ZauberType)
+	json.Unmarshal([]byte(string(file8)), &zauberTmp)
+	for _, v := range zauberTmp {
+		AlleZauber[v.Name] = v
+	}
 }
 
 type TalentType struct {
@@ -103,6 +112,19 @@ type KulturType struct {
 }
 
 type LiturgieType struct {
+	Name              string
+	Probe             ProbeMitMod
+	Wirkung           string
+	Dauer             string
+	Kosten            []string
+	Reichweite        ReichweiteMitMod
+	Wirkungsdauer     string
+	Zielkategorie     []string
+	Verbreitung       [][2]string
+	Steigerungsfaktor string
+}
+
+type ZauberType struct {
 	Name              string
 	Probe             ProbeMitMod
 	Wirkung           string

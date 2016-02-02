@@ -27,9 +27,11 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li id="nav_Neu" class="active"><a href="javascript:jumpToPage('Neu')">Neu</a></li>
-            <li id="nav_Allgemeines"><a href="javascript:jumpToPage('Allgemeines')">Allgemeines</a></li>
-            <li id="nav_Kampftechniken"><a href="javascript:jumpToPage('Kampftechniken')">Kampftechniken</a></li>
-            <li id="nav_Talente"><a href="javascript:jumpToPage('Talente')">Talente</a></li>
+            <li id="nav_Allgemeines" class="hidden"><a href="javascript:jumpToPage('Allgemeines')">Allgemeines</a></li>
+            <li id="nav_Kampftechniken" class="hidden"><a href="javascript:jumpToPage('Kampftechniken')">Kampftechniken</a></li>
+            <li id="nav_Talente" class="hidden"><a href="javascript:jumpToPage('Talente')">Talente</a></li>
+            <li id="nav_Zauber" class="hidden"><a href="javascript:jumpToPage('Zauber')">Zauber</a></li>
+            <li id="nav_Liturgien" class="hidden"><a href="javascript:jumpToPage('Liturgien')">Liturgien</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

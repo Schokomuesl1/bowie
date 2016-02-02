@@ -1,0 +1,14 @@
+[
+{
+  "Name": "Blitz dich find!",
+  "Probe": {"Eigenschaften": ["MU", "CH", "GE"], "Mod": ""},
+  "Wirkung": "Puff!",
+  "Dauer": "1 Aktion",
+  "Kosten": ["7"],
+  "Reichweite": {"Reichweite": "7 Schritt", "Mod": ""},
+  "Wirkungsdauer": "Viel zu lang",
+  "Zielkategorie": ["Kulturschaffende"],
+  "Verbreitung": [["allgemein", ""]],
+  "Steigerungsfaktor": "B"
+}
+]
