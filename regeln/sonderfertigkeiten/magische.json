@@ -6,7 +6,7 @@
       "Vorteile":["Zauberer"],
       "NichtNachteil":[],
       "Eigenschaften":[],
-      "Sonderfertigkeiten":[],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
       "Sonstiges":"14 AP bei Erschaffung, dafür ohne permanente AsP-Kosten."
     },
     "APKosten":14

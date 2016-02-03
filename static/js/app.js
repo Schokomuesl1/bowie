@@ -127,8 +127,8 @@ function addNachteil() {
 	doStuff("add", "nachteil", selectedItem);
 }
 
-function addSF() {
-	var e = document.getElementById("SFToAdd")	
+function addSF(bereich) {
+	var e = document.getElementById(bereich)	
 	var selectedItem = e.options[e.selectedIndex].value;
 	doStuff("add", "sf", selectedItem);
 }

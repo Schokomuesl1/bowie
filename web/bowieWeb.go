@@ -34,6 +34,9 @@ type AvailableItems struct {
 	Nachteile    []basiswerte.VorUndNachteil
 	Vorteile     []basiswerte.VorUndNachteil
 	SF_Allgemein []basiswerte.Sonderfertigkeit
+	SF_Karmal    []basiswerte.Sonderfertigkeit
+	SF_Magisch   []basiswerte.Sonderfertigkeit
+	SF_Kampf     []basiswerte.Sonderfertigkeit
 }
 
 type EigenschaftenModSet struct {
@@ -75,6 +78,9 @@ func calculateAvailable() {
 	PageData.Available.Nachteile = PageData.Available.Nachteile[:0]
 	PageData.Available.Vorteile = PageData.Available.Vorteile[:0]
 	PageData.Available.SF_Allgemein = PageData.Available.SF_Allgemein[:0]
+	PageData.Available.SF_Karmal = PageData.Available.SF_Karmal[:0]
+	PageData.Available.SF_Magisch = PageData.Available.SF_Magisch[:0]
+	PageData.Available.SF_Kampf = PageData.Available.SF_Kampf[:0]
 	for _, v := range basiswerte.Nachteile {
 		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
 			// only append if not already selected
@@ -117,6 +123,51 @@ func calculateAvailable() {
 			}
 			if !selected {
 				PageData.Available.SF_Allgemein = append(PageData.Available.SF_Allgemein, v)
+			}
+		}
+	}
+	for _, v := range basiswerte.KarmaleSF {
+		if erschaffung.SFAvailable(PageData.Held, &v) {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Sonderfertigkeiten {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.SF_Karmal = append(PageData.Available.SF_Karmal, v)
+			}
+		}
+	}
+	for _, v := range basiswerte.MagischeSF {
+		if erschaffung.SFAvailable(PageData.Held, &v) {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Sonderfertigkeiten {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.SF_Magisch = append(PageData.Available.SF_Magisch, v)
+			}
+		}
+	}
+	for _, v := range basiswerte.KampfSF {
+		if erschaffung.SFAvailable(PageData.Held, &v) {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Sonderfertigkeiten {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.SF_Kampf = append(PageData.Available.SF_Kampf, v)
 			}
 		}
 	}

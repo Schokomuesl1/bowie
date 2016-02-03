@@ -54,7 +54,7 @@
 
 		<form>
 			<div class="form-group">
-				<label for="VorteilToAdd">Hinzufügen:</label>
+				<label for="VorteilToAdd">Vorteil:</label>
 				<select name="VorteilToAdd" id="VorteilToAdd">
 					{{range .Available.Vorteile}}
 					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
@@ -63,7 +63,7 @@
 				<input type="button" value="+" onClick="Javascript:addVorteil()"/></td>
 			</div>
 			<div class="form-group">
-				<label for="NachteilToAdd">Hinzufügen:</label>
+				<label for="NachteilToAdd">Nachteil:</label>
 				<select name="NachteilToAdd" id="NachteilToAdd">
 					{{range .Available.Nachteile}}
 					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
@@ -72,13 +72,40 @@
 				<input type="button" value="+" onClick="Javascript:addNachteil()"/></td>
 			</div>
 			<div class="form-group">
-				<label for="SFToAdd">Hinzufügen:</label>
-				<select name="SFToAdd" id="SFToAdd">
+				<label for="SFToAddAllgemein">Allgemeine SF:</label>
+				<select name="SFToAddAllgemein" id="SFToAddAllgemein">
 					{{range .Available.SF_Allgemein}}
 					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
 					{{end}}
 				</select>
-				<input type="button" value="+" onClick="Javascript:addSF()"/></td>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddAllgemein')"/></td>
+			</div>
+			<div class="form-group">
+				<label for="SFToAddKarmal">Karmale SF:</label>
+				<select name="SFToAddKarmal" id="SFToAddKarmal">
+					{{range .Available.SF_Karmal}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddKarmal')"/></td>
+			</div>
+			<div class="form-group">
+				<label for="SFToAddMagisch">Magische SF:</label>
+				<select name="SFToAddMagisch" id="SFToAddMagisch">
+					{{range .Available.SF_Magisch}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddMagisch')"/></td>
+			</div>
+			<div class="form-group">
+				<label for="SFToAddKampf">Kampf SF:</label>
+				<select name="SFToAddKampf" id="SFToAddKampf">
+					{{range .Available.SF_Kampf}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddKampf')"/></td>
 			</div>
 		</form>
 	</div>
