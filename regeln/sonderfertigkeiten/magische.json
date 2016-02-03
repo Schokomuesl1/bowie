@@ -1,0 +1,783 @@
+[
+  {
+    "Name":"Bindung des Stabes",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Zauberer"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":"14 AP bei Erschaffung, dafür ohne permanente AsP-Kosten."
+    },
+    "APKosten":14
+  },
+  {
+    "Name":"Merkmalsfokus (Antimagie)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Antimagie)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Dämonisch)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Dämonisch)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Einfluss)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Einfluss)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Elementar)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Elementar)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Heilung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Heilung)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Hellsicht)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Hellsicht)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Illusion)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Illusion)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Sphären)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Sphären)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Objekt)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Objekt)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Telekinese)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Telekinese)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Merkmalsfokus (Verwandlung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Kraftfokus", "Merkmalskenntnis (Verwandlung)"],
+      "Sonstiges":"Volumen: 8"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Doppeltes Maß",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bindung des Stabes"],
+      "Sonstiges":"Volumen: 2"
+    },
+    "APKosten":5
+  },
+  {
+    "Name":"Ewige Flamme",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bindung des Stabes"],
+      "Sonstiges":"Volumen: 2"
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Flammenschwert",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ewige Flamme", "Kraftfokus"],
+      "Sonstiges":"Volumen: 7"
+    },
+    "APKosten":35
+  },
+  {
+    "Name":"Kraftfokus",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bindung des Stabes"],
+      "Sonstiges":"Volumen: 6"
+    },
+    "APKosten":30
+  },
+  {
+    "Name":"Seil des Adepten",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bindung des Stabes"],
+      "Sonstiges":"Volumen: 2"
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Stab-Apport",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bindung des Stabes"],
+      "Sonstiges":"Volumen: 3"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aura verbergen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["MU", "13"],
+        ["IN", "13"]
+      ],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":20
+  },
+  {
+    "Name":"Merkmalskenntnis (Antimagie)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Dämonisch)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Einfluss)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Elementar)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Heilung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Hellsicht)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Illusion)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Sphären)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Objekt)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Telekinese)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Verwandlung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["KL", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Antimagie)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Dämonisch)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Einfluss)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Elementar)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Heilung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Hellsicht)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Illusion)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Sphären)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Objekt)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Telekinese)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Verwandlung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["CH", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Antimagie)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Dämonisch)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Einfluss)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Elementar)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Heilung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Hellsicht)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Illusion)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Sphären)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Objekt)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Telekinese)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Merkmalskenntnis (Verwandlung)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["IN", "15"]
+      ],
+      "Sonderfertigkeiten":["Tradition (Elfen)"],
+      "Sonstiges":"3 Zauber des Merkmals auf 10. Kosten: 10 AP für die erste, 20 für die 2te, 40 für die dritte."
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Starke Zaubertricks",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Zauberer"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Tradition (Elfen)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Zauberer"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":125
+  },
+  {
+    "Name":"Tradition (Gildenmagier)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Zauberer"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":155
+  },
+  {
+    "Name":"Tradition (Hexen)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Zauberer"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":135
+  },
+  {
+    "Name":"Verbotene Pforten",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["MU", "12"]
+      ],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Zauberzeichen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["FF", "12"]
+      ],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":20
+  },
+  {
+    "Name":"Vertrautenbindung",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Hexen)"],
+      "Sonstiges":""
+    },
+    "APKosten":20
+  }
+]

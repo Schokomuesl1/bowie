@@ -1,0 +1,126 @@
+[
+  {
+    "Name":"Aspektkenntnis",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":
+  },
+  {
+    "Name":"Fokussierung",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["MU", "13"]
+      ],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":8
+  },
+  {
+    "Name":"Stärke des Glaubens",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[
+        ["MU", "15"]
+      ],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":10
+  },
+  {
+    "Name":"Starke Segnungen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Tradition (Boronkirche)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":130
+  },
+  {
+    "Name":"Tradition (Hesindekirche)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":130
+  },
+  {
+    "Name":"Tradition (Perainekirche)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":110
+  },
+  {
+    "Name":"Tradition (Phexkirche)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":150
+  },
+  {
+    "Name":"Tradition (Praioskirche)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":130
+  },
+  {
+    "Name":"Tradition (Rondrakirche)",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":["Geweihter"],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":150
+  }
+]

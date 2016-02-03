@@ -259,6 +259,8 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			PageData.Held.NewZauber(&zauber)
 			if zauber.Steigerungsfaktor != "-" {
 				PageData.Held.APAusgeben(basiswerte.Kosten(zauber.Steigerungsfaktor, 0))
+			} else {
+				PageData.Held.APAusgeben(1) // Zaubertrick + Segnung 1 AP
 			}
 			return "/held/page/zauber"
 		}
@@ -275,6 +277,8 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			PageData.Held.NewLiturgie(&liturgie)
 			if liturgie.Steigerungsfaktor != "-" {
 				PageData.Held.APAusgeben(basiswerte.Kosten(liturgie.Steigerungsfaktor, 0))
+			} else {
+				PageData.Held.APAusgeben(1) // Zaubertrick + Segnung 1 AP
 			}
 			return "/held/page/liturgien"
 		}
