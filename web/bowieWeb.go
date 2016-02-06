@@ -359,6 +359,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			}
 			zauber, _ := basiswerte.AlleZauber[item]
 			PageData.Held.NewZauber(&zauber)
+			PageData.Held.Zauber.Get(item).SetMaxErschaffung(PageData.Validator.Grad.Fertigkeit)
 			fmt.Println(zauber)
 			if zauber.Steigerungsfaktor != "-" {
 				PageData.Held.APAusgeben(basiswerte.Kosten(zauber.Steigerungsfaktor, 0))
@@ -378,6 +379,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			}
 			liturgie, _ := basiswerte.AlleLiturgien[item]
 			PageData.Held.NewLiturgie(&liturgie)
+			PageData.Held.Liturgien.Get(item).SetMaxErschaffung(PageData.Validator.Grad.Fertigkeit)
 			if liturgie.Steigerungsfaktor != "-" {
 				PageData.Held.APAusgeben(basiswerte.Kosten(liturgie.Steigerungsfaktor, 0))
 			} else {

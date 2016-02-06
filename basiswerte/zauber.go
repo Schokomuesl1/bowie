@@ -6,11 +6,12 @@ import (
 )
 
 type Zauber struct {
-	Name          string
-	Wert          int
-	Eigenschaften [3]*Eigenschaft
-	dependingOnMe dependenceStorage
-	Weiteres      *ZauberType
+	Name           string
+	Wert           int
+	maxErschaffung int
+	Eigenschaften  [3]*Eigenschaft
+	dependingOnMe  dependenceStorage
+	Weiteres       *ZauberType
 }
 
 func (z Zauber) Register(d DependingValue) {
@@ -40,6 +41,8 @@ func (z *Zauber) Decrement() {
 	z.AddValue(-1)
 }
 
+func (z *Zauber) SetMaxErschaffung(max int) { z.maxErschaffung = max }
+
 func (z *Zauber) SK() string { return z.Weiteres.Steigerungsfaktor }
 
 func (z *Zauber) Value() int { return z.Wert }
@@ -55,7 +58,11 @@ func (z *Zauber) Max() int {
 			max = v.Value()
 		}
 	}
-	return max + 2
+	max += 2 //  höchste eigenschaft +2
+	if max < z.maxErschaffung {
+		return max
+	}
+	return z.maxErschaffung
 }
 
 func (z *Zauber) KannSteigern() string {
