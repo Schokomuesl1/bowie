@@ -56,6 +56,8 @@ func (a *apData) ProzentVerfuegbar() int {
 
 type redirectToStruct struct {
 	RedirectTo string `json:"redirectTo"`
+	Magie      bool   `json:"magie"`
+	Karmal     bool   `json:"karmal"`
 }
 
 var PageData PageDataType
@@ -205,7 +207,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 
 			}
 		}
-	// if we have not found it in eigenschaften, it might be a Talent...
+		// if we have not found it in eigenschaften, it might be a Talent...
 	case "talent":
 		{
 			t := PageData.Held.Talente.Get(item)
@@ -238,11 +240,33 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 		}
 	case "zauber":
 		{
-
+			z := PageData.Held.Zauber.Get(item)
+			if z != nil {
+				kosten := basiswerte.Kosten(z.SK(), z.Value()+val)
+				if kosten > -1 {
+					if val < 0 {
+						kosten *= -1
+					}
+					z.AddValue(val)
+					PageData.Held.APAusgeben(kosten)
+					return "/held/page/magie"
+				}
+			}
 		}
 	case "liturgie":
 		{
-
+			l := PageData.Held.Liturgien.Get(item)
+			if l != nil {
+				kosten := basiswerte.Kosten(l.SK(), l.Value()+val)
+				if kosten > -1 {
+					if val < 0 {
+						kosten *= -1
+					}
+					l.AddValue(val)
+					PageData.Held.APAusgeben(kosten)
+					return "/held/page/karmales"
+				}
+			}
 		}
 	}
 	return ""
@@ -312,9 +336,9 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 				case "SFToAddAllgemein":
 					return "/held/page/allgemeines"
 				case "SFToAddKarmal":
-					return "/held/page/liturgien"
+					return "/held/page/karmales"
 				case "SFToAddMagisch":
-					return "/held/page/zauber"
+					return "/held/page/magie"
 				case "SFToAddKampf":
 					return "/held/page/kampftechniken"
 				default:
@@ -334,12 +358,13 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			}
 			zauber, _ := basiswerte.AlleZauber[item]
 			PageData.Held.NewZauber(&zauber)
+			fmt.Println(zauber)
 			if zauber.Steigerungsfaktor != "-" {
 				PageData.Held.APAusgeben(basiswerte.Kosten(zauber.Steigerungsfaktor, 0))
 			} else {
 				PageData.Held.APAusgeben(1) // Zaubertrick + Segnung 1 AP
 			}
-			return "/held/page/zauber"
+			return "/held/page/magie"
 		}
 	case "liturgie":
 		{
@@ -357,7 +382,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			} else {
 				PageData.Held.APAusgeben(1) // Zaubertrick + Segnung 1 AP
 			}
-			return "/held/page/liturgien"
+			return "/held/page/karmales"
 		}
 	}
 	return ""
@@ -381,22 +406,6 @@ func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action str
 	return ""
 }
 
-/*
-func runAction(c web.C, w http.ResponseWriter, r *http.Request) {
-	//fmt.Printf("Received request: runAction with parameters: action: %s, rest: %s", c.URLParams["action"], c.URLParams["*"])
-	action := c.URLParams["action"]
-	params := strings.Split(c.URLParams["*"], "/")
-	if len(params) > 1 {
-		runActionParams(c, w, r, action, params[1:])
-	}
-	if PageData.Validator != nil {
-		_, PageData.ValidatorMsg = PageData.Validator.Validate()
-	}
-
-	calculateAvailable()
-	renderTemplate(w, "held", &PageData)
-}*/
-
 func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
 	//fmt.Printf("Received request: runAction with parameters: action: %s, rest: %s", c.URLParams["action"], c.URLParams["*"])
 	action := c.URLParams["action"]
@@ -413,7 +422,7 @@ func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//renderTemplate(w, "held", &PageData)
-	redirInfo := redirectToStruct{RedirectTo: redirectToURI}
+	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal()}
 
 	js, err := json.Marshal(redirInfo)
 	if err != nil {
@@ -483,7 +492,7 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	redirInfo := redirectToStruct{RedirectTo: redirectToURI}
+	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal()}
 
 	js, err := json.Marshal(redirInfo)
 	if err != nil {
@@ -529,38 +538,38 @@ func doModEigenschaften(r *http.Request) {
 }
 
 /*func modEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
-	err := r.ParseForm()
-	if err != nil {
-		fmt.Println(err)
-	}
+err := r.ParseForm()
+if err != nil {
+	fmt.Println(err)
+}
 
-	PageData.Held, PageData.Validator = erschaffung.ErschaffeHeld(r.FormValue("erfahrungsgrad"))
-	PageData.Validator.AddAllValidators()
-	PageData.Held.Name = r.FormValue("heldName")
-	PageData.Held.SetSpezies(r.FormValue("spezies"))
-	PageData.Held.APAusgeben(basiswerte.AlleSpezies[r.FormValue("spezies")].APKosten)
-	PageData.Held.SetKultur(r.FormValue("kultur"))
-	PageData.Held.APAusgeben(basiswerte.AlleKulturen[r.FormValue("kultur")].APKosten)
-	PageData.Held.Eigenschaften.Init("MU", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("KL", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("GE", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("KK", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("FF", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("IN", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("CH", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Eigenschaften.Init("KO", PageData.Validator.Grad.Eigenschaft)
-	PageData.Held.Talente.SetErschaffungsMax(PageData.Validator.Grad.Fertigkeit)
-	_, PageData.ValidatorMsg = PageData.Validator.Validate()
+PageData.Held, PageData.Validator = erschaffung.ErschaffeHeld(r.FormValue("erfahrungsgrad"))
+PageData.Validator.AddAllValidators()
+PageData.Held.Name = r.FormValue("heldName")
+PageData.Held.SetSpezies(r.FormValue("spezies"))
+PageData.Held.APAusgeben(basiswerte.AlleSpezies[r.FormValue("spezies")].APKosten)
+PageData.Held.SetKultur(r.FormValue("kultur"))
+PageData.Held.APAusgeben(basiswerte.AlleKulturen[r.FormValue("kultur")].APKosten)
+PageData.Held.Eigenschaften.Init("MU", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("KL", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("GE", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("KK", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("FF", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("IN", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("CH", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Eigenschaften.Init("KO", PageData.Validator.Grad.Eigenschaft)
+PageData.Held.Talente.SetErschaffungsMax(PageData.Validator.Grad.Fertigkeit)
+_, PageData.ValidatorMsg = PageData.Validator.Validate()
 
-	t, _ := template.ParseFiles("template/modSpeziesEigenschaften.tpl")
+t, _ := template.ParseFiles("template/modSpeziesEigenschaften.tpl")
 
-	eigenMod := make([]EigenschaftenModSet, len(PageData.Held.Spezies.EigenschaftsModifikationen))
-	for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
-		eigenMod[i].Label = i
-		eigenMod[i].Modifikation = v
+eigenMod := make([]EigenschaftenModSet, len(PageData.Held.Spezies.EigenschaftsModifikationen))
+for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
+	eigenMod[i].Label = i
+	eigenMod[i].Modifikation = v
 
-	}
-	t.Execute(w, &eigenMod)
+}
+t.Execute(w, &eigenMod)
 }*/
 
 // sub pages
@@ -614,14 +623,14 @@ func pageLiturgien(c web.C, w http.ResponseWriter, r *http.Request) {
 	if PageData.Held == nil {
 		return // empty page if no held...
 	}
-	renderTemplate(w, "partials/liturgien", &PageData)
+	renderTemplate(w, "partials/karmales", &PageData)
 }
 
 func pageZauber(c web.C, w http.ResponseWriter, r *http.Request) {
 	if PageData.Held == nil {
 		return // empty page if no held...
 	}
-	renderTemplate(w, "partials/zauber", &PageData)
+	renderTemplate(w, "partials/magie", &PageData)
 }
 
 func pageFooter(c web.C, w http.ResponseWriter, r *http.Request) {
@@ -674,10 +683,6 @@ func initRoutes() {
 
 	// prepare routes, get/post stuff etc
 	goji.Get("/", startPage)
-	//goji.Post("/held/reset", resetHero)
-	//goji.Post("/held/new", newHero)
-	//goji.Post("/held/modEigenschaften", modEigenschaften)
-	//goji.Get("/held/action/:action/*", runAction)
 	goji.Post("/held/action/:action/*", runActionAndRedirect)
 	goji.Post("/held/complexaction", runComplexActionAndRedirect)
 	goji.Get("/held/isValid", isValid)
@@ -688,12 +693,11 @@ func initRoutes() {
 	goji.Get("/held/page/kampftechniken", pageKampftechniken)
 	goji.Get("/held/page/talente", pageTalente)
 	goji.Get("/held/page/footer", pageFooter)
-	goji.Get("/held/page/liturgien", pageLiturgien)
-	goji.Get("/held/page/zauber", pageZauber)
+	goji.Get("/held/page/karmales", pageLiturgien)
+	goji.Get("/held/page/magie", pageZauber)
 
 	// json-accessors/ partial rest-API?
 	goji.Get("/held/data/ap", getAP)
-	//goji.Get("/held.data/ap", getAP)
 }
 
 func Serve() {

@@ -28,17 +28,17 @@ function jumpToPage(pagename)
     	$("#nav_Talente").siblings('li').removeClass('active');
         $("#nav_Talente").addClass('active');
     }
-    else if (pagename == "Liturgien")
+    else if (pagename == "Karmales")
     {
-      putContentToDiv('/held/page/liturgien', '#main_window');
-      $("#nav_Liturgien").siblings('li').removeClass('active');
-        $("#nav_Liturgien").addClass('active');
+      putContentToDiv('/held/page/karmales', '#main_window');
+      $("#nav_Karmales").siblings('li').removeClass('active');
+        $("#nav_Karmales").addClass('active');
     }
-    else if (pagename == "Zauber")
+    else if (pagename == "Magie")
     {
-      putContentToDiv('/held/page/zauber', '#main_window');
-      $("#nav_Zauber").siblings('li').removeClass('active');
-        $("#nav_Zauber").addClass('active');
+      putContentToDiv('/held/page/magie', '#main_window');
+      $("#nav_Magie").siblings('li').removeClass('active');
+        $("#nav_Magie").addClass('active');
     }
 }
 
@@ -141,6 +141,14 @@ function checkForRedirect(data, status)
 		putContentToDiv(data['redirectTo'])
 		updateProgressBar()
 	}
+	if (data.hasOwnProperty('magie'))
+	{
+		toggleMenuitemVisibility('Magie', data['magie']);
+  	}
+	if (data.hasOwnProperty('karmal'))
+	{
+	  	toggleMenuitemVisibility('Karmales', data['karmal']);
+	}
 	
 }
 
@@ -189,8 +197,6 @@ function extractSelectedUpdateEigenschaften() {
   toggleMenuitemActivity('Neu', false);
   toggleMenuitemVisibility('Kampftechniken', true);
   toggleMenuitemVisibility('Talente', true);
-  toggleMenuitemVisibility('Zauber', true);
-  toggleMenuitemVisibility('Liturgien', true);
 }
 
 

@@ -92,6 +92,24 @@ func (h *Held) APAusgeben(menge int) {
 	h.AP_spent += menge
 }
 
+func (h *Held) IsMagisch() bool {
+	for _, v := range h.Vorteile {
+		if v.Name == "Zauberer" {
+			return true
+		}
+	}
+	return false
+}
+
+func (h *Held) IsKarmal() bool {
+	for _, v := range h.Vorteile {
+		if v.Name == "Geweihter" {
+			return true
+		}
+	}
+	return false
+}
+
 //String prints an overview of the hero
 func (h *Held) String() string {
 	ret := fmt.Sprintf("Name: %s, Kultur: %s\n", h.Name, h.Kultur.Name)

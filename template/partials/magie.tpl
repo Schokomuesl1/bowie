@@ -69,7 +69,7 @@
 <div class ="row">
 	<div class ="col-md-6">
 		<p>
-			{{range .Held.Sonderfertigkeiten.Magisch}}
+			{{range .Held.Sonderfertigkeiten.Magische}}
 			{{.Name}}, 
 			{{end}}
 		</p>

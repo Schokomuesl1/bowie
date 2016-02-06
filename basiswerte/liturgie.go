@@ -6,12 +6,11 @@ import (
 )
 
 type Liturgie struct {
-	Name           string
-	Wert           int
-	maxErschaffung int
-	Eigenschaften  [3]*Eigenschaft
-	dependingOnMe  dependenceStorage
-	Weiteres       *LiturgieType
+	Name          string
+	Wert          int
+	Eigenschaften [3]*Eigenschaft
+	dependingOnMe dependenceStorage
+	Weiteres      *LiturgieType
 }
 
 func (l Liturgie) Register(d DependingValue) {
@@ -33,7 +32,6 @@ func (l *Liturgie) AddValue(value int) {
 	}
 }
 
-func (l *Liturgie) SetMaxErschaffung(max int) { l.maxErschaffung = max }
 func (l *Liturgie) Increment() {
 	l.AddValue(1)
 }
@@ -56,11 +54,7 @@ func (l *Liturgie) Max() int {
 			max = v.Value()
 		}
 	}
-	max += 2 //  höchste eigenschaft +2
-	if max < l.maxErschaffung {
-		return max
-	}
-	return l.maxErschaffung
+	return max + 2
 }
 
 func (l *Liturgie) KannSteigern() string {
@@ -125,12 +119,6 @@ func (l *LiturgieHandler) Get(liturgie string) *Liturgie {
 		return nil
 	}
 	return l.Liturgien[liturgie]
-}
-
-func (l *LiturgieHandler) SetErschaffungsMax(max int) {
-	for _, v := range l.Liturgien {
-		v.SetMaxErschaffung(max)
-	}
 }
 
 type LiturgieListe []*Liturgie

@@ -1,17 +1,16 @@
 package basiswerte
 
 import (
-	//	"fmt"
+	"fmt"
 	"sort"
 )
 
 type Zauber struct {
-	Name           string
-	Wert           int
-	maxErschaffung int
-	Eigenschaften  [3]*Eigenschaft
-	dependingOnMe  dependenceStorage
-	Weiteres       *ZauberType
+	Name          string
+	Wert          int
+	Eigenschaften [3]*Eigenschaft
+	dependingOnMe dependenceStorage
+	Weiteres      *ZauberType
 }
 
 func (z Zauber) Register(d DependingValue) {
@@ -33,7 +32,6 @@ func (z *Zauber) AddValue(value int) {
 	}
 }
 
-func (z *Zauber) SetMaxErschaffung(max int) { z.maxErschaffung = max }
 func (z *Zauber) Increment() {
 	z.AddValue(1)
 }
@@ -42,13 +40,14 @@ func (z *Zauber) Decrement() {
 	z.AddValue(-1)
 }
 
-func (z Zauber) SK() string { return z.Weiteres.Steigerungsfaktor }
+func (z *Zauber) SK() string { return z.Weiteres.Steigerungsfaktor }
 
 func (z *Zauber) Value() int { return z.Wert }
 func (z *Zauber) Min() int   { return 0 }
 func (z *Zauber) Max() int {
 	max := 0
 	for _, v := range z.Eigenschaften {
+		fmt.Println(v)
 		if v == nil {
 			continue
 		}
@@ -56,11 +55,7 @@ func (z *Zauber) Max() int {
 			max = v.Value()
 		}
 	}
-	max += 2 //  höchste eigenschaft +2
-	if max < z.maxErschaffung {
-		return max
-	}
-	return z.maxErschaffung
+	return max + 2
 }
 
 func (z *Zauber) KannSteigern() string {
@@ -68,6 +63,7 @@ func (z *Zauber) KannSteigern() string {
 		// special case: zaubertricks
 		return "disabled"
 	}
+	fmt.Println(z.Value()+1, z.Max())
 	if z.Value()+1 <= z.Max() {
 		return ""
 	}
@@ -125,12 +121,6 @@ func (z *ZauberHandler) Get(Zauber string) *Zauber {
 		return nil
 	}
 	return z.Zaubers[Zauber]
-}
-
-func (z *ZauberHandler) SetErschaffungsMax(max int) {
-	for _, v := range z.Zaubers {
-		v.SetMaxErschaffung(max)
-	}
 }
 
 type ZauberListe []*Zauber
