@@ -39,11 +39,13 @@
     <footer id="page_footer" class="footer" style="padding-top: 50px">
 
     </footer>
-    
-    <div id="main_window" class="container-fluid" role="main" style="padding-top: 55px">
+
+    <div id="warnings_and_errors" class="container-fluid" role="main" style="padding-top: 55px">
+    </div>
+    <div id="main_window" class="container-fluid" role="main" >
       <input type="button" class="btn btn-primary" value="Neuen Held erstellen" onClick="Javascript:jumpToPage('Neu')"/>
     </div>
-    
+
     <script src = "static/js/app.js"> </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

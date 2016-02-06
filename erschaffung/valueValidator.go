@@ -105,6 +105,7 @@ func (e *ErschaffungsValidator) AddAllValidators() {
 	e.AddValidator(EPValidator{})
 	e.AddValidator(FertigkeitsValidator{})
 	e.AddValidator(APValidator{})
+	e.AddValidator(ZauberUndLiturgieValidator{})
 }
 
 // validators here
@@ -141,6 +142,37 @@ func (e FertigkeitsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (r
 	message.Msg = ""
 	message.Type = NONE
 
+	for _, v := range held.Zauber.Zaubers {
+		if v.Value() > 14 {
+			result = false
+			message.Type = ERROR
+			message.Msg = fmt.Sprintf("Zauber %s hat einen Wert von %d. Maximum bei Erschaffung ist 14! ", v.Name, v.Value())
+			return
+		}
+	}
+	for _, v := range held.Liturgien.Liturgien {
+		if v.Value() > 14 {
+			result = false
+			message.Type = ERROR
+			message.Msg = fmt.Sprintf("Liturgie %s hat einen Wert von %d. Maximum bei Erschaffung ist 14! ", v.Name, v.Value())
+			return
+		}
+	}
+
+	message.Type = INFO
+	message.Msg = fmt.Sprintf("Keine Zauber und Liturgien mit einem Wert größer 14 gefunden!")
+	return
+}
+
+// validate max. Zauber und Liturgie-Grad
+type ZauberUndLiturgieValidator struct {
+}
+
+func (e ZauberUndLiturgieValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+	result = true
+	message.Msg = ""
+	message.Type = NONE
+
 	for _, v := range held.Talente.Talente {
 		if v.Value() > grad.Fertigkeit {
 			result = false
@@ -154,6 +186,7 @@ func (e FertigkeitsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (r
 	return
 }
 
+// Validator ausgegebene AP
 type APValidator struct {
 }
 

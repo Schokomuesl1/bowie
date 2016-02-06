@@ -55,9 +55,10 @@ func (a *apData) ProzentVerfuegbar() int {
 }
 
 type redirectToStruct struct {
-	RedirectTo string `json:"redirectTo"`
-	Magie      bool   `json:"magie"`
-	Karmal     bool   `json:"karmal"`
+	RedirectTo        string                         `json:"redirectTo"`
+	Magie             bool                           `json:"magie"`
+	Karmal            bool                           `json:"karmal"`
+	ValidatorMessages []erschaffung.ValidatorMessage `json:"validatorMessages"`
 }
 
 var PageData PageDataType
@@ -422,7 +423,7 @@ func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//renderTemplate(w, "held", &PageData)
-	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal()}
+	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
 
 	js, err := json.Marshal(redirInfo)
 	if err != nil {
@@ -492,7 +493,7 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal()}
+	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
 
 	js, err := json.Marshal(redirInfo)
 	if err != nil {
@@ -536,41 +537,6 @@ func doModEigenschaften(r *http.Request) {
 		}
 	}
 }
-
-/*func modEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
-err := r.ParseForm()
-if err != nil {
-	fmt.Println(err)
-}
-
-PageData.Held, PageData.Validator = erschaffung.ErschaffeHeld(r.FormValue("erfahrungsgrad"))
-PageData.Validator.AddAllValidators()
-PageData.Held.Name = r.FormValue("heldName")
-PageData.Held.SetSpezies(r.FormValue("spezies"))
-PageData.Held.APAusgeben(basiswerte.AlleSpezies[r.FormValue("spezies")].APKosten)
-PageData.Held.SetKultur(r.FormValue("kultur"))
-PageData.Held.APAusgeben(basiswerte.AlleKulturen[r.FormValue("kultur")].APKosten)
-PageData.Held.Eigenschaften.Init("MU", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("KL", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("GE", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("KK", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("FF", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("IN", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("CH", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Eigenschaften.Init("KO", PageData.Validator.Grad.Eigenschaft)
-PageData.Held.Talente.SetErschaffungsMax(PageData.Validator.Grad.Fertigkeit)
-_, PageData.ValidatorMsg = PageData.Validator.Validate()
-
-t, _ := template.ParseFiles("template/modSpeziesEigenschaften.tpl")
-
-eigenMod := make([]EigenschaftenModSet, len(PageData.Held.Spezies.EigenschaftsModifikationen))
-for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
-	eigenMod[i].Label = i
-	eigenMod[i].Modifikation = v
-
-}
-t.Execute(w, &eigenMod)
-}*/
 
 // sub pages
 func pageNew(c web.C, w http.ResponseWriter, r *http.Request) {

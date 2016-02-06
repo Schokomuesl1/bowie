@@ -70,7 +70,6 @@ function putContentToDiv(pagename, divname)
 	
 }
 
-
 function decEigen(item) {
 	doStuff("decrement", "eigenschaft", item);
 }
@@ -149,7 +148,12 @@ function checkForRedirect(data, status)
 	{
 	  	toggleMenuitemVisibility('Karmales', data['karmal']);
 	}
-	
+	var content = "";
+	if (data.hasOwnProperty('validatorMessages'))
+	{
+		content = generateWarningsAndErrors(data['validatorMessages']);
+	}
+	$( "#warnings_and_errors" ).html( content );
 }
 
 
@@ -188,7 +192,6 @@ function extractSelectedUpdateEigenschaften() {
 		i++
 	}
 	request.type = "modEigenschaften"
-	console.log(request)
 	sendPostWithJSONTo("/held/complexaction", request)
   // now we set the active window and make the relevant items visible
 
@@ -214,3 +217,21 @@ function updateProgressBar()
 	putContentToDiv("/held/page/footer", "#page_footer")
 }
 
+function generateWarningsAndErrors(data)
+{
+	var retVal = ""
+	for (i in data) {
+		if (data[i]['Type'] == '2') {
+			// warning
+			retVal += "<div class='alert alert-warning'> <strong>Warnung!</strong> ";
+			retVal += data[i]['Msg'];
+			retVal += "</div>";
+		}
+		else if (data[i]['Type'] == '3') {
+			retVal += "<div class='alert alert-danger'> <strong>Fehler!</strong> ";
+			retVal += data[i]['Msg'];
+			retVal += "</div>";
+		}
+	}
+	return retVal
+}
