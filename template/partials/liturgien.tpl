@@ -46,3 +46,32 @@
 </table>
 </div>
 </div>
+<div class ="row">
+	<div class = "col-md-2">
+		<h3>Karmale Sonderfertigkeiten</h3>
+	</div>
+</div>
+<div class="row">
+	<div class ="col-md-6">
+		<form>
+			<div class="form-group">
+				<label for="SFToAddKarmal">Karmale SF:</label>
+				<select name="SFToAddKarmal" id="SFToAddKarmal">
+					{{range .Available.SF_Karmal}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddKarmal')"/></td>
+			</div>
+		</form>
+	</div>
+</div>
+<div class ="row">
+	<div class ="col-md-6">
+		<p>
+			{{range .Held.Sonderfertigkeiten.Karmale}}
+			{{.Name}}, 
+			{{end}}
+		</p>
+	</div>
+</div>

@@ -6,6 +6,12 @@ import (
 	"github.com/Schokomuesl1/bowie/basiswerte"
 )
 
+type SFListe struct {
+	Allgemeine []*basiswerte.Sonderfertigkeit
+	Karmale    []*basiswerte.Sonderfertigkeit
+	Magische   []*basiswerte.Sonderfertigkeit
+	Kampf      []*basiswerte.Sonderfertigkeit
+}
 type Held struct {
 	Name               string
 	Spezies            basiswerte.SpeziesType
@@ -16,7 +22,7 @@ type Held struct {
 	Eigenschaften      basiswerte.EigenschaftHandler
 	Kampftechniken     basiswerte.KampftechnikHandler
 	Talente            basiswerte.TalentHandler
-	Sonderfertigkeiten []*basiswerte.Sonderfertigkeit
+	Sonderfertigkeiten SFListe
 	Vorteile           []*basiswerte.VorUndNachteil
 	Nachteile          []*basiswerte.VorUndNachteil
 	Liturgien          basiswerte.LiturgieHandler

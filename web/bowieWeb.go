@@ -115,7 +115,7 @@ func calculateAvailable() {
 		if erschaffung.SFAvailable(PageData.Held, &v) {
 			// only append if not already selected
 			selected := false
-			for _, w := range PageData.Held.Sonderfertigkeiten {
+			for _, w := range PageData.Held.Sonderfertigkeiten.Allgemeine {
 				if w.Name == v.Name {
 					selected = true
 					break
@@ -130,7 +130,7 @@ func calculateAvailable() {
 		if erschaffung.SFAvailable(PageData.Held, &v) {
 			// only append if not already selected
 			selected := false
-			for _, w := range PageData.Held.Sonderfertigkeiten {
+			for _, w := range PageData.Held.Sonderfertigkeiten.Karmale {
 				if w.Name == v.Name {
 					selected = true
 					break
@@ -145,7 +145,7 @@ func calculateAvailable() {
 		if erschaffung.SFAvailable(PageData.Held, &v) {
 			// only append if not already selected
 			selected := false
-			for _, w := range PageData.Held.Sonderfertigkeiten {
+			for _, w := range PageData.Held.Sonderfertigkeiten.Magische {
 				if w.Name == v.Name {
 					selected = true
 					break
@@ -160,7 +160,7 @@ func calculateAvailable() {
 		if erschaffung.SFAvailable(PageData.Held, &v) {
 			// only append if not already selected
 			selected := false
-			for _, w := range PageData.Held.Sonderfertigkeiten {
+			for _, w := range PageData.Held.Sonderfertigkeiten.Kampf {
 				if w.Name == v.Name {
 					selected = true
 					break
@@ -283,18 +283,44 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 				return "/held/page/allgemeines"
 			}
 		}
-	case "sf":
+	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf":
 		{
+			var bereich *[]*basiswerte.Sonderfertigkeit
+			switch group {
+			case "SFToAddAllgemein":
+				bereich = &PageData.Held.Sonderfertigkeiten.Allgemeine
+			case "SFToAddKarmal":
+				bereich = &PageData.Held.Sonderfertigkeiten.Karmale
+			case "SFToAddMagisch":
+				bereich = &PageData.Held.Sonderfertigkeiten.Magische
+			case "SFToAddKampf":
+				bereich = &PageData.Held.Sonderfertigkeiten.Kampf
+			default:
+				return ""
+			}
+			fmt.Println(bereich, group)
 			sf := basiswerte.GetSF(item)
 			if sf != nil {
-				for _, v := range PageData.Held.Sonderfertigkeiten {
+				for _, v := range *bereich {
 					if v.Name == sf.Name {
 						return ""
 					}
 				}
-				PageData.Held.Sonderfertigkeiten = append(PageData.Held.Sonderfertigkeiten, sf)
+				*bereich = append(*bereich, sf)
 				PageData.Held.APAusgeben(sf.APKosten)
-				return "/held/page/allgemeines"
+				switch group {
+				case "SFToAddAllgemein":
+					return "/held/page/allgemeines"
+				case "SFToAddKarmal":
+					return "/held/page/liturgien"
+				case "SFToAddMagisch":
+					return "/held/page/zauber"
+				case "SFToAddKampf":
+					return "/held/page/kampftechniken"
+				default:
+					return ""
+				}
+
 			}
 		}
 	case "zauber":

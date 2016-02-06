@@ -26,7 +26,7 @@
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li id="nav_Neu" class="active"><a href="javascript:jumpToPage('Neu')">Neu</a></li>
+            <li id="nav_Neu" class="hidden" class="active"><a href="javascript:jumpToPage('Neu')">Neu</a></li>
             <li id="nav_Allgemeines" class="hidden"><a href="javascript:jumpToPage('Allgemeines')">Allgemeines</a></li>
             <li id="nav_Kampftechniken" class="hidden"><a href="javascript:jumpToPage('Kampftechniken')">Kampftechniken</a></li>
             <li id="nav_Talente" class="hidden"><a href="javascript:jumpToPage('Talente')">Talente</a></li>

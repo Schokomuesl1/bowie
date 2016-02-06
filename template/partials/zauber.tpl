@@ -46,3 +46,32 @@
 </table>
 </div>
 </div>
+<div class ="row">
+	<div class = "col-md-2">
+		<h3>Magische Sonderfertigkeiten</h3>
+	</div>
+</div>
+<div class="row">
+	<div class ="col-md-6">
+		<form>
+			<div class="form-group">
+				<label for="SFToAddMagisch">Magische SF:</label>
+				<select name="SFToAddMagisch" id="SFToAddMagisch">
+					{{range .Available.SF_Magisch}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddMagisch')"/></td>
+			</div>
+		</form>
+	</div>
+</div>
+<div class ="row">
+	<div class ="col-md-6">
+		<p>
+			{{range .Held.Sonderfertigkeiten.Magisch}}
+			{{.Name}}, 
+			{{end}}
+		</p>
+	</div>
+</div>

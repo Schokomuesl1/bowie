@@ -1,15 +1,147 @@
 [
   {
-    "Name":"Aspektkenntnis",
+    "Name":"Aspektkenntnis Antimagie",
     "Vorraussetzungen":{
       "Talente":[],
       "Vorteile":[],
       "NichtNachteil":[],
       "Eigenschaften":[],
-      "Sonderfertigkeiten":[],
+      "Sonderfertigkeiten":["Tradition (Praioskirche)"],
       "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
     },
-    "APKosten":
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Ordnung",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Praioskirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Schild",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Rondrakirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Sturm",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Rondrakirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Magie",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Hesindekirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Wissen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Hesindekirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Handel",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Phexkirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Schatten",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Phexkirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Heilung",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Perainekirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Landwirtschaft",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Perainekirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Tod",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Boronkirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
+  },
+  {
+    "Name":"Aspektkenntnis Traum",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tradition (Boronkirche)"],
+      "Sonstiges":"Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10"
+    },
+    "APKosten":15
   },
   {
     "Name":"Fokussierung",

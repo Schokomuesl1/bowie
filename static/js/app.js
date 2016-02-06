@@ -130,7 +130,7 @@ function addNachteil() {
 function addSF(bereich) {
 	var e = document.getElementById(bereich)	
 	var selectedItem = e.options[e.selectedIndex].value;
-	doStuff("add", "sf", selectedItem);
+	doStuff("add", bereich, selectedItem);
 }
 
 function checkForRedirect(data, status)

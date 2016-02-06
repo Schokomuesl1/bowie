@@ -61,7 +61,43 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 
 	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
 		found := false
-		for _, k := range Held.Sonderfertigkeiten {
+		for _, k := range Held.Sonderfertigkeiten.Allgemeine {
+			if k.Name == v {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return
+		}
+	}
+	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
+		found := false
+		for _, k := range Held.Sonderfertigkeiten.Karmale {
+			if k.Name == v {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return
+		}
+	}
+	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
+		found := false
+		for _, k := range Held.Sonderfertigkeiten.Magische {
+			if k.Name == v {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return
+		}
+	}
+	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
+		found := false
+		for _, k := range Held.Sonderfertigkeiten.Kampf {
 			if k.Name == v {
 				found = true
 				break
@@ -121,9 +157,3 @@ func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUnd
 	}
 	return true
 }
-
-/* Vorteile       []string
-Nachteile      []string
-NichtVorteile  []string
-NichtNachteile []string
-Sonstiges      string*/

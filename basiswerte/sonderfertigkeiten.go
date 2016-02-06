@@ -27,9 +27,6 @@ type VorraussetzungSF struct {
 }
 
 func init() {
-	/*vorteileFile, _ := ioutil.ReadFile("regeln/sonderfertigkeiten/allgemeine.json")
-	AllgemeineSF = make([]Sonderfertigkeit, 0)
-	json.Unmarshal([]byte(string(vorteileFile)), &AllgemeineSF)*/
 	readAndMakeSFList("regeln/sonderfertigkeiten/allgemeine.json", &AllgemeineSF)
 	readAndMakeSFList("regeln/sonderfertigkeiten/karmale.json", &KarmaleSF)
 	readAndMakeSFList("regeln/sonderfertigkeiten/magische.json", &MagischeSF)
