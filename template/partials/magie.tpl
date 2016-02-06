@@ -70,7 +70,7 @@
 	<div class ="col-md-6">
 		<p>
 			{{range .Held.Sonderfertigkeiten.Magische}}
-			{{.Name}}, 
+			{{.Name}} <a href="javascript:removeSF('SFToAddMagisch', '{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
 			{{end}}
 		</p>
 	</div>

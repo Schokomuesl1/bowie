@@ -37,7 +37,7 @@
 				<td>Vorteile</td>
 				<td>
 					{{range .Held.Vorteile}}
-					{{.Name}}, 
+					{{.Name}} <a href="javascript:removeVorteil('{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
 					{{end}}
 				</td>
 			</tr>
@@ -45,7 +45,7 @@
 				<td>Nachteile</td>
 				<td>
 					{{range .Held.Nachteile}}
-					{{.Name}}, 
+					{{.Name}} <a href="javascript:removeNachteil('{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
 					{{end}}
 				</td>
 			</tr>
@@ -53,7 +53,7 @@
 				<td>Allgemeine SF</td>
 				<td>
 					{{range .Held.Sonderfertigkeiten.Allgemeine}}
-					{{.Name}}, 
+					{{.Name}} <a href="javascript:removeSF('SFToAddAllgemein', '{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
 					{{end}}
 				</td>
 			</tr>

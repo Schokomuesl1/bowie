@@ -75,7 +75,7 @@
 	<div class ="col-md-6">
 		<p>
 			{{range .Held.Sonderfertigkeiten.Kampf}}
-			{{.Name}}, 
+			{{.Name}} <a href="javascript:removeSF('SFToAddKampf', '{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
 			{{end}}
 		</p>
 	</div>

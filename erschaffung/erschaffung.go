@@ -1,7 +1,7 @@
 package erschaffung
 
 import (
-	//	"fmt"
+	"fmt"
 	"github.com/Schokomuesl1/bowie/basiswerte"
 	"github.com/Schokomuesl1/bowie/held"
 	"strconv"
@@ -17,13 +17,18 @@ func ErschaffeHeld(erfahrungsgrad string) (*held.Held, *ErschaffungsValidator) {
 	return h, e
 }
 
-func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool) {
+func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool, message string) {
 	result = false
+	message = ""
 	// talente checken
 	for _, v := range SF.Vorraussetzungen.Talente {
 		t := Held.Talente.Get(v[0])
 		v_num, err := strconv.Atoi(v[1])
-		if t == nil || err != nil || t.Value() < v_num {
+		if t == nil || err != nil {
+			return
+		}
+		if t.Value() < v_num {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Talent %s muss mindestens %d betragen, aktuell ist der Wert jedoch %d", SF.Name, v[0], v_num, t.Value())
 			return
 		}
 	}
@@ -32,7 +37,11 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 	for _, v := range SF.Vorraussetzungen.Eigenschaften {
 		t := Held.Eigenschaften.Get(v[0])
 		v_num, err := strconv.Atoi(v[1])
-		if t == nil || err != nil || t.Value() < v_num {
+		if t == nil || err != nil {
+			return
+		}
+		if t.Value() < v_num {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Eigenschaft %s muss mindestens %d betragen, aktuell ist der Wert jedoch %d", SF.Name, v[0], v_num, t.Value())
 			return
 		}
 	}
@@ -47,6 +56,7 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 			}
 		}
 		if !found {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 			return
 		}
 	}
@@ -54,6 +64,7 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 	for _, v := range SF.Vorraussetzungen.NichtNachteil {
 		for _, k := range Held.Vorteile {
 			if k.Name == v {
+				message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Nachteil %s darf nicht gewählt sein!", SF.Name, v)
 				return
 			}
 		}
@@ -68,6 +79,7 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 			}
 		}
 		if !found {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 			return
 		}
 	}
@@ -80,6 +92,7 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 			}
 		}
 		if !found {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 			return
 		}
 	}
@@ -92,6 +105,7 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 			}
 		}
 		if !found {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 			return
 		}
 	}
@@ -100,6 +114,7 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 		for _, k := range Held.Sonderfertigkeiten.Kampf {
 			if k.Name == v {
 				found = true
+				message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 				break
 			}
 		}
@@ -107,14 +122,13 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool)
 			return
 		}
 	}
-	return true
+	return true, ""
 }
 
-func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUndNachteil) (result bool) {
+func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUndNachteil) (result bool, message string) {
 	result = false
-	//fmt.Println(VorOderNachteil)
+	message = ""
 	for _, v := range VorOderNachteil.Vorraussetzungen.Vorteile {
-		//fmt.Println(v)
 		found := false
 		for _, k := range Held.Vorteile {
 			if v == k.Name {
@@ -123,6 +137,7 @@ func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUnd
 			}
 		}
 		if !found {
+			message = fmt.Sprintf("Anforderungen für Vorteil/Nachteil %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", VorOderNachteil.Name, v)
 			return
 		}
 	}
@@ -132,6 +147,7 @@ func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUnd
 		for _, k := range Held.Nachteile {
 			if v == k.Name {
 				found = true
+				message = fmt.Sprintf("Anforderungen für Vorteil/Nachteil %s nicht erfüllt! Nachteil %s muss gewählt sein, fehlt jedoch.", VorOderNachteil.Name, v)
 				break
 			}
 		}
@@ -143,6 +159,7 @@ func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUnd
 	for _, v := range VorOderNachteil.Vorraussetzungen.NichtVorteile {
 		for _, k := range Held.Vorteile {
 			if v == k.Name {
+				message = fmt.Sprintf("Anforderungen für Vorteil/Nachteil %s nicht erfüllt! Vorteil %s darf nicht gewählt sein, ist jedoch vorhanden.", VorOderNachteil.Name, v)
 				return
 			}
 		}
@@ -151,9 +168,10 @@ func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUnd
 	for _, v := range VorOderNachteil.Vorraussetzungen.NichtNachteile {
 		for _, k := range Held.Nachteile {
 			if v == k.Name {
+				message = fmt.Sprintf("Anforderungen für Vorteil/Nachteil %s nicht erfüllt! Nachteil %s darf nicht gewählt sein, ist jedoch vorhanden.", VorOderNachteil.Name, v)
 				return
 			}
 		}
 	}
-	return true
+	return true, ""
 }

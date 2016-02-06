@@ -85,7 +85,8 @@ func calculateAvailable() {
 	PageData.Available.SF_Magisch = PageData.Available.SF_Magisch[:0]
 	PageData.Available.SF_Kampf = PageData.Available.SF_Kampf[:0]
 	for _, v := range basiswerte.Nachteile {
-		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+		ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, &v)
+		if ok {
 			// only append if not already selected
 			selected := false
 			for _, w := range PageData.Held.Nachteile {
@@ -100,7 +101,8 @@ func calculateAvailable() {
 		}
 	}
 	for _, v := range basiswerte.Vorteile {
-		if erschaffung.VorUndNachteilAvailable(PageData.Held, &v) {
+		ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, &v)
+		if ok {
 			// only append if not already selected
 			selected := false
 			for _, w := range PageData.Held.Vorteile {
@@ -115,7 +117,8 @@ func calculateAvailable() {
 		}
 	}
 	for _, v := range basiswerte.AllgemeineSF {
-		if erschaffung.SFAvailable(PageData.Held, &v) {
+		ok, _ := erschaffung.SFAvailable(PageData.Held, &v)
+		if ok {
 			// only append if not already selected
 			selected := false
 			for _, w := range PageData.Held.Sonderfertigkeiten.Allgemeine {
@@ -130,7 +133,8 @@ func calculateAvailable() {
 		}
 	}
 	for _, v := range basiswerte.KarmaleSF {
-		if erschaffung.SFAvailable(PageData.Held, &v) {
+		ok, _ := erschaffung.SFAvailable(PageData.Held, &v)
+		if ok {
 			// only append if not already selected
 			selected := false
 			for _, w := range PageData.Held.Sonderfertigkeiten.Karmale {
@@ -145,7 +149,8 @@ func calculateAvailable() {
 		}
 	}
 	for _, v := range basiswerte.MagischeSF {
-		if erschaffung.SFAvailable(PageData.Held, &v) {
+		ok, _ := erschaffung.SFAvailable(PageData.Held, &v)
+		if ok {
 			// only append if not already selected
 			selected := false
 			for _, w := range PageData.Held.Sonderfertigkeiten.Magische {
@@ -160,7 +165,8 @@ func calculateAvailable() {
 		}
 	}
 	for _, v := range basiswerte.KampfSF {
-		if erschaffung.SFAvailable(PageData.Held, &v) {
+		ok, _ := erschaffung.SFAvailable(PageData.Held, &v)
+		if ok {
 			// only append if not already selected
 			selected := false
 			for _, w := range PageData.Held.Sonderfertigkeiten.Kampf {
@@ -273,6 +279,81 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 	return ""
 }
 
+func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) string {
+	if len(addTo) != 2 {
+		return ""
+	}
+	group := addTo[0]
+	item := addTo[1]
+	switch group {
+	case "vorteil":
+		{
+			vorteil := basiswerte.GetVorteil(item)
+			if vorteil != nil {
+				for i, v := range PageData.Held.Vorteile {
+					if v.Name == vorteil.Name {
+						PageData.Held.Vorteile, PageData.Held.Vorteile[len(PageData.Held.Vorteile)-1] = append(PageData.Held.Vorteile[:i], PageData.Held.Vorteile[i+1:]...), nil
+						PageData.Held.APAusgeben(vorteil.APKosten * -1)
+						return "/held/page/allgemeines"
+					}
+				}
+			}
+		}
+	case "nachteil":
+		{
+			nachteil := basiswerte.GetNachteil(item)
+			if nachteil != nil {
+				for i, v := range PageData.Held.Nachteile {
+					if v.Name == nachteil.Name {
+						PageData.Held.Nachteile, PageData.Held.Nachteile[len(PageData.Held.Nachteile)-1] = append(PageData.Held.Nachteile[:i], PageData.Held.Nachteile[i+1:]...), nil
+						PageData.Held.APAusgeben(nachteil.APKosten * -1)
+						return "/held/page/allgemeines"
+					}
+				}
+			}
+		}
+	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf":
+		{
+			var bereich *[]*basiswerte.Sonderfertigkeit
+			switch group {
+			case "SFToAddAllgemein":
+				bereich = &PageData.Held.Sonderfertigkeiten.Allgemeine
+			case "SFToAddKarmal":
+				bereich = &PageData.Held.Sonderfertigkeiten.Karmale
+			case "SFToAddMagisch":
+				bereich = &PageData.Held.Sonderfertigkeiten.Magische
+			case "SFToAddKampf":
+				bereich = &PageData.Held.Sonderfertigkeiten.Kampf
+			default:
+				return ""
+			}
+			fmt.Println(bereich, group)
+			sf := basiswerte.GetSF(item)
+			if sf != nil {
+				for i, v := range *bereich {
+					if v.Name == sf.Name {
+						(*bereich), (*bereich)[len((*bereich))-1] = append((*bereich)[:i], (*bereich)[i+1:]...), nil
+						PageData.Held.APAusgeben(sf.APKosten * -1)
+						switch group {
+						case "SFToAddAllgemein":
+							return "/held/page/allgemeines"
+						case "SFToAddKarmal":
+							return "/held/page/karmales"
+						case "SFToAddMagisch":
+							return "/held/page/magie"
+						case "SFToAddKampf":
+							return "/held/page/kampftechniken"
+						default:
+							return ""
+						}
+					}
+				}
+			}
+		}
+	}
+	return ""
+}
+
 func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) string {
 	if len(addTo) != 2 {
 		return ""
@@ -350,7 +431,9 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 		}
 	case "zauber":
 		{
-			if !erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Zauberer")) {
+
+			ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Zauberer"))
+			if !ok {
 				return ""
 			}
 			_, exists := basiswerte.AlleZauber[item]
@@ -370,7 +453,8 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 		}
 	case "liturgie":
 		{
-			if !erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Geweihter")) {
+			ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Geweihter"))
+			if !ok {
 				return ""
 			}
 			_, exists := basiswerte.AlleLiturgien[item]
@@ -405,12 +489,15 @@ func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action str
 		{
 			return addItem(c, w, r, params)
 		}
+	case "remove":
+		{
+			return removeItem(c, w, r, params)
+		}
 	}
 	return ""
 }
 
 func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
-	//fmt.Printf("Received request: runAction with parameters: action: %s, rest: %s", c.URLParams["action"], c.URLParams["*"])
 	action := c.URLParams["action"]
 	params := strings.Split(c.URLParams["*"], "/")
 	redirectToURI := ""
@@ -424,7 +511,6 @@ func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
 	if len(redirectToURI) == 0 {
 		return
 	}
-	//renderTemplate(w, "held", &PageData)
 	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
 
 	js, err := json.Marshal(redirInfo)

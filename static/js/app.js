@@ -132,6 +132,18 @@ function addSF(bereich) {
 	doStuff("add", bereich, selectedItem);
 }
 
+function removeVorteil(name) {
+	doStuff("remove", "vorteil", name);
+}
+
+function removeNachteil(name) {
+	doStuff("remove", "nachteil", name);
+}
+
+function removeSF(bereich, name) {
+	doStuff("remove", bereich, name);
+}
+
 function checkForRedirect(data, status)
 {
 	//var obj = $.parseJSON(data);

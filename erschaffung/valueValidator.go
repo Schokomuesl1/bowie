@@ -108,6 +108,7 @@ func (e *ErschaffungsValidator) AddAllValidators() {
 	e.AddValidator(ZauberUndLiturgieValidator{})
 	e.AddValidator(VorteilUndNachteilValidator{vorteil: true})
 	e.AddValidator(VorteilUndNachteilValidator{vorteil: false})
+	e.AddValidator(VorraussetzungsValidator{})
 }
 
 // validators here
@@ -233,5 +234,84 @@ func (e APValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result boo
 		message.Type = ERROR
 		message.Msg = fmt.Sprintf("%d AP zuviel verbraucht!", held.AP)
 	}
+	return
+}
+
+type VorraussetzungsValidator struct {
+}
+
+func (e VorraussetzungsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+	result = true
+	message.Msg = ""
+	message.Type = NONE
+	//func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUndNachteil) (result bool, message string)
+	for _, v := range held.Vorteile {
+		ok, msg := VorUndNachteilAvailable(held, v)
+		if !ok {
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += msg
+			message.Type = ERROR
+			result = false
+		}
+	}
+	for _, v := range held.Nachteile {
+		ok, msg := VorUndNachteilAvailable(held, v)
+		if !ok {
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += msg
+			message.Type = ERROR
+			result = false
+		}
+	}
+	for _, v := range held.Sonderfertigkeiten.Allgemeine {
+		ok, msg := SFAvailable(held, v)
+		if !ok {
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += msg
+			message.Type = ERROR
+			result = false
+		}
+	}
+	for _, v := range held.Sonderfertigkeiten.Karmale {
+		ok, msg := SFAvailable(held, v)
+		if !ok {
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += msg
+			message.Type = ERROR
+			result = false
+		}
+	}
+	for _, v := range held.Sonderfertigkeiten.Magische {
+		ok, msg := SFAvailable(held, v)
+		if !ok {
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += msg
+			message.Type = ERROR
+			result = false
+		}
+	}
+	for _, v := range held.Sonderfertigkeiten.Kampf {
+		ok, msg := SFAvailable(held, v)
+		if !ok {
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += msg
+			message.Type = ERROR
+			result = false
+		}
+	}
+
+	//func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool, message string)
 	return
 }
