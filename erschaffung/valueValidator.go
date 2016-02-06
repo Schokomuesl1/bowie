@@ -106,6 +106,8 @@ func (e *ErschaffungsValidator) AddAllValidators() {
 	e.AddValidator(FertigkeitsValidator{})
 	e.AddValidator(APValidator{})
 	e.AddValidator(ZauberUndLiturgieValidator{})
+	e.AddValidator(VorteilUndNachteilValidator{vorteil: true})
+	e.AddValidator(VorteilUndNachteilValidator{vorteil: false})
 }
 
 // validators here
@@ -183,6 +185,37 @@ func (e ZauberUndLiturgieValidator) Validate(grad *Erfahrungsgrad, held *held.He
 	}
 	message.Type = INFO
 	message.Msg = fmt.Sprintf("Keine Fertigkeit mit einem Wert größer %d gefunden!", grad.Fertigkeit)
+	return
+}
+
+// Validator ausgegebene AP
+type VorteilUndNachteilValidator struct {
+	vorteil bool
+}
+
+func (e VorteilUndNachteilValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+	result = true
+	message.Msg = ""
+	message.Type = NONE
+	sum := 0
+	if e.vorteil {
+		for _, v := range held.Vorteile {
+			sum += v.APKosten
+		}
+		if sum > 80 {
+			message.Msg = fmt.Sprintf("Zuviele Vorteile! Maximal 80 AP in Vorteilen - genutzt: %d!", sum)
+			message.Type = ERROR
+		}
+
+	} else {
+		for _, v := range held.Nachteile {
+			sum += v.APKosten
+		}
+		if sum < -80 {
+			message.Msg = fmt.Sprintf("Zuviele Nachteile! Maximal -80 AP in Nachteilen - genutzt: %d!", sum)
+			message.Type = ERROR
+		}
+	}
 	return
 }
 

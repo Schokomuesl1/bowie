@@ -2,41 +2,142 @@
     {
         "Name": "Andergaster",
         "Talente": [
-            {"Id": "Holzbearbeitung", "Value": 2},
-            {"Id": "Orientierung", "Value": 1},
-            {"Id": "Pflanzenkunde", "Value": 1},
-            {"Id": "Sagen& Legenden", "Value": 1},
-            {"Id": "Tierkunde", "Value": 1},
-            {"Id": "Wildnisleben", "Value": 2}
+            ["Holzbearbeitung","2"],
+            ["Orientierung","1"],
+            ["Pflanzenkunde","1"],
+            ["Sagen& Legenden", "1"],
+            ["Tierkunde","1"],
+            ["Wildnisleben","2"]
         ],
         "APKosten": 20
     },
     {
         "Name": "Aranier",
         "Talente": [
-            {"Id":"Betören", "Value": 1},
-            {"Id":"Brett-& Glücksspiel", "Value": 1},
-            {"Id":"Gassenwissen", "Value": 2},
-            {"Id":"Handel", "Value": 2},
-            {"Id":"Menschenkenntnis", "Value": 1},
-            {"Id":"Rechnen", "Value": 1},
-            {"Id":"Sagen& Legenden", "Value": 1},
-            {"Id":"Stoffbearbeitung", "Value": 1},
-            {"Id":"Überreden", "Value": 2}
+            ["Betören", "1"],
+            ["Brett-& Glücksspiel", "1"],
+            ["Gassenwissen", "2"],
+            ["Handel", "2"],
+            ["Menschenkenntnis", "1"],
+            ["Rechnen", "1"],
+            ["Sagen& Legenden", "1"],
+            ["Stoffbearbeitung", "1"],
+            ["Überreden", "2"]
         ],
         "APKosten": 26
     },
     {
         "Name": "Bornländer",
         "Talente": [
-            {"Id": "Fährtensuchen", "Value":1},
-            {"Id": "Holzbearbeitung", "Value":2},
-            {"Id": "Lebensmittelbearbeitung", "Value":1},
-            {"Id": "Orientierung", "Value":1},
-            {"Id": "Pflanzenkunde", "Value":1},
-            {"Id": "Wildnisleben", "Value":1},
-            {"Id": "Zechen", "Value":2}
+            ["Fährtensuchen","1"],
+            ["Holzbearbeitung","2"],
+            ["Lebensmittelbearbeitung","1"],
+            ["Orientierung","1"],
+            ["Pflanzenkunde","1"],
+            ["Wildnisleben","1"],
+            ["Zechen","2"]
         ],
         "APKosten": 18
+    },
+    {
+        "Name": "Fjarninger",
+        "Talente": [
+            ["Einschüchtern","2"],
+            ["Fährtensuchen","1"],
+            ["Körperbeherrschung","1"],
+            ["Kraftakt","2"],
+            ["Metallbearbeitung","1"],
+            ["Orientierung","2"],
+            ["Selbstbeherrschung","1"],
+            ["Steinbearbeitung","1"],
+            ["Wildnisleben","2"]
+        ],
+        "APKosten": 33
+    },
+    {
+        "Name": "Horasier",
+        "Talente": [
+            ["Betören","1"],
+            ["Boote& Schiffe", "1"],
+            ["Etikette","2"],
+            ["Gassenwissen","2"],
+            ["Geographie","1"],
+            ["Geschichtswissen","1"],
+            ["Handel","1"],
+            ["Mechanik","1"],
+            ["Rechnen","2"],
+            ["Rechtskunde","1"],
+            ["Tanzen","1"]
+        ],
+        "APKosten": 27
+    },
+    {
+        "Name": "Maraskaner",
+        "Talente": [
+            ["Götter& Kulte", "1"],
+            ["Heilkunde Gift", "2"],
+            ["Orientierung", "1"],
+            ["Pflanzenkunde", "2"],
+            ["Tierkunde", "2"],
+            ["Verbergen", "1"],
+            ["Wildnisleben", "1"]
+        ],
+        "APKosten": 26
+    },
+    {
+        "Name": "Mhanadistani",
+        "Talente": [
+            ["Brett& Glücksspiel", "2"],
+            ["Gassenwissen", "2"],
+            ["Geschichtswissen", "1"],
+            ["Götter& Kulte", "2"],
+            ["Handel", "2"],
+            ["Magiekunde", "1"],
+            ["Sagen& Legenden", "2"],
+            ["Überreden", "1"]
+        ],
+        "APKosten": 28
+    },
+    {
+        "Name": "Mittelreicher",
+        "Talente": [
+            ["Holzbearbeitung", "1"],
+            ["Metallbearbeitung", "1"],
+            ["Pflanzenkunde", "1"],
+            ["Stoffbearbeitung", "1"],
+            ["Tierkunde", "1"]
+        ],
+        "APKosten": 12
+    },
+    {
+        "Name": "Mohas",
+        "Talente": [
+            ["Fährtensuchen", "1"],
+            ["Heilkunde Gift", "1"],
+            ["Körperbeherrschung", "1"],
+            ["Orientierung", "1"],
+            ["Pflanzenkunde", "2"],
+            ["Sagen& Legenden", "1"],
+            ["Sinnenschärfe", "1"],
+            ["Tierkunde", "2"],
+            ["Verbergen", "1"],
+            ["Wildnisleben", "2"]
+        ],
+        "APKosten": 38
+    },
+    {
+        "Name": "Nivesen",
+        "Talente": [
+            ["Fährtensuchen", "2"],
+            ["Fahrzeuge", "1"],
+            ["Orientierung", "2"],
+            ["Pflanzenkunde", "1"],
+            ["Sagen& Legenden", "2"],
+            ["Sinnenschärfe", "1"],
+            ["Tierkunde", "2"],
+            ["Verbergen", "1"],
+            ["Wildnisleben", "2"]
+        ],
+        "APKosten": 37
     }
 ]

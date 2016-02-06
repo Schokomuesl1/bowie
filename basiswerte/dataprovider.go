@@ -3,6 +3,8 @@ package basiswerte
 import (
 	"encoding/json"
 	"io/ioutil"
+	"log"
+	"strconv"
 )
 
 var AlleEigenschaften map[string]string
@@ -29,13 +31,26 @@ func init() {
 	file3, _ := ioutil.ReadFile("regeln/talente.json")
 	AlleTalente = make([]TalentType, 0)
 	json.Unmarshal([]byte(string(file3)), &AlleTalente)
-
 	file4, _ := ioutil.ReadFile("regeln/kulturen.json")
-	kulturTmp := make([]KulturType, 0)
+	kulturTmp := make([]KulturTemp, 0)
 	AlleKulturen = make(map[string]KulturType)
 	json.Unmarshal([]byte(string(file4)), &kulturTmp)
 	for _, v := range kulturTmp {
-		AlleKulturen[v.Name] = v
+		var k KulturType
+		k.APKosten = v.APKosten
+		k.Name = v.Name
+		k.Talente = make([]ModPair, len(v.Talente))
+		for i, t := range v.Talente {
+			var m ModPair
+			m.Id = t[0]
+			t_num, err := strconv.Atoi(t[1])
+			if err != nil {
+				log.Fatalln("Error while reading Kulturwerte, check format. Currently reading", k.Name, "- Error was: ", err)
+			}
+			m.Value = t_num
+			k.Talente[i] = m
+		}
+		AlleKulturen[k.Name] = k
 	}
 	file5, _ := ioutil.ReadFile("regeln/kosten.json")
 	kostenTmp := make([]SKType, 0)
@@ -104,7 +119,11 @@ type ModPair struct {
 	Id    string
 	Value int
 }
-
+type KulturTemp struct {
+	Name     string
+	Talente  [][2]string
+	APKosten int
+}
 type KulturType struct {
 	Name     string
 	Talente  []ModPair
