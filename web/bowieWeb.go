@@ -779,7 +779,8 @@ func initRoutes() {
 	goji.Get("/held/data/ap", getAP)
 }
 
-func Serve() {
+func Serve(done chan bool) {
 	initRoutes()
 	goji.Serve()
+	done <- true
 }

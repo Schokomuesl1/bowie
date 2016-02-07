@@ -6,6 +6,7 @@ import (
 	"github.com/Schokomuesl1/bowie/erschaffung"
 	"github.com/Schokomuesl1/bowie/held"
 	"github.com/Schokomuesl1/bowie/web"
+	"github.com/toqueteos/webbrowser"
 	"html/template"
 	"net/http"
 	//"os"
@@ -64,5 +65,11 @@ func heldHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	bowieweb.Serve()
+	done := make(chan bool, 1)
+
+	go bowieweb.Serve(done)
+	// start web browser
+	webbrowser.Open("http://localhost:8000")
+	// wait for bowieweb to finish serving
+	<-done
 }
