@@ -1,0 +1,339 @@
+[
+{
+	"Name":"Barde",
+	"Kommentar": "Sprachen und Schriften für 16 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Dolche", "8"]
+	],
+	"KampftechnikenAuswahl":[],
+	"Talente":[
+		["Singen", "7"],
+		["Tanzen", "2"],
+		["Bekehren& Überzeugen", "2"],
+		["Betören", "2"],
+		["Etikette", "4"],
+		["Gassenwissen", "4"],
+		["Menschenkenntnis", "5"],
+		["Überreden", "5"],
+		["Wildnisleben", "2"],
+		["Geographie", "4"],
+		["Geschichtswissen", "4"],
+		["Götter& Kulte", "4"],
+		["Rechnen", "3"],
+		["Rechtskunde", "2"],
+		["Sagen& Legenden", "5"],
+		["Holzbearbeitung", "3"],
+		["Musizieren", "7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
+	"APKosten":	150
+},
+{
+	"Name":"Barde (Geschichtenerzähler)",
+	"Kommentar": "Sprachen und Schriften für 16 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Dolche", "8"]
+	],
+	"KampftechnikenAuswahl":[],
+	"Talente":[
+		["Singen", "0"],
+		["Tanzen", "2"],
+		["Bekehren& Überzeugen", "2"],
+		["Betören", "2"],
+		["Etikette", "4"],
+		["Gassenwissen", "7"],
+		["Menschenkenntnis", "5"],
+		["Überreden", "5"],
+		["Wildnisleben", "2"],
+		["Geographie", "4"],
+		["Geschichtswissen", "4"],
+		["Götter& Kulte", "4"],
+		["Rechnen", "3"],
+		["Rechtskunde", "2"],
+		["Sagen& Legenden", "7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
+	"APKosten":	144
+},
+{
+	"Name":"Barde (Haimamud)",
+	"Kommentar": "Sprachen und Schriften für 16 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur": ["Aranier", "Mhanadistani", "Novadis"]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Dolche", "8"]
+	],
+	"KampftechnikenAuswahl":[],
+	"Talente":[
+		["Singen", "0"],
+		["Tanzen", "2"],
+		["Bekehren& Überzeugen", "2"],
+		["Betören", "2"],
+		["Etikette", "4"],
+		["Gassenwissen", "7"],
+		["Menschenkenntnis", "5"],
+		["Überreden", "5"],
+		["Wildnisleben", "2"],
+		["Geographie", "4"],
+		["Geschichtswissen", "4"],
+		["Götter& Kulte", "4"],
+		["Rechnen", "3"],
+		["Rechtskunde", "2"],
+		["Sagen& Legenden", "7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
+	"APKosten":	144
+},
+{
+	"Name":"Barde (Skalde)",
+	"Kommentar": "Sprachen und Schriften für 16 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur": ["Thorwaler"]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Dolche", "8"],
+		["Hiebwaffen", "8"]
+	],
+	"KampftechnikenAuswahl":[],
+	"Talente":[
+		["Singen", "7"],
+		["Tanzen", "2"],
+		["Bekehren& Überzeugen", "2"],
+		["Betören", "2"],
+		["Etikette", "4"],
+		["Gassenwissen", "4"],
+		["Menschenkenntnis", "5"],
+		["Überreden", "5"],
+		["Wildnisleben", "2"],
+		["Geographie", "4"],
+		["Geschichtswissen", "4"],
+		["Götter& Kulte", "4"],
+		["Rechnen", "3"],
+		["Rechtskunde", "2"],
+		["Sagen& Legenden", "8"],
+		["Holzbearbeitung", "3"],
+		["Musizieren", "7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
+	"APKosten":	162
+},
+{
+	"Name":"Gardist",
+	"Kommentar": "Sprachen und Schriften für 10 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["KO", "13"],
+			["KK", "13"]
+		],
+		"Kultur":[]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Armbrüste", "10"],
+		["Hiebwaffen", "8"]
+	],
+	"KampftechnikenAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Hiebwaffen",
+				"Schwerter",
+				"Stangenwaffen"
+			],
+			"ZuWaehlen":2,
+			"Wert":10
+		}
+	],
+	"Talente":[
+		["Körperbeherrschung", "3"],
+		["Selbstbeherrschung", "4"],
+		["Sinnesschärfe", "5"],
+		["Einschüchtern", "4"],
+		["Etikette", "3"],
+		["Gassenwissen", "6"],
+		["Menschenkenntnis", "3"],
+		["Überreden", "2"],
+		["Willenskraft", "4"],
+		["Fesseln", "4"],
+		["Orientierung", "5"],
+		["Götter& Kulte", "4"],
+		["Kriegskunst", "2"],
+		["Rechtskunde", "5"],
+		["Fahrzeuge", "4"],
+		["Heilkunde Wunden", "4"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Belastungsgewöhnung I",
+		"Wuchtschlag I"
+	],
+	"APKosten":	246
+},
+{
+	"Name":"Gardist (Aufseher)",
+	"Kommentar": "Sprachen und Schriften für 10 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["KO", "13"],
+			["KK", "13"]
+		],
+		"Kultur":[]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Armbrüste", "10"],
+		["Hiebwaffen", "8"]
+	],
+	"KampftechnikenAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Hiebwaffen",
+				"Schwerter",
+				"Stangenwaffen"
+			],
+			"ZuWaehlen":2,
+			"Wert":10
+		}
+	],
+	"Talente":[
+		["Körperbeherrschung", "3"],
+		["Selbstbeherrschung", "4"],
+		["Sinnesschärfe", "5"],
+		["Einschüchtern", "7"],
+		["Etikette", "3"],
+		["Gassenwissen", "6"],
+		["Menschenkenntnis", "3"],
+		["Überreden", "2"],
+		["Willenskraft", "4"],
+		["Fährtensuche", "2"],
+		["Fesseln", "4"],
+		["Orientierung", "5"],
+		["Götter& Kulte", "4"],
+		["Kriegskunst", "2"],
+		["Rechtskunde", "5"],
+		["Heilkunde Wunden", "4"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Wuchtschlag I"
+	],
+	"APKosten":	235
+},
+{
+	"Name":"Gardist (Kerkermeister)",
+	"Kommentar": "Sprachen und Schriften für 10 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["KO", "13"],
+			["KK", "13"]
+		],
+		"Kultur":[]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Armbrüste", "10"],
+		["Hiebwaffen", "8"]
+	],
+	"KampftechnikenAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Hiebwaffen",
+				"Schwerter",
+				"Stangenwaffen"
+			],
+			"ZuWaehlen":2,
+			"Wert":10
+		}
+	],
+	"Talente":[
+		["Körperbeherrschung", "3"],
+		["Selbstbeherrschung", "4"],
+		["Sinnesschärfe", "5"],
+		["Bekehren& Überzeugen", "2"],
+		["Einschüchtern", "7"],
+		["Etikette", "3"],
+		["Gassenwissen", "6"],
+		["Menschenkenntnis", "3"],
+		["Überreden", "2"],
+		["Willenskraft", "4"],
+		["Fesseln", "7"],
+		["Orientierung", "5"],
+		["Götter& Kulte", "4"],
+		["Kriegskunst", "2"],
+		["Rechtskunde", "5"],
+		["Fahrzeuge", "4"],
+		["Heilkunde Wunden", "4"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Wuchtschlag I"
+	],
+	"APKosten":	246
+},
+{
+	"Name":"Gardist (Zöllner)",
+	"Kommentar": "Sprachen und Schriften für 10 AP.",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["KO", "13"],
+			["KK", "13"]
+		],
+		"Kultur":[]
+	},
+	"Kampftechniken":[
+		["Raufen", "8"],
+		["Armbrüste", "10"],
+		["Hiebwaffen", "8"]
+	],
+	"KampftechnikenAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Hiebwaffen",
+				"Schwerter",
+				"Stangenwaffen"
+			],
+			"ZuWaehlen":2,
+			"Wert":10
+		}
+	],
+	"Talente":[
+		["Körperbeherrschung", "3"],
+		["Selbstbeherrschung", "4"],
+		["Sinnesschärfe", "5"],
+		["Einschüchtern", "4"],
+		["Etikette", "3"],
+		["Gassenwissen", "6"],
+		["Menschenkenntnis", "7"],
+		["Überreden", "2"],
+		["Willenskraft", "4"],
+		["Fesseln", "4"],
+		["Orientierung", "5"],
+		["Götter& Kulte", "4"],
+		["Kriegskunst", "2"],
+		["Rechtskunde", "5"],
+		["Fahrzeuge", "4"],
+		["Heilkunde Wunden", "4"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Belastungsgewöhnung I",
+		"Wuchtschlag I"
+	],
+	"APKosten":	246
+}
+
+]
