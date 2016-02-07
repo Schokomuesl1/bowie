@@ -56,9 +56,6 @@ function toggleMenuitemVisibility(pagename, visible)
 // used to load stuff somewhere
 function putContentToDiv(pagename, divname)
 {
-	console.log("putContentToDiv")
-	console.log(pagename)
-	console.log(divname)
 	if (! divname)
 	{
 		$.get( pagename , function( data )	{ $( "#main_window" ).html( data ); } );
@@ -132,12 +129,8 @@ function addSF(bereich) {
 	doStuff("add", bereich, selectedItem);
 }
 
-function removeVorteil(name) {
-	doStuff("remove", "vorteil", name);
-}
-
-function removeNachteil(name) {
-	doStuff("remove", "nachteil", name);
+function removeVTNT(name) {
+	doStuff("remove", "vorteilnachteil", name);
 }
 
 function removeSF(bereich, name) {
@@ -147,10 +140,13 @@ function removeSF(bereich, name) {
 function checkForRedirect(data, status)
 {
 	//var obj = $.parseJSON(data);
+	console.log(data);
 	if (data.hasOwnProperty('redirectTo'))
 	{
-		putContentToDiv(data['redirectTo'])
-		updateProgressBar()
+		if (data['redirectTo'] != "") {
+			putContentToDiv(data['redirectTo'])
+			updateProgressBar()
+		}
 	}
 	if (data.hasOwnProperty('magie'))
 	{
@@ -166,12 +162,62 @@ function checkForRedirect(data, status)
 		content = generateWarningsAndErrors(data['validatorMessages']);
 	}
 	$( "#warnings_and_errors" ).html( content );
+	var notification = "";
+	if (data.hasOwnProperty('notificationMsg'))
+	{
+		console.log("found notification msg");
+		console.log(data['notificationMsg']);
+		notification = data['notificationMsg'];
+	}
+	console.log(notification);
+	if (notification != "") {
+		$.notify({
+			// options
+			icon: 'glyphicon glyphicon-warning-sign',
+			title: 'Warnung:',
+			message: notification
+		},{
+			// settings
+			element: 'body',
+			position: null,
+			type: "warning",
+			allow_dismiss: true,
+			newest_on_top: false,
+			showProgressbar: false,
+			placement: {
+				from: "top",
+				align: "right"
+			},
+			offset: 20,
+			spacing: 10,
+			z_index: 1031,
+			delay: 5000,
+			timer: 1000,
+			url_target: '_blank',
+			mouse_over: null,
+			animate: {
+				enter: 'animated bounceInLeft',
+				exit: 'animated bounceOutDown'
+			},
+			onShow: null,
+			onShown: null,
+			onClose: null,
+			onClosed: null,
+			icon_type: 'class',
+			template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+				'<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+				'<span data-notify="icon"></span> ' +
+				'<span data-notify="title">{1}</span> ' +
+				'<span data-notify="message">{2}</span>' +
+				'<a href="{3}" target="{4}" data-notify="url"></a>' +
+			'</div>' 
+		});
+	}
 }
 
 
 // this is a hack - each click replaces the whole page. Rework this after switchung to a sensible API
 function doStuff(action, group, item) {	
-	console.log("/held/action/"+action+"/"+group+"/"+item);
 
 	$.post("/held/action/"+action+"/"+group+"/"+item,
     	{},
@@ -196,9 +242,7 @@ function extractSelectedNewHeld() {
 function extractSelectedUpdateEigenschaften() {
 	var request = new Object();
 	var i = 0
-	console.log(document.getElementById("modifikationSelect"+i.toString()))
 	while (!(!document.getElementById("modifikationSelect"+i.toString()))) {
-		console.log(document.getElementById("modifikationSelect"+i.toString()))
 		var e = document.getElementById("modifikationSelect"+i.toString());
 		request[i.toString()] = e.options[e.selectedIndex].value;
 		i++

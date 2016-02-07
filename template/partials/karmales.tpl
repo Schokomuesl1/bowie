@@ -56,7 +56,7 @@
 		<form>
 			<div class="form-group">
 				<label for="SFToAddKarmal">Karmale SF:</label>
-				<select name="SFToAddKarmal" id="SFToAddKarmal">
+				<select class="form-control" name="SFToAddKarmal" id="SFToAddKarmal">
 					{{range .Available.SF_Karmal}}
 					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
 					{{end}}

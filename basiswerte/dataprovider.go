@@ -152,8 +152,9 @@ type ZauberType struct {
 	Reichweite        ReichweiteMitMod
 	Wirkungsdauer     string
 	Zielkategorie     []string
-	Verbreitung       [][2]string
+	Verbreitung       []string
 	Steigerungsfaktor string
+	Merkmale          []string
 }
 
 type ProbeMitMod struct {

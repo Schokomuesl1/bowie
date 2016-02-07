@@ -11,6 +11,7 @@
   <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="static/css/normalize.css" rel="stylesheet">
+  <link href="static/css/animate.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,10 +47,11 @@
       <input type="button" class="btn btn-primary" value="Neuen Held erstellen" onClick="Javascript:jumpToPage('Neu')"/>
     </div>
 
-    <script src = "static/js/app.js"> </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src = "static/js/notify-min.js"> </script>
+    <script src = "static/js/app.js"> </script>
   </body>
   </html>

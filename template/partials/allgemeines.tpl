@@ -37,7 +37,7 @@
 				<td>Vorteile</td>
 				<td>
 					{{range .Held.Vorteile}}
-					{{.Name}} <a href="javascript:removeVorteil('{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
+					{{.Name}}<a href="javascript:removeVTNT('{{.Name}}');"><span class='{{.DeleteButtonIfApplicable}}'></span></a>,
 					{{end}}
 				</td>
 			</tr>
@@ -45,7 +45,7 @@
 				<td>Nachteile</td>
 				<td>
 					{{range .Held.Nachteile}}
-					{{.Name}} <a href="javascript:removeNachteil('{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
+					{{.Name}}<a href="javascript:removeVTNT('{{.Name}}');"><span class='{{.DeleteButtonIfApplicable}}'></span></a>,
 					{{end}}
 				</td>
 			</tr>

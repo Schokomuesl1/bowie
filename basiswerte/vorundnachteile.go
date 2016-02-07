@@ -12,6 +12,7 @@ type VorUndNachteil struct {
 	Name             string
 	Vorraussetzungen VorraussetzungVorteilNachteil
 	APKosten         int
+	FromSpezies      bool // initializes by default to false which is good :P
 }
 
 type VorraussetzungVorteilNachteil struct {
@@ -30,6 +31,13 @@ func init() {
 	nachteileFile, _ := ioutil.ReadFile("regeln/VorUndNachteile/nachteile.json")
 	Nachteile = make([]VorUndNachteil, 0)
 	json.Unmarshal([]byte(string(nachteileFile)), &Nachteile)
+}
+
+func (vn *VorUndNachteil) DeleteButtonIfApplicable() string {
+	if !vn.FromSpezies {
+		return "text-danger glyphicon glyphicon-remove"
+	}
+	return ""
 }
 
 func GetVorteil(name string) *VorUndNachteil {

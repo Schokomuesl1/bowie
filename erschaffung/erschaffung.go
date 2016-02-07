@@ -14,6 +14,7 @@ func ErschaffeHeld(erfahrungsgrad string) (*held.Held, *ErschaffungsValidator) {
 		return nil, nil
 	}
 	h.AP = e.Grad.AP
+	h.ZauberCountMax = e.Grad.Zauber
 	return h, e
 }
 

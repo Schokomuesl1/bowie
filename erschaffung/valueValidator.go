@@ -246,7 +246,7 @@ func (e VorraussetzungsValidator) Validate(grad *Erfahrungsgrad, held *held.Held
 	message.Type = NONE
 	//func VorUndNachteilAvailable(Held *held.Held, VorOderNachteil *basiswerte.VorUndNachteil) (result bool, message string)
 	for _, v := range held.Vorteile {
-		ok, msg := VorUndNachteilAvailable(held, v)
+		ok, msg := VorUndNachteilAvailable(held, &v)
 		if !ok {
 			if len(message.Msg) != 0 {
 				message.Msg += "<br>"
@@ -257,7 +257,7 @@ func (e VorraussetzungsValidator) Validate(grad *Erfahrungsgrad, held *held.Held
 		}
 	}
 	for _, v := range held.Nachteile {
-		ok, msg := VorUndNachteilAvailable(held, v)
+		ok, msg := VorUndNachteilAvailable(held, &v)
 		if !ok {
 			if len(message.Msg) != 0 {
 				message.Msg += "<br>"

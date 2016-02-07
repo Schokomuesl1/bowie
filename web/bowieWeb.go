@@ -56,6 +56,7 @@ func (a *apData) ProzentVerfuegbar() int {
 
 type redirectToStruct struct {
 	RedirectTo        string                         `json:"redirectTo"`
+	NotificationMsg   string                         `json:"notificationMsg"`
 	Magie             bool                           `json:"magie"`
 	Karmal            bool                           `json:"karmal"`
 	ValidatorMessages []erschaffung.ValidatorMessage `json:"validatorMessages"`
@@ -191,9 +192,9 @@ func resetHero(c web.C, w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Received request: resetHero")
 }
 
-func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string, val int) string {
+func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string, val int) (string, string) {
 	if len(addTo) != 2 {
-		return ""
+		return "", ""
 	}
 	group := addTo[0]
 	item := addTo[1]
@@ -209,7 +210,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 					}
 					e.Add(val)
 					PageData.Held.APAusgeben(kosten)
-					return "/held/page/allgemeines"
+					return "/held/page/allgemeines", ""
 				}
 
 			}
@@ -226,7 +227,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 					}
 					t.AddValue(val)
 					PageData.Held.APAusgeben(kosten)
-					return "/held/page/talente"
+					return "/held/page/talente", ""
 				}
 			}
 		}
@@ -241,7 +242,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 					}
 					t.AddValue(val)
 					PageData.Held.APAusgeben(kosten)
-					return "/held/page/kampftechniken"
+					return "/held/page/kampftechniken", ""
 				}
 			}
 		}
@@ -256,7 +257,7 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 					}
 					z.AddValue(val)
 					PageData.Held.APAusgeben(kosten)
-					return "/held/page/magie"
+					return "/held/page/magie", ""
 				}
 			}
 		}
@@ -271,43 +272,55 @@ func addToValue(c web.C, w http.ResponseWriter, r *http.Request, addTo []string,
 					}
 					l.AddValue(val)
 					PageData.Held.APAusgeben(kosten)
-					return "/held/page/karmales"
+					return "/held/page/karmales", ""
 				}
 			}
 		}
 	}
-	return ""
+	return "", ""
 }
 
-func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) string {
+func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (string, string) {
 	if len(addTo) != 2 {
-		return ""
+		return "", ""
 	}
+	//Vorteile                   []string
+	//Nachteile                  []string
 	group := addTo[0]
 	item := addTo[1]
 	switch group {
-	case "vorteil":
+	case "vorteilnachteil":
 		{
 			vorteil := basiswerte.GetVorteil(item)
 			if vorteil != nil {
 				for i, v := range PageData.Held.Vorteile {
 					if v.Name == vorteil.Name {
-						PageData.Held.Vorteile, PageData.Held.Vorteile[len(PageData.Held.Vorteile)-1] = append(PageData.Held.Vorteile[:i], PageData.Held.Vorteile[i+1:]...), nil
+						// ok, we need to check if the vorteil stems from the species descrtipion (e.g. Elf -> Zauberer). If so-> no deleting
+						for _, vt := range PageData.Held.Spezies.Vorteile {
+							if vorteil.Name == vt {
+								return "", ""
+							}
+						}
+						PageData.Held.Vorteile = append(PageData.Held.Vorteile[:i], PageData.Held.Vorteile[i+1:]...)
 						PageData.Held.APAusgeben(vorteil.APKosten * -1)
-						return "/held/page/allgemeines"
+						return "/held/page/allgemeines", ""
 					}
 				}
 			}
-		}
-	case "nachteil":
-		{
+			// no vorteil found -> continue...
 			nachteil := basiswerte.GetNachteil(item)
 			if nachteil != nil {
 				for i, v := range PageData.Held.Nachteile {
 					if v.Name == nachteil.Name {
-						PageData.Held.Nachteile, PageData.Held.Nachteile[len(PageData.Held.Nachteile)-1] = append(PageData.Held.Nachteile[:i], PageData.Held.Nachteile[i+1:]...), nil
+						// ok, we need to check if the vorteil stems from the species descrtipion (e.g. Elf -> Zauberer). If so-> no deleting
+						for _, nt := range PageData.Held.Spezies.Nachteile {
+							if nachteil.Name == nt {
+								return "", ""
+							}
+						}
+						PageData.Held.Nachteile = append(PageData.Held.Nachteile[:i], PageData.Held.Nachteile[i+1:]...)
 						PageData.Held.APAusgeben(nachteil.APKosten * -1)
-						return "/held/page/allgemeines"
+						return "/held/page/allgemeines", ""
 					}
 				}
 			}
@@ -325,9 +338,8 @@ func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string)
 			case "SFToAddKampf":
 				bereich = &PageData.Held.Sonderfertigkeiten.Kampf
 			default:
-				return ""
+				return "", ""
 			}
-			fmt.Println(bereich, group)
 			sf := basiswerte.GetSF(item)
 			if sf != nil {
 				for i, v := range *bereich {
@@ -336,27 +348,27 @@ func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string)
 						PageData.Held.APAusgeben(sf.APKosten * -1)
 						switch group {
 						case "SFToAddAllgemein":
-							return "/held/page/allgemeines"
+							return "/held/page/allgemeines", ""
 						case "SFToAddKarmal":
-							return "/held/page/karmales"
+							return "/held/page/karmales", ""
 						case "SFToAddMagisch":
-							return "/held/page/magie"
+							return "/held/page/magie", ""
 						case "SFToAddKampf":
-							return "/held/page/kampftechniken"
+							return "/held/page/kampftechniken", ""
 						default:
-							return ""
+							return "", ""
 						}
 					}
 				}
 			}
 		}
 	}
-	return ""
+	return "", ""
 }
 
-func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) string {
+func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (string, string) {
 	if len(addTo) != 2 {
-		return ""
+		return "", ""
 	}
 	group := addTo[0]
 	item := addTo[1]
@@ -367,12 +379,12 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			if vorteil != nil {
 				for _, v := range PageData.Held.Vorteile {
 					if v.Name == vorteil.Name {
-						return ""
+						return "", ""
 					}
 				}
-				PageData.Held.Vorteile = append(PageData.Held.Vorteile, vorteil)
+				PageData.Held.Vorteile = append(PageData.Held.Vorteile, *vorteil)
 				PageData.Held.APAusgeben(vorteil.APKosten)
-				return "/held/page/allgemeines"
+				return "/held/page/allgemeines", ""
 			}
 		}
 	case "nachteil":
@@ -381,12 +393,12 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			if nachteil != nil {
 				for _, v := range PageData.Held.Nachteile {
 					if v.Name == nachteil.Name {
-						return ""
+						return "", ""
 					}
 				}
-				PageData.Held.Nachteile = append(PageData.Held.Nachteile, nachteil)
+				PageData.Held.Nachteile = append(PageData.Held.Nachteile, *nachteil)
 				PageData.Held.APAusgeben(nachteil.APKosten)
-				return "/held/page/allgemeines"
+				return "/held/page/allgemeines", ""
 			}
 		}
 	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf":
@@ -402,29 +414,28 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			case "SFToAddKampf":
 				bereich = &PageData.Held.Sonderfertigkeiten.Kampf
 			default:
-				return ""
+				return "", ""
 			}
-			fmt.Println(bereich, group)
 			sf := basiswerte.GetSF(item)
 			if sf != nil {
 				for _, v := range *bereich {
 					if v.Name == sf.Name {
-						return ""
+						return "", ""
 					}
 				}
 				*bereich = append(*bereich, sf)
 				PageData.Held.APAusgeben(sf.APKosten)
 				switch group {
 				case "SFToAddAllgemein":
-					return "/held/page/allgemeines"
+					return "/held/page/allgemeines", ""
 				case "SFToAddKarmal":
-					return "/held/page/karmales"
+					return "/held/page/karmales", ""
 				case "SFToAddMagisch":
-					return "/held/page/magie"
+					return "/held/page/magie", ""
 				case "SFToAddKampf":
-					return "/held/page/kampftechniken"
+					return "/held/page/kampftechniken", ""
 				default:
-					return ""
+					return "", ""
 				}
 
 			}
@@ -434,32 +445,60 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 
 			ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Zauberer"))
 			if !ok {
-				return ""
+				return "", ""
 			}
 			_, exists := basiswerte.AlleZauber[item]
 			if !exists {
-				return ""
+				return "", ""
 			}
 			zauber, _ := basiswerte.AlleZauber[item]
+			// first we need to check if there are still zauber left to add in this category...
+			ownCategory := false
+			fmt.Println(zauber)
+			for _, v := range zauber.Verbreitung {
+				fmt.Println(v)
+				if v == "allgemein" || v == "Allgemein" {
+					ownCategory = true
+					break
+				}
+				lookForSF := fmt.Sprintf("Tradition (%s)", v)
+				for _, s := range PageData.Held.Sonderfertigkeiten.Magische {
+					if s.Name == lookForSF {
+						ownCategory = true
+						break
+					}
+				}
+			}
+			idx := 0
+			if !ownCategory {
+				idx = 1
+			}
+			if PageData.Held.ZauberCount[idx] >= PageData.Validator.Grad.Zauber[idx] {
+				// no room left, we cant add it...
+				return "", "Kann Zauber nicht hinzufügen, maximale Anzahl in dieser Kategorie bereits erreicht."
+			}
+			if PageData.Held.Zauber.Exists(item) {
+				return "", "Der Held beherrscht diesen Zauber bereits."
+			}
+			PageData.Held.ZauberCount[idx]++
 			PageData.Held.NewZauber(&zauber)
 			PageData.Held.Zauber.Get(item).SetMaxErschaffung(PageData.Validator.Grad.Fertigkeit)
-			fmt.Println(zauber)
 			if zauber.Steigerungsfaktor != "-" {
 				PageData.Held.APAusgeben(basiswerte.Kosten(zauber.Steigerungsfaktor, 0))
 			} else {
 				PageData.Held.APAusgeben(1) // Zaubertrick + Segnung 1 AP
 			}
-			return "/held/page/magie"
+			return "/held/page/magie", ""
 		}
 	case "liturgie":
 		{
 			ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, basiswerte.GetVorteil("Geweihter"))
 			if !ok {
-				return ""
+				return "", ""
 			}
 			_, exists := basiswerte.AlleLiturgien[item]
 			if !exists {
-				return ""
+				return "", ""
 			}
 			liturgie, _ := basiswerte.AlleLiturgien[item]
 			PageData.Held.NewLiturgie(&liturgie)
@@ -469,13 +508,13 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) st
 			} else {
 				PageData.Held.APAusgeben(1) // Zaubertrick + Segnung 1 AP
 			}
-			return "/held/page/karmales"
+			return "/held/page/karmales", ""
 		}
 	}
-	return ""
+	return "", ""
 }
 
-func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action string, params []string) string {
+func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action string, params []string) (string, string) {
 	switch action {
 	case "increment":
 		{
@@ -494,24 +533,23 @@ func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action str
 			return removeItem(c, w, r, params)
 		}
 	}
-	return ""
+	return "", ""
 }
 
 func runActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
 	action := c.URLParams["action"]
 	params := strings.Split(c.URLParams["*"], "/")
 	redirectToURI := ""
+	notificationMsg := ""
 	if len(params) > 1 {
-		redirectToURI = runActionParams(c, w, r, action, params[1:])
+		redirectToURI, notificationMsg = runActionParams(c, w, r, action, params[1:])
 	}
 	if PageData.Validator != nil {
 		_, PageData.ValidatorMsg = PageData.Validator.Validate()
 	}
 	calculateAvailable()
-	if len(redirectToURI) == 0 {
-		return
-	}
-	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
+
+	redirInfo := redirectToStruct{RedirectTo: redirectToURI, NotificationMsg: notificationMsg, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
 
 	js, err := json.Marshal(redirInfo)
 	if err != nil {
@@ -535,17 +573,13 @@ func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println("parse ok")
 	for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
-		fmt.Println(v)
 		result := r.FormValue(strconv.Itoa(i))
 		eigenschaft := PageData.Held.Eigenschaften.Get(result)
 		if eigenschaft != nil {
-			fmt.Println("start", eigenschaft)
 			eigenschaft.SetMin(eigenschaft.Min() + v.Mod)
 			eigenschaft.SetMax(eigenschaft.Max() + v.Mod)
 			PageData.Held.Eigenschaften.Set(result, eigenschaft.Wert+v.Mod)
-			fmt.Println("stop", eigenschaft)
 		}
 	}
 
@@ -554,7 +588,6 @@ func newHero(c web.C, w http.ResponseWriter, r *http.Request) {
 }
 
 func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Println("runComplexActionAndRedirect")
 	err := r.ParseForm()
 	if err != nil {
 		fmt.Println(err)
@@ -564,7 +597,6 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 	if r.FormValue("type") == "createHeld" {
 		newHeld(r)
 		// show modification page only if we need it.
-		fmt.Println(PageData.Held.Spezies)
 		if len(PageData.Held.Spezies.EigenschaftsModifikationen) == 0 {
 			redirectToURI = "/held/page/allgemeines"
 		} else {
@@ -581,7 +613,7 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	redirInfo := redirectToStruct{RedirectTo: redirectToURI, Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
+	redirInfo := redirectToStruct{RedirectTo: redirectToURI, NotificationMsg: "", Magie: PageData.Held.IsMagisch(), Karmal: PageData.Held.IsKarmal(), ValidatorMessages: PageData.ValidatorMsg}
 
 	js, err := json.Marshal(redirInfo)
 	if err != nil {
@@ -613,9 +645,7 @@ func newHeld(r *http.Request) {
 }
 
 func doModEigenschaften(r *http.Request) {
-	fmt.Println(r.FormValue("0"))
 	for i, v := range PageData.Held.Spezies.EigenschaftsModifikationen {
-		fmt.Println(v)
 		result := r.FormValue(strconv.Itoa(i))
 		eigenschaft := PageData.Held.Eigenschaften.Get(result)
 		if eigenschaft != nil {
@@ -648,7 +678,6 @@ func pageModEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
 		eigenMod[i].Modifikation = v
 
 	}
-	fmt.Println(eigenMod)
 	t.Execute(w, &eigenMod)
 }
 
@@ -688,7 +717,6 @@ func pageZauber(c web.C, w http.ResponseWriter, r *http.Request) {
 }
 
 func pageFooter(c web.C, w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Page footer")
 	ap_info := apData{AP: 0, AP_spent: 0, AP_total: 0}
 
 	if PageData.Held != nil {
@@ -698,10 +726,7 @@ func pageFooter(c web.C, w http.ResponseWriter, r *http.Request) {
 
 	}
 	t, _ := template.ParseFiles("template/partials/footer.tpl")
-	if PageData.Held.AP >= 0 {
-		fmt.Println("Page footer normal")
-	} else {
-		fmt.Println("Page footer unter 0")
+	if PageData.Held.AP < 0 {
 		t, _ = template.ParseFiles("template/partials/footer_negativ.tpl")
 	}
 	t.Execute(w, &ap_info)

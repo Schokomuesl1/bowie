@@ -23,10 +23,12 @@ type Held struct {
 	Kampftechniken     basiswerte.KampftechnikHandler
 	Talente            basiswerte.TalentHandler
 	Sonderfertigkeiten SFListe
-	Vorteile           []*basiswerte.VorUndNachteil
-	Nachteile          []*basiswerte.VorUndNachteil
+	Vorteile           []basiswerte.VorUndNachteil
+	Nachteile          []basiswerte.VorUndNachteil
 	Liturgien          basiswerte.LiturgieHandler
 	Zauber             basiswerte.ZauberHandler
+	ZauberCount        [2]int
+	ZauberCountMax     [2]int
 }
 
 func NewHeld() *Held {
@@ -52,14 +54,18 @@ func (h *Held) SetSpezies(spezies string) error {
 	for _, v := range h.Spezies.Vorteile {
 		vorteil := basiswerte.GetVorteil(v)
 		if vorteil != nil {
-			h.Vorteile = append(h.Vorteile, vorteil)
+			tmpVorteil := basiswerte.VorUndNachteil{Name: vorteil.Name, Vorraussetzungen: vorteil.Vorraussetzungen, APKosten: vorteil.APKosten, FromSpezies: true}
+			h.Vorteile = append(h.Vorteile, tmpVorteil)
+			//h.Vorteile = append(h.Vorteile, vorteil)
 		}
 	}
 
 	for _, v := range h.Spezies.Nachteile {
 		nachteil := basiswerte.GetNachteil(v)
 		if nachteil != nil {
-			h.Nachteile = append(h.Nachteile, nachteil)
+			tmpNachteil := basiswerte.VorUndNachteil{Name: nachteil.Name, Vorraussetzungen: nachteil.Vorraussetzungen, APKosten: nachteil.APKosten, FromSpezies: true}
+			h.Nachteile = append(h.Nachteile, tmpNachteil)
+			//h.Nachteile = append(h.Nachteile, nachteil)
 		}
 	}
 

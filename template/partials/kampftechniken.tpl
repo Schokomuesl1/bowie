@@ -61,7 +61,7 @@
 		<form>
 			<div class="form-group">
 				<label for="SFToAddKampf">Kampf SF:</label>
-				<select name="SFToAddKampf" id="SFToAddKampf">
+				<select class="form-control" name="SFToAddKampf" id="SFToAddKampf">
 					{{range .Available.SF_Kampf}}
 					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
 					{{end}}

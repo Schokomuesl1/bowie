@@ -8,7 +8,34 @@
   "Reichweite": {"Reichweite": "7 Schritt", "Mod": ""},
   "Wirkungsdauer": "Viel zu lang",
   "Zielkategorie": ["Kulturschaffende"],
-  "Verbreitung": [["allgemein", ""]],
+  "Verbreitung": ["allgemein"],
   "Steigerungsfaktor": "B"
+},
+{
+  "Name": "Adlerauge",
+  "Probe": {"Eigenschaften": ["KL", "IN", "FF"], "Mod": ""},
+  "Wirkung": "Das Talent Sinnenschärfe wird während der Wirkungsdauer um QS + 3 des Zaubers erhöht.",
+  "Dauer": "2 Aktionen",
+  "Kosten": ["4", "+2/5 min."],
+  "Reichweite": {"Reichweite": "selbst", "Mod": ""},
+  "Wirkungsdauer": "aufrechterhalten",
+  "Zielkategorie": ["Wesen"],
+  "Merkmale": ["Heilung"],
+  "Verbreitung": ["Elfen"],
+  "Steigerungsfaktor": "B"
+},
+{
+  "Name": "Corpofesso",
+  "Probe": {"Eigenschaften": ["KL", "IN", "KO"], "Mod": "+ZK"},
+  "Wirkung": "Der verzauberte erleidet schmerzhafte Muskelschwäche. Während der Wirkungsdauer erleidet er den Zustand Schmerz.",
+  "Dauer": "2 Aktionen",
+  "Kosten": ["16", ""],
+  "Reichweite": {"Reichweite": "8 Schritt", "Mod": ""},
+  "Wirkungsdauer": "2*QS KR",
+  "Zielkategorie": ["Lebewesen"],
+  "Merkmale": ["Verwandlung"],
+  "Verbreitung": ["Gildenmagier"],
+  "Steigerungsfaktor": "C"
 }
+
 ]
