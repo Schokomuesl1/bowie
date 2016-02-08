@@ -239,6 +239,21 @@ function extractSelectedNewHeld() {
 	sendPostWithJSONTo("/held/complexaction", request)
 }
 
+function extractSelectedProfession() {
+  var request = new Object();
+  var e = document.getElementById("professionsListe")
+  request["profession"] = e.options[e.selectedIndex].value
+  request.type = "selectProfession"
+  sendPostWithJSONTo("/held/complexaction", request)
+
+  // now we set the active window and make the relevant items visible
+
+  toggleMenuitemVisibility('Allgemeines', true);
+  toggleMenuitemActivity('Allgemeines', true);
+  toggleMenuitemActivity('Neu', false);
+  toggleMenuitemVisibility('Kampftechniken', true);
+  toggleMenuitemVisibility('Talente', true);
+}
 function extractSelectedUpdateEigenschaften() {
 	var request = new Object();
 	var i = 0
@@ -249,13 +264,6 @@ function extractSelectedUpdateEigenschaften() {
 	}
 	request.type = "modEigenschaften"
 	sendPostWithJSONTo("/held/complexaction", request)
-  // now we set the active window and make the relevant items visible
-
-  toggleMenuitemVisibility('Allgemeines', true);
-  toggleMenuitemActivity('Allgemeines', true);
-  toggleMenuitemActivity('Neu', false);
-  toggleMenuitemVisibility('Kampftechniken', true);
-  toggleMenuitemVisibility('Talente', true);
 }
 
 

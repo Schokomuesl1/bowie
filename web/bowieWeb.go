@@ -22,6 +22,7 @@ type PageDataType struct {
 	AlleKulturen      *map[string]basiswerte.KulturType
 	AlleLiturgien     *map[string]basiswerte.LiturgieType
 	AlleZauber        *map[string]basiswerte.ZauberType
+	AlleProfessionen  *basiswerte.ProfessionsListe
 	Kosten            *map[string][26]int
 	Grade             *map[string]erschaffung.Erfahrungsgrad
 	Held              *held.Held
@@ -31,12 +32,13 @@ type PageDataType struct {
 }
 
 type AvailableItems struct {
-	Nachteile    []basiswerte.VorUndNachteil
-	Vorteile     []basiswerte.VorUndNachteil
-	SF_Allgemein []basiswerte.Sonderfertigkeit
-	SF_Karmal    []basiswerte.Sonderfertigkeit
-	SF_Magisch   []basiswerte.Sonderfertigkeit
-	SF_Kampf     []basiswerte.Sonderfertigkeit
+	Nachteile                        []basiswerte.VorUndNachteil
+	Vorteile                         []basiswerte.VorUndNachteil
+	SF_Allgemein                     []basiswerte.Sonderfertigkeit
+	SF_Karmal                        []basiswerte.Sonderfertigkeit
+	SF_Magisch                       []basiswerte.Sonderfertigkeit
+	SF_Kampf                         []basiswerte.Sonderfertigkeit
+	ProfessionenNachKulturUndSpezies basiswerte.ProfessionsListePtr
 }
 
 type EigenschaftenModSet struct {
@@ -85,6 +87,7 @@ func calculateAvailable() {
 	PageData.Available.SF_Karmal = PageData.Available.SF_Karmal[:0]
 	PageData.Available.SF_Magisch = PageData.Available.SF_Magisch[:0]
 	PageData.Available.SF_Kampf = PageData.Available.SF_Kampf[:0]
+	PageData.Available.ProfessionenNachKulturUndSpezies = PageData.Available.ProfessionenNachKulturUndSpezies[:0]
 	for _, v := range basiswerte.Nachteile {
 		ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, &v)
 		if ok {
@@ -181,6 +184,7 @@ func calculateAvailable() {
 			}
 		}
 	}
+	PageData.Available.ProfessionenNachKulturUndSpezies = basiswerte.AlleProfessionen.NachKulturUndSpezies(PageData.Held.Kultur.Name, PageData.Held.Spezies.Name)
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, pd *PageDataType) {
@@ -598,13 +602,32 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 		newHeld(r)
 		// show modification page only if we need it.
 		if len(PageData.Held.Spezies.EigenschaftsModifikationen) == 0 {
-			redirectToURI = "/held/page/allgemeines"
+			PageData.Available.ProfessionenNachKulturUndSpezies = PageData.Available.ProfessionenNachKulturUndSpezies[:0]
+			PageData.Available.ProfessionenNachKulturUndSpezies = basiswerte.AlleProfessionen.NachKulturUndSpezies(PageData.Held.Kultur.Name, PageData.Held.Spezies.Name)
+			fmt.Println("Jetzt professionsauswahl")
+			fmt.Println(len(PageData.Available.ProfessionenNachKulturUndSpezies))
+			fmt.Println(PageData.Available.ProfessionenNachKulturUndSpezies)
+			for _, v := range PageData.Available.ProfessionenNachKulturUndSpezies {
+				fmt.Println(v)
+			}
+			redirectToURI = "/held/page/professionsAuswahl"
 		} else {
 			redirectToURI = "/held/page/modEigenschaften"
 		}
 
 	} else if r.FormValue("type") == "modEigenschaften" {
 		doModEigenschaften(r)
+		PageData.Available.ProfessionenNachKulturUndSpezies = PageData.Available.ProfessionenNachKulturUndSpezies[:0]
+		PageData.Available.ProfessionenNachKulturUndSpezies = basiswerte.AlleProfessionen.NachKulturUndSpezies(PageData.Held.Kultur.Name, PageData.Held.Spezies.Name)
+		fmt.Println("Jetzt professionsauswahl")
+		fmt.Println(len(PageData.Available.ProfessionenNachKulturUndSpezies))
+		fmt.Println(PageData.Available.ProfessionenNachKulturUndSpezies)
+		for _, v := range PageData.Available.ProfessionenNachKulturUndSpezies {
+			fmt.Println(v)
+		}
+		redirectToURI = "/held/page/professionsAuswahl"
+	} else if r.FormValue("type") == "selectProfession" {
+		doSelectProfession(r)
 		redirectToURI = "/held/page/allgemeines"
 	}
 
@@ -656,6 +679,15 @@ func doModEigenschaften(r *http.Request) {
 	}
 }
 
+func doSelectProfession(r *http.Request) {
+	profession := r.FormValue("profession")
+	fmt.Println("Ausgewählte Profession: ", profession)
+	if profession == "__none__" {
+		return
+	}
+	PageData.Held.SetProfession(PageData.Available.ProfessionenNachKulturUndSpezies.NachName(profession))
+}
+
 // sub pages
 func pageNew(c web.C, w http.ResponseWriter, r *http.Request) {
 	initPageData()
@@ -686,6 +718,13 @@ func pageAllgemeines(c web.C, w http.ResponseWriter, r *http.Request) {
 		return // empty page if no held...
 	}
 	renderTemplate(w, "partials/allgemeines", &PageData)
+}
+
+func pageAuswahlProfession(c web.C, w http.ResponseWriter, r *http.Request) {
+	if PageData.Held == nil {
+		return // empty page if no held...
+	}
+	renderTemplate(w, "partials/auswahlProfession", &PageData)
 }
 
 func pageKampftechniken(c web.C, w http.ResponseWriter, r *http.Request) {
@@ -769,6 +808,7 @@ func initRoutes() {
 	goji.Get("/held/page/new", pageNew)
 	goji.Get("/held/page/modEigenschaften", pageModEigenschaften)
 	goji.Get("/held/page/allgemeines", pageAllgemeines)
+	goji.Get("/held/page/professionsAuswahl", pageAuswahlProfession)
 	goji.Get("/held/page/kampftechniken", pageKampftechniken)
 	goji.Get("/held/page/talente", pageTalente)
 	goji.Get("/held/page/footer", pageFooter)

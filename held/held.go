@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/Schokomuesl1/bowie/basiswerte"
+	"strconv"
 )
 
 type SFListe struct {
@@ -19,6 +20,7 @@ type Held struct {
 	AP                 int
 	AP_spent           int
 	Kultur             basiswerte.KulturType
+	Profession         basiswerte.Profession
 	Eigenschaften      basiswerte.EigenschaftHandler
 	Kampftechniken     basiswerte.KampftechnikHandler
 	Talente            basiswerte.TalentHandler
@@ -32,7 +34,7 @@ type Held struct {
 }
 
 func NewHeld() *Held {
-	h := Held{Eigenschaften: *basiswerte.NewEigenschaftHandler(), Kampftechniken: *basiswerte.NewKampftechnikHandler(), Talente: *basiswerte.NewTalentHandler(), Zauber: *basiswerte.NewZauberHandler(), Liturgien: *basiswerte.NewLiturgieHandler()}
+	h := Held{Eigenschaften: *basiswerte.NewEigenschaftHandler(), Kampftechniken: *basiswerte.NewKampftechnikHandler(), Talente: *basiswerte.NewTalentHandler(), Zauber: *basiswerte.NewZauberHandler(), Liturgien: *basiswerte.NewLiturgieHandler(), Profession: basiswerte.DummyProfession}
 	for k, _ := range basiswerte.AlleEigenschaften {
 		h.Eigenschaften.Add(k)
 	}
@@ -88,6 +90,68 @@ func (h *Held) SetKultur(kultur string) error {
 		}
 
 	}
+	return nil
+}
+
+func (h *Held) SetProfession(profession *basiswerte.Profession) error {
+	h.Profession = *profession
+	for _, v := range h.Profession.Talente {
+		talent := v[0]
+		t_num, err := strconv.Atoi(v[1])
+		if err != nil {
+			return errors.New("Error converting number in profession! Check regeln/professionsn for bugs in data.")
+		}
+		h.Talente.Get(talent).AddValue(t_num)
+	}
+	for _, v := range h.Profession.Kampftechniken {
+		kt := v[0]
+		k_num, err := strconv.Atoi(v[1])
+		if err != nil {
+			return errors.New("Error converting number in profession! Check regeln/professionsn for bugs in data.")
+		}
+		h.Kampftechniken.Get(kt).AddValue(k_num - 6)
+	}
+	for _, v := range h.Profession.Sonderfertigkeiten {
+		var bereich *[]*basiswerte.Sonderfertigkeit
+		switch basiswerte.GetSFType(v) {
+		case basiswerte.ALLGEMEIN:
+			{
+				bereich = &h.Sonderfertigkeiten.Allgemeine
+			}
+		case basiswerte.KARMAL:
+			{
+				bereich = &h.Sonderfertigkeiten.Karmale
+			}
+		case basiswerte.MAGISCH:
+			{
+				bereich = &h.Sonderfertigkeiten.Magische
+			}
+		case basiswerte.KAMPF:
+			{
+				bereich = &h.Sonderfertigkeiten.Kampf
+			}
+		case basiswerte.UNBEKANNT:
+			{
+				bereich = nil
+			}
+		}
+		if bereich == nil {
+			fmt.Printf("Unbekannte Sonderfertigkeit %s! Überspringe!\n", v)
+		}
+		sf := basiswerte.GetSF(v)
+		if sf != nil {
+			found := false
+			for _, v := range *bereich {
+				if v.Name == sf.Name {
+					found = true
+				}
+			}
+			if !found {
+				*bereich = append(*bereich, sf)
+			}
+		}
+	}
+	h.APAusgeben(h.Profession.APKosten)
 	return nil
 }
 

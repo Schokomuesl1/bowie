@@ -4,7 +4,8 @@
 	"Kommentar": "Sprachen und Schriften für 16 AP.",
 	"Voraussetzungen":{
 		"Eigenschaften":[],
-		"Kultur":[]
+		"Kultur":[],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -38,7 +39,8 @@
 	"Kommentar": "Sprachen und Schriften für 16 AP.",
 	"Voraussetzungen":{
 		"Eigenschaften":[],
-		"Kultur":[]
+		"Kultur":[],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -70,7 +72,8 @@
 	"Kommentar": "Sprachen und Schriften für 16 AP.",
 	"Voraussetzungen":{
 		"Eigenschaften":[],
-		"Kultur": ["Aranier", "Mhanadistani", "Novadis"]
+		"Kultur": ["Aranier", "Mhanadistani", "Novadis"],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -102,7 +105,8 @@
 	"Kommentar": "Sprachen und Schriften für 16 AP.",
 	"Voraussetzungen":{
 		"Eigenschaften":[],
-		"Kultur": ["Thorwaler"]
+		"Kultur": ["Thorwaler"],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -140,7 +144,8 @@
 			["KO", "13"],
 			["KK", "13"]
 		],
-		"Kultur":[]
+		"Kultur":[],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -191,7 +196,8 @@
 			["KO", "13"],
 			["KK", "13"]
 		],
-		"Kultur":[]
+		"Kultur":[],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -241,7 +247,8 @@
 			["KO", "13"],
 			["KK", "13"]
 		],
-		"Kultur":[]
+		"Kultur":[],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],
@@ -292,7 +299,8 @@
 			["KO", "13"],
 			["KK", "13"]
 		],
-		"Kultur":[]
+		"Kultur":[],
+		"Spezies":[]
 	},
 	"Kampftechniken":[
 		["Raufen", "8"],

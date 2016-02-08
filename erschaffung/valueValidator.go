@@ -2,7 +2,9 @@ package erschaffung
 
 import (
 	"fmt"
+	"github.com/Schokomuesl1/bowie/basiswerte"
 	"github.com/Schokomuesl1/bowie/held"
+	"strconv"
 )
 
 type ValidatorMessageType int
@@ -313,5 +315,51 @@ func (e VorraussetzungsValidator) Validate(grad *Erfahrungsgrad, held *held.Held
 	}
 
 	//func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool, message string)
+	return
+}
+
+// Validator ausgegebene AP
+type ProfessionValidator struct {
+}
+
+func (e ProfessionValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+	result = true
+	message.Msg = ""
+	message.Type = NONE
+
+	if held.Profession.Name == basiswerte.DummyProfession.Name {
+		return
+	}
+	if !held.Profession.Voraussetzungen.KulturOK(held.Kultur.Name) {
+		result = false
+		if len(message.Msg) != 0 {
+			message.Msg += "<br>"
+		}
+		message.Msg += "Der Held hat die falsche Kultur für diese Profession!"
+	}
+	if !held.Profession.Voraussetzungen.SpeziesOK(held.Spezies.Name) {
+		result = false
+		if len(message.Msg) != 0 {
+			message.Msg += "<br>"
+		}
+		message.Msg += "Der Held hat die falsche Spezies für diese Profession!"
+	}
+	for _, v := range held.Profession.Voraussetzungen.Eigenschaften {
+		eigenschaft := v[0]
+		e_num, err := strconv.Atoi(v[1])
+		if err != nil {
+			result = false
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += fmt.Sprintf("Fehler beim konvertieren von Wert %s in eine Zahl - Professionsdaten korrupt?", v[1])
+		} else if e_num >= held.Eigenschaften.Get(eigenschaft).Value() {
+			result = false
+			if len(message.Msg) != 0 {
+				message.Msg += "<br>"
+			}
+			message.Msg += fmt.Sprintf("Eigenschaft %s muss wenigstens %d betragen!", eigenschaft, e_num)
+		}
+	}
 	return
 }

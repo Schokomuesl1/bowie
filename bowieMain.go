@@ -2,6 +2,7 @@ package main
 
 import (
 	//"encoding/json"
+	"flag"
 	"fmt"
 	"github.com/Schokomuesl1/bowie/erschaffung"
 	"github.com/Schokomuesl1/bowie/held"
@@ -65,11 +66,16 @@ func heldHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	noBrowser := false
+	flag.BoolVar(&noBrowser, "noBrowser", false, "If set, no browser is opened automatically.")
+	flag.Parse()
 	done := make(chan bool, 1)
 
 	go bowieweb.Serve(done)
 	// start web browser
-	webbrowser.Open("http://localhost:8000")
+	if !noBrowser {
+		webbrowser.Open("http://localhost:8000")
+	}
 	// wait for bowieweb to finish serving
 	<-done
 }
