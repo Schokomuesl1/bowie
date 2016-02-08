@@ -12,6 +12,8 @@ type SFListe struct {
 	Karmale    []*basiswerte.Sonderfertigkeit
 	Magische   []*basiswerte.Sonderfertigkeit
 	Kampf      []*basiswerte.Sonderfertigkeit
+	Schriften  []*basiswerte.Sonderfertigkeit
+	Sprachen   []*basiswerte.Sonderfertigkeit
 }
 type Held struct {
 	Name               string
@@ -129,6 +131,14 @@ func (h *Held) SetProfession(profession *basiswerte.Profession) error {
 		case basiswerte.KAMPF:
 			{
 				bereich = &h.Sonderfertigkeiten.Kampf
+			}
+		case basiswerte.SPRACHE:
+			{
+				bereich = &h.Sonderfertigkeiten.Sprachen
+			}
+		case basiswerte.SCHRIFT:
+			{
+				bereich = &h.Sonderfertigkeiten.Schriften
 			}
 		case basiswerte.UNBEKANNT:
 			{

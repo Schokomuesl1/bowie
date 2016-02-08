@@ -1,5 +1,19 @@
 [
 	{
+		"Name":"Analytiker",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Magiekunde", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
 		"Name":"Anführer",
 		"Vorraussetzungen":{
 			"Talente":[
@@ -64,6 +78,35 @@
 			"Sonstiges":""
 		},
 		"APKosten":3
+	},
+	{
+		"Name":"Fallen entschärfen",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Brett& Glücksspiel", "8"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Falschspiel",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Mechanik", "4"],
+				["Schlösserknacken", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
 	},
 	{
 		"Name":"Fischer",
@@ -221,5 +264,277 @@
 			"Sonstiges":""
 		},
 		"APKosten":10
+	},
+	{
+		"Name":"Ortskenntnis",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"6 Monate lang an diesem Ort gelebt oder Weg dutzendfach bereist haben."
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Rosstäuscher",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Handel", "4"],
+				["Tierkunde", "8"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":4
+	},
+	{
+		"Name":"Sammler",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Pflanzenkunde", "4"],
+				["Wildnisleben", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Schmerzen unterdrücken",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Selbstbeherrschung", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":20
+	},
+	{
+		"Name":"Schnapsbrennerei",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Alchemie", "4"],
+				["Lebensmittelbearbeitung", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Tierstimmen imitieren",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Tierkunde", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Töpferei",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Steinbearbeitung", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Wettervorhersage",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Wildnisleben", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Zahlenmystik",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Sagen& Legenden", "4"],
+				["Rechnen", "8"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Attacke verbessern",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Ausweichen verbessern",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Eigenschaft verbessern",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Fernkampf verbessern",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Parade verbessern",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":5
+	},
+	{
+		"Name":"Wachsamkeit",
+		"Vorraussetzungen":{
+			"Talente":[],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":""
+		},
+		"APKosten":10
+	},
+	{
+		"Name":"Schriftstellerei (Liebesroman)",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Betören", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"passende Schrift, passende Sprache III"
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Schriftstellerei (Poesie)",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Etikette", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"passende Schrift, passende Sprache III"
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Schriftstellerei (Hetzschriften)",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Bekehren& Überzeugen", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"passende Schrift, passende Sprache III"
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Schriftstellerei (Kriminalgeschichten)",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Gassenwissen", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"passende Schrift, passende Sprache III"
+		},
+		"APKosten":2
+	},
+	{
+		"Name":"Schriftstellerei (Märchen& Romane)",
+		"Vorraussetzungen":{
+			"Talente":[
+				["Überreden", "4"]
+			],
+			"Vorteile":[],
+			"NichtNachteil":[],
+			"Eigenschaften":[],
+			"Sonderfertigkeiten":[],
+			"Sonstiges":"passende Schrift, passende Sprache III"
+		},
+		"APKosten":2
 	}
+	
+	
 ]

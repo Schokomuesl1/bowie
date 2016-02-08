@@ -1,0 +1,2480 @@
+[
+  {
+    "Name": "Fertigkeitsspezialisierung (Fliegen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fliegen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Fliegen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fliegen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fliegen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Fliegen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Fliegen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Fliegen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Gaukeleien)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Gaukeleien", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Gaukeleien)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Gaukeleien", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Gaukeleien)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Gaukeleien", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Gaukeleien)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Klettern)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Klettern", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Klettern)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Klettern", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Klettern)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Klettern)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Klettern", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Klettern)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Körperbeherrschung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Körperbeherrschung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 4
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Körperbeherrschung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Körperbeherrschung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Körperbeherrschung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 8
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Körperbeherrschung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Körperbeherrschung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Körperbeherrschung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 12
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Kraftakt)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Kraftakt", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Kraftakt)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Kraftakt", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Kraftakt)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Kraftakt)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Kraftakt", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Kraftakt)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Reiten)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Reiten", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Reiten)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Reiten", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Reiten)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Reiten)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Reiten", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Reiten)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Schwimmen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Schwimmen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Schwimmen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Schwimmen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Schwimmen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Schwimmen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Schwimmen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Schwimmen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Selbstbeherrschung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Selbstbeherrschung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 4
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Selbstbeherrschung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Selbstbeherrschung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Selbstbeherrschung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 8
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Selbstbeherrschung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Selbstbeherrschung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Selbstbeherrschung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 12
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Singen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Singen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Singen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Singen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Singen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Singen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Singen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Singen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Sinnesschärfe)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sinnesschärfe", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 4
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Sinnesschärfe)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sinnesschärfe", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sinnesschärfe)"],
+      "Sonstiges":""
+    },
+    "APKosten": 8
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Sinnesschärfe)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Sinnesschärfe", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Sinnesschärfe)"],
+      "Sonstiges":""
+    },
+    "APKosten": 12
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Tanzen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Tanzen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Tanzen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Tanzen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Tanzen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Tanzen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Tanzen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Tanzen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Taschendiebstahl)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Taschendiebstahl", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Taschendiebstahl)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Taschendiebstahl", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Taschendiebstahl)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Taschendiebstahl)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Taschendiebstahl", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Taschendiebstahl)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Verbergen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Verbergen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Verbergen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Verbergen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Verbergen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Verbergen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Verbergen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Verbergen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Zechen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Zechen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Zechen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Zechen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Zechen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Zechen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Zechen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Zechen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Bekehren& Überzeugen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Bekehren& Überzeugen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Bekehren& Überzeugen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Bekehren& Überzeugen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Bekehren& Überzeugen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Bekehren& Überzeugen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Bekehren& Überzeugen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Bekehren& Überzeugen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Betören)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Betören", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Betören)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Betören", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Betören)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Betören)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Betören", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Betören)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Einschüchtern)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Einschüchtern", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Einschüchtern)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Einschüchtern", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Einschüchtern)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Einschüchtern)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Einschüchtern", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Einschüchtern)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Etikette)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Etikette", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Etikette)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Etikette", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Etikette)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Etikette)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Etikette", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Etikette)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Gassenwissen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Gassenwissen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Gassenwissen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Gassenwissen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gassenwissen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Gassenwissen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Gassenwissen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Gassenwissen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Menschenkenntnis)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Menschenkenntnis", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Menschenkenntnis)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Menschenkenntnis", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Menschenkenntnis)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Menschenkenntnis)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Menschenkenntnis", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Menschenkenntnis)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Überreden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Überreden", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Überreden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Überreden", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Überreden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Überreden)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Überreden", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Überreden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Verkleiden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Verkleiden", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Verkleiden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Verkleiden", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Verkleiden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Verkleiden)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Verkleiden", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Verkleiden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Willenskraft)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Willenskraft", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 4
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Willenskraft)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Willenskraft", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Willenskraft)"],
+      "Sonstiges":""
+    },
+    "APKosten": 8
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Willenskraft)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Willenskraft", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Willenskraft)"],
+      "Sonstiges":""
+    },
+    "APKosten": 12
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Fährtensuchen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fährtensuchen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Fährtensuchen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fährtensuchen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fährtensuchen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Fährtensuchen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Fährtensuchen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Fährtensuchen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Fesseln)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fesseln", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Fesseln)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fesseln", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fesseln)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Fesseln)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Fesseln", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Fesseln)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Fischen& Angeln)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fischen& Angeln", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Fischen& Angeln)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fischen& Angeln", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fischen& Angeln)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Fischen& Angeln)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Fischen& Angeln", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Fischen& Angeln)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Orientierung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Orientierung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Orientierung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Orientierung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Orientierung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Orientierung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Orientierung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Orientierung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Pflanzenkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Pflanzenkunde", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Pflanzenkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Pflanzenkunde", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Pflanzenkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Pflanzenkunde)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Pflanzenkunde", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Pflanzenkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Tierkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Tierkunde", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Tierkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Tierkunde", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Tierkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Tierkunde)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Tierkunde", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Tierkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Wildnisleben)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Wildnisleben", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Wildnisleben)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Wildnisleben", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Wildnisleben)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Wildnisleben)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Wildnisleben", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Wildnisleben)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Brett-& Glücksspiel)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Brett-& Glücksspiel", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Brett-& Glücksspiel)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Brett-& Glücksspiel", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Brett-& Glücksspiel)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Brett-& Glücksspiel)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Brett-& Glücksspiel", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Brett-& Glücksspiel)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Geographie)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Geographie", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Geographie)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Geographie", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Geographie)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Geographie)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Geographie", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Geographie)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Geschichtswissen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Geschichtswissen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Geschichtswissen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Geschichtswissen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Geschichtswissen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Geschichtswissen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Geschichtswissen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Geschichtswissen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Götter& Kulte)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Götter& Kulte", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Götter& Kulte)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Götter& Kulte", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Götter& Kulte)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Götter& Kulte)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Götter& Kulte", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Götter& Kulte)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Kriegskunst)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Kriegskunst", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Kriegskunst)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Kriegskunst", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Kriegskunst)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Kriegskunst)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Kriegskunst", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Kriegskunst)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Magiekunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Magiekunde", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Magiekunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Magiekunde", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Magiekunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Magiekunde)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Magiekunde", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Magiekunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Mechanik)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Mechanik", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Mechanik)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Mechanik", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Mechanik)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Mechanik)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Mechanik", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Mechanik)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Rechnen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Rechnen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Rechnen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Rechnen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Rechnen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Rechnen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Rechnen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Rechnen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Rechtskunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Rechtskunde", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Rechtskunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Rechtskunde", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Rechtskunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Rechtskunde)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Rechtskunde", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Rechtskunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Sagen& Legenden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sagen& Legenden", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Sagen& Legenden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sagen& Legenden", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Sagen& Legenden)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Sagen& Legenden", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Sagen& Legenden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Sphärenkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sphärenkunde", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Sphärenkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sphärenkunde", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sphärenkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Sphärenkunde)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Sphärenkunde", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Sphärenkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Sternkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sternkunde", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Sternkunde)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Sternkunde", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sternkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Sternkunde)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Sternkunde", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Sternkunde)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Alchemie)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Alchemie", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Alchemie)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Alchemie", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Alchemie)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Alchemie)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Alchemie", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Alchemie)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Boote& Schiffe)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Boote& Schiffe", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Boote& Schiffe)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Boote& Schiffe", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Boote& Schiffe)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Boote& Schiffe)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Boote& Schiffe", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Boote& Schiffe)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Fahrzeuge)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fahrzeuge", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Fahrzeuge)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Fahrzeuge", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fahrzeuge)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Fahrzeuge)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Fahrzeuge", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Fahrzeuge)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Handel)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Handel", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Handel)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Handel", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Handel)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Handel", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Handel)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Heilkunde Gift)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Gift", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Heilkunde Gift)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Gift", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Gift)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Heilkunde Gift)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Heilkunde Gift", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Heilkunde Gift)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Heilkunde Krankheiten)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Krankheiten", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Heilkunde Krankheiten)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Krankheiten", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Krankheiten)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Heilkunde Krankheiten)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Heilkunde Krankheiten", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Heilkunde Krankheiten)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Heilkunde Seele)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Seele", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Heilkunde Seele)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Seele", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Seele)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Heilkunde Seele)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Heilkunde Seele", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Heilkunde Seele)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Heilkunde Wunden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Wunden", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 4
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Heilkunde Wunden)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Heilkunde Wunden", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 8
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Heilkunde Wunden)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Heilkunde Wunden", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Heilkunde Wunden)"],
+      "Sonstiges":""
+    },
+    "APKosten": 12
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Holzbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Holzbearbeitung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Holzbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Holzbearbeitung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Holzbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Holzbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Holzbearbeitung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Holzbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Lebensmittelbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Lebensmittelbearbeitung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Lebensmittelbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Lebensmittelbearbeitung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Lebensmittelbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Lebensmittelbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Lebensmittelbearbeitung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Lebensmittelbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Lederbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Lederbearbeitung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Lederbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Lederbearbeitung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Lederbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Lederbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Lederbearbeitung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Lederbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Malen& Zeichnen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Malen& Zeichnen", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Malen& Zeichnen)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Malen& Zeichnen", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Malen& Zeichnen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Malen& Zeichnen)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Malen& Zeichnen", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Malen& Zeichnen)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Metallbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Metallbearbeitung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Metallbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Metallbearbeitung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Metallbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Metallbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Metallbearbeitung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Metallbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Musizieren)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Musizieren", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Musizieren)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Musizieren", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Musizieren)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Musizieren", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Musizieren)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Schlösserknacken)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Schlösserknacken", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Schlösserknacken)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Schlösserknacken", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Schlösserknacken)"],
+      "Sonstiges":""
+    },
+    "APKosten": 6
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Schlösserknacken)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Schlösserknacken", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Schlösserknacken)"],
+      "Sonstiges":""
+    },
+    "APKosten": 9
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Steinbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Steinbearbeitung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Steinbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Steinbearbeitung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Steinbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Steinbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Steinbearbeitung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Steinbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung (Stoffbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Stoffbearbeitung", "6"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten": 1
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung II (Stoffbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente":[
+        ["Stoffbearbeitung", "12"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung (Stoffbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 2
+  },
+  {
+    "Name": "Fertigkeitsspezialisierung III (Stoffbearbeitung)",
+    "Vorraussetzungen": {
+      "Talente": [
+        ["Stoffbearbeitung", "8"]
+      ],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fertigkeitsspezialisierung II (Stoffbearbeitung)"],
+      "Sonstiges":""
+    },
+    "APKosten": 3
+  }
+]

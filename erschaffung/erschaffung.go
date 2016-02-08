@@ -79,50 +79,47 @@ func SFAvailable(Held *held.Held, SF *basiswerte.Sonderfertigkeit) (result bool,
 				break
 			}
 		}
-		if !found {
-			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
-			return
-		}
-	}
-	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
-		found := false
 		for _, k := range Held.Sonderfertigkeiten.Karmale {
 			if k.Name == v {
 				found = true
 				break
 			}
 		}
-		if !found {
-			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
-			return
-		}
-	}
-	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
-		found := false
+
 		for _, k := range Held.Sonderfertigkeiten.Magische {
 			if k.Name == v {
 				found = true
 				break
 			}
 		}
-		if !found {
-			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
-			return
-		}
-	}
-	for _, v := range SF.Vorraussetzungen.Sonderfertigkeiten {
-		found := false
+
 		for _, k := range Held.Sonderfertigkeiten.Kampf {
 			if k.Name == v {
 				found = true
-				message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! Vorteil %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 				break
 			}
 		}
+
+		for _, k := range Held.Sonderfertigkeiten.Schriften {
+			if k.Name == v {
+				found = true
+				break
+			}
+		}
+
+		for _, k := range Held.Sonderfertigkeiten.Sprachen {
+			if k.Name == v {
+				found = true
+				break
+			}
+		}
+
 		if !found {
+			message = fmt.Sprintf("Anforderungen für Sonderfertigkeit %s nicht erfüllt! SF %s muss gewählt sein, fehlt jedoch.", SF.Name, v)
 			return
 		}
 	}
+
 	return true, ""
 }
 

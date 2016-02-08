@@ -38,6 +38,8 @@ type AvailableItems struct {
 	SF_Karmal                        []basiswerte.Sonderfertigkeit
 	SF_Magisch                       []basiswerte.Sonderfertigkeit
 	SF_Kampf                         []basiswerte.Sonderfertigkeit
+	SF_Sprachen                      []basiswerte.Sonderfertigkeit
+	SF_Schriften                     []basiswerte.Sonderfertigkeit
 	ProfessionenNachKulturUndSpezies basiswerte.ProfessionsListePtr
 }
 
@@ -88,6 +90,9 @@ func calculateAvailable() {
 	PageData.Available.SF_Magisch = PageData.Available.SF_Magisch[:0]
 	PageData.Available.SF_Kampf = PageData.Available.SF_Kampf[:0]
 	PageData.Available.ProfessionenNachKulturUndSpezies = PageData.Available.ProfessionenNachKulturUndSpezies[:0]
+	PageData.Available.SF_Sprachen = PageData.Available.SF_Sprachen[:0]
+	PageData.Available.SF_Schriften = PageData.Available.SF_Schriften[:0]
+
 	for _, v := range basiswerte.Nachteile {
 		ok, _ := erschaffung.VorUndNachteilAvailable(PageData.Held, &v)
 		if ok {
@@ -184,6 +189,39 @@ func calculateAvailable() {
 			}
 		}
 	}
+	for _, v := range basiswerte.SprachenSF {
+		ok, _ := erschaffung.SFAvailable(PageData.Held, &v)
+		if ok {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Sonderfertigkeiten.Sprachen {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.SF_Sprachen = append(PageData.Available.SF_Sprachen, v)
+			}
+		}
+	}
+	for _, v := range basiswerte.SchriftenSF {
+		ok, _ := erschaffung.SFAvailable(PageData.Held, &v)
+		if ok {
+			// only append if not already selected
+			selected := false
+			for _, w := range PageData.Held.Sonderfertigkeiten.Schriften {
+				if w.Name == v.Name {
+					selected = true
+					break
+				}
+			}
+			if !selected {
+				PageData.Available.SF_Schriften = append(PageData.Available.SF_Schriften, v)
+			}
+		}
+	}
+
 	PageData.Available.ProfessionenNachKulturUndSpezies = basiswerte.AlleProfessionen.NachKulturUndSpezies(PageData.Held.Kultur.Name, PageData.Held.Spezies.Name)
 }
 
@@ -329,7 +367,7 @@ func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string)
 				}
 			}
 		}
-	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf":
+	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf", "SFToAddSprache", "SFToAddSchrift":
 		{
 			var bereich *[]*basiswerte.Sonderfertigkeit
 			switch group {
@@ -341,6 +379,10 @@ func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string)
 				bereich = &PageData.Held.Sonderfertigkeiten.Magische
 			case "SFToAddKampf":
 				bereich = &PageData.Held.Sonderfertigkeiten.Kampf
+			case "SFToAddSprache":
+				bereich = &PageData.Held.Sonderfertigkeiten.Sprachen
+			case "SFToAddSchrift":
+				bereich = &PageData.Held.Sonderfertigkeiten.Schriften
 			default:
 				return "", ""
 			}
@@ -351,7 +393,7 @@ func removeItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string)
 						(*bereich), (*bereich)[len((*bereich))-1] = append((*bereich)[:i], (*bereich)[i+1:]...), nil
 						PageData.Held.APAusgeben(sf.APKosten * -1)
 						switch group {
-						case "SFToAddAllgemein":
+						case "SFToAddAllgemein", "SFToAddSprache", "SFToAddSchrift":
 							return "/held/page/allgemeines", ""
 						case "SFToAddKarmal":
 							return "/held/page/karmales", ""
@@ -405,8 +447,9 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (s
 				return "/held/page/allgemeines", ""
 			}
 		}
-	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf":
+	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf", "SFToAddSprache", "SFToAddSchrift":
 		{
+			fmt.Println("SF-Gruppe")
 			var bereich *[]*basiswerte.Sonderfertigkeit
 			switch group {
 			case "SFToAddAllgemein":
@@ -417,12 +460,18 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (s
 				bereich = &PageData.Held.Sonderfertigkeiten.Magische
 			case "SFToAddKampf":
 				bereich = &PageData.Held.Sonderfertigkeiten.Kampf
+			case "SFToAddSprache":
+				bereich = &PageData.Held.Sonderfertigkeiten.Sprachen
+			case "SFToAddSchrift":
+				bereich = &PageData.Held.Sonderfertigkeiten.Schriften
 			default:
 				return "", ""
 			}
+			fmt.Println(bereich)
 			sf := basiswerte.GetSF(item)
 			if sf != nil {
 				for _, v := range *bereich {
+					fmt.Println(v, item)
 					if v.Name == sf.Name {
 						return "", ""
 					}
@@ -430,7 +479,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (s
 				*bereich = append(*bereich, sf)
 				PageData.Held.APAusgeben(sf.APKosten)
 				switch group {
-				case "SFToAddAllgemein":
+				case "SFToAddAllgemein", "SFToAddSprache", "SFToAddSchrift":
 					return "/held/page/allgemeines", ""
 				case "SFToAddKarmal":
 					return "/held/page/karmales", ""
@@ -530,6 +579,8 @@ func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action str
 		}
 	case "add":
 		{
+			fmt.Println("add")
+			fmt.Println(params)
 			return addItem(c, w, r, params)
 		}
 	case "remove":

@@ -1,0 +1,75 @@
+[
+
+  {
+    "Name":"Garethi I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Garethi II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Garethi I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Garethi III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Garethi II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Tulamydia I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Tulamydia II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tulamydia I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Tulamydia III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tulamydia II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  }
+]

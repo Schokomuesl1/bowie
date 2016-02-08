@@ -124,9 +124,11 @@ function addNachteil() {
 }
 
 function addSF(bereich) {
+  console.log(bereich)
 	var e = document.getElementById(bereich)	
 	var selectedItem = e.options[e.selectedIndex].value;
-	doStuff("add", bereich, selectedItem);
+	console.log(selectedItem)
+  doStuff("add", bereich, selectedItem);
 }
 
 function removeVTNT(name) {
@@ -218,7 +220,7 @@ function checkForRedirect(data, status)
 
 // this is a hack - each click replaces the whole page. Rework this after switchung to a sensible API
 function doStuff(action, group, item) {	
-
+  console.log(action, group, item)
 	$.post("/held/action/"+action+"/"+group+"/"+item,
     	{},
     	checkForRedirect

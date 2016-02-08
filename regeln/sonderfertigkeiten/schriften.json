@@ -1,0 +1,26 @@
+[
+  {
+    "Name":"Kusliker Zeichen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Garethi I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Tulamydia",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tulamydia I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  }
+]

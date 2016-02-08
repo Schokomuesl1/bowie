@@ -57,6 +57,22 @@
 					{{end}}
 				</td>
 			</tr>
+			<tr>
+				<td>Sprachen</td>
+				<td>
+					{{range .Held.Sonderfertigkeiten.Sprachen}}
+					{{.Name}} <a href="javascript:removeSF('SFToAddSprache', '{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
+					{{end}}
+				</td>
+			</tr>
+			<tr>
+				<td>Schriften</td>
+				<td>
+					{{range .Held.Sonderfertigkeiten.Schriften}}
+					{{.Name}} <a href="javascript:removeSF('SFToAddSchrift', '{{.Name}}');"><span class="text-danger glyphicon glyphicon-remove"></span></a>, 
+					{{end}}
+				</td>
+			</tr>
 		</table>
 
 		<form>
@@ -86,6 +102,24 @@
 					{{end}}
 				</select>
 				<input type="button" value="+" onClick="Javascript:addSF('SFToAddAllgemein')"/></td>
+			</div>
+			<div class="form-group">
+				<label for="SFToAddSprache">Sprachen:</label>
+				<select class="form-control" name="SFToAddSprache" id="SFToAddSprache">
+					{{range .Available.SF_Sprachen}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddSprache')"/></td>
+			</div>
+			<div class="form-group">
+				<label for="SFToAddSchrift">Schriften:</label>
+				<select class="form-control" name="SFToAddSchrift" id="SFToAddSchrift">
+					{{range .Available.SF_Schriften}}
+					<option value="{{.Name}}"> {{.Name}} <i>({{.APKosten}} AP)</i></option>
+					{{end}}
+				</select>
+				<input type="button" value="+" onClick="Javascript:addSF('SFToAddSchrift')"/></td>
 			</div>
 		</form>
 	</div>
