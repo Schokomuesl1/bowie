@@ -1,5 +1,256 @@
 [
-
+  {
+    "Name":"Alaani I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Alaani II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Alaani I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Alaani III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Alaani II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Angram I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Angram II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Angram I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Angram III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Angram II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Asdharia I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Asdharia II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Asdharia I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Asdharia III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Asdharia II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Atak I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Atak II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Atak I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Atak III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Atak II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Aureliani I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Aureliani II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Aureliani I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Aureliani III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Aureliani II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Bosparano I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Bosparano II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bosparano I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Bosparano III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Bosparano II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Fjarningisch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Fjarningisch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fjarningisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Fjarningisch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Fjarningisch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
   {
     "Name":"Garethi I",
     "Vorraussetzungen":{
@@ -37,6 +288,510 @@
     "APKosten":2
   },
   {
+    "Name":"Goblinisch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Goblinisch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Goblinisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Goblinisch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Goblinisch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Isdira I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Isdira II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Isdira I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Isdira III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Isdira II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Mohisch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Mohisch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Mohisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Mohisch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Mohisch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Nujuka I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Nujuka II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Nujuka I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Nujuka III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Nujuka II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ogrisch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ogrisch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ogrisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ogrisch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ogrisch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Oloarkh I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Oloarkh II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Oloarkh I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Oloarkh III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Oloarkh II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ologhaijan I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ologhaijan II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ologhaijan I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ologhaijan III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ologhaijan II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rabensprache I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rabensprache II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rabensprache I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rabensprache III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rabensprache II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rogolan I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rogolan II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rogolan I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rogolan III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rogolan II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rssahh I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rssahh II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rssahh I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rssahh III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rssahh II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ruuz I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ruuz II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ruuz I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ruuz III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ruuz II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Saga-Thorwalsch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Saga-Thorwalsch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Saga-Thorwalsch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Saga-Thorwalsch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Saga-Thorwalsch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Thorwalsch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Thorwalsch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Thorwalsch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Thorwalsch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Thorwalsch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Trollisch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Trollisch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Trollisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Trollisch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Trollisch II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
     "Name":"Tulamydia I",
     "Vorraussetzungen":{
       "Talente":[],
@@ -68,6 +823,150 @@
       "NichtNachteil":[],
       "Eigenschaften":[],
       "Sonderfertigkeiten":["Tulamydia II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ur-Tulamydia I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ur-Tulamydia II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ur-Tulamydia I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Ur-Tulamydia III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ur-Tulamydia II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zelemja I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zelemja II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Zelemja I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zelemja III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Zelemja II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zhayad I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zhayad II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Zhayad I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zhayad III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Zhayad II"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"´Zyklopäisch I",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"´Zyklopäisch II",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["´Zyklopäisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"´Zyklopäisch III",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":[],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["´Zyklopäisch II"],
       "Sonstiges":""
     },
     "APKosten":2

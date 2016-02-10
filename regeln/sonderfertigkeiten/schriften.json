@@ -1,5 +1,102 @@
 [
   {
+    "Name":"Altes Alaani",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Alaani I"],
+      "Sonstiges":""
+    },
+    "APKosten":4
+  },
+  {
+    "Name":"Angram-Bilderschrift",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Angram I"],
+      "Sonstiges":""
+    },
+    "APKosten":4
+  },
+  {
+    "Name":"Chrmk",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rssahh I"],
+      "Sonstiges":""
+    },
+    "APKosten":4
+  },
+  {
+    "Name":"Chuchas",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rssahh I"],
+      "Sonstiges":""
+    },
+    "APKosten":6
+  },
+  {
+    "Name":"Hjaldingsche Runen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Saga-Thorwalsch I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Imperiale Zeichen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Aureliani I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  }
+  ,
+  {
+    "Name":"Geheiligte Glyphen von Unau",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Tulamydia I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Isdira- und Ashdaria-Zeichen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Isdira I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
     "Name":"Kusliker Zeichen",
     "Vorraussetzungen":{
       "Talente":[],
@@ -12,6 +109,42 @@
     "APKosten":2
   },
   {
+    "Name":"Nanduria",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":[""],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Rogolan-Runen",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Rogolan I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Trollische Raumbilderschrift",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Trollisch I"],
+      "Sonstiges":""
+    },
+    "APKosten":6
+  },
+  {
     "Name":"Tulamydia",
     "Vorraussetzungen":{
       "Talente":[],
@@ -22,5 +155,30 @@
       "Sonstiges":""
     },
     "APKosten":2
+  },
+  {
+    "Name":"Ur-Tulamydia",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Ur-Tulamydia I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
+  },
+  {
+    "Name":"Zhayad",
+    "Vorraussetzungen":{
+      "Talente":[],
+      "Vorteile":[],
+      "NichtNachteil":["Blind"],
+      "Eigenschaften":[],
+      "Sonderfertigkeiten":["Zhayad I"],
+      "Sonstiges":""
+    },
+    "APKosten":2
   }
+  
 ]
