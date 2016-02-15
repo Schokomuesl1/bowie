@@ -31,7 +31,7 @@
 		["Holzbearbeitung", "3"],
 		["Musizieren", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren) I"],
 	"APKosten":	150
 },
 {
@@ -64,7 +64,7 @@
 		["Rechtskunde", "2"],
 		["Sagen& Legenden", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden) I"],
 	"APKosten":	144
 },
 {
@@ -97,7 +97,7 @@
 		["Rechtskunde", "2"],
 		["Sagen& Legenden", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden) I"],
 	"APKosten":	144
 },
 {
@@ -133,7 +133,7 @@
 		["Holzbearbeitung", "3"],
 		["Musizieren", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren) I"],
 	"APKosten":	162
 },
 {
@@ -182,7 +182,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Fertigkeitsspezialisierung (Gassenwissen) I",
 		"Belastungsgewöhnung I",
 		"Wuchtschlag I"
 	],
@@ -234,7 +234,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Fertigkeitsspezialisierung (Gassenwissen) I",
 		"Wuchtschlag I"
 	],
 	"APKosten":	235
@@ -286,7 +286,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Fertigkeitsspezialisierung (Gassenwissen) I",
 		"Wuchtschlag I"
 	],
 	"APKosten":	246
@@ -337,11 +337,711 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen)",
+		"Fertigkeitsspezialisierung (Gassenwissen) I",
 		"Belastungsgewöhnung I",
 		"Wuchtschlag I"
 	],
 	"APKosten":	246
+},
+{
+	"Name":"Gaukler",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","8"],
+		["Wurfwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","7"],
+		["Klettern","4"],
+		["Körperbeherrschung","7"],
+		["Kraftakt","2"],
+		["Reiten","2"],
+		["Tanzen","2"],
+		["Taschendiebstahl","3"],
+		["Verbergen","3"],
+		["Zechen","3"],
+		["Gassenwissen","2"],
+		["Menschenkenntnis","4"],
+		["Überreden","2"],
+		["Verkleiden","5"],
+		["Tierkunde","2"],
+		["Wildnisleben","3"],
+		["Geographie","3"],
+		["Götter& Kulte","2"],
+		["Sagen& Legenden","5"],
+		["Fahrzeuge","4"],
+		["Malen& Zeichnen","2"],
+		["Musizieren","3"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien) I"],
+	"APKosten": 160
+},
+{
+	"Name":"Gaukler (Akrobat)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","8"],
+		["Wurfwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","7"],
+		["Klettern","7"],
+		["Körperbeherrschung","8"],
+		["Kraftakt","2"],
+		["Reiten","2"],
+		["Tanzen","2"],
+		["Taschendiebstahl","3"],
+		["Verbergen","3"],
+		["Zechen","3"],
+		["Gassenwissen","2"],
+		["Menschenkenntnis","4"],
+		["Überreden","2"],
+		["Verkleiden","5"],
+		["Tierkunde","2"],
+		["Wildnisleben","3"],
+		["Geographie","3"],
+		["Götter& Kulte","2"],
+		["Sagen& Legenden","5"],
+		["Fahrzeuge","4"],
+		["Malen& Zeichnen","2"],
+		["Musizieren","3"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Körperbeherrschung) I"],
+	"APKosten": 173
+},
+{
+	"Name":"Gaukler (Dompteur)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","8"],
+		["Wurfwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","7"],
+		["Klettern","4"],
+		["Körperbeherrschung","7"],
+		["Kraftakt","2"],
+		["Reiten","2"],
+		["Tanzen","2"],
+		["Taschendiebstahl","3"],
+		["Verbergen","3"],
+		["Zechen","3"],
+		["Gassenwissen","2"],
+		["Menschenkenntnis","2"],
+		["Überreden","2"],
+		["Verkleiden","5"],
+		["Tierkunde","7"],
+		["Wildnisleben","3"],
+		["Geographie","3"],
+		["Götter& Kulte","2"],
+		["Sagen& Legenden","5"],
+		["Fahrzeuge","4"],
+		["Malen& Zeichnen","2"],
+		["Musizieren","3"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Tierkunde) I"],
+	"APKosten": 171
+},
+{
+	"Name":"Gaukler (Messerwerfer)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","8"],
+		["Wurfwaffen","12"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","5"],
+		["Klettern","4"],
+		["Körperbeherrschung","7"],
+		["Kraftakt","2"],
+		["Reiten","2"],
+		["Tanzen","2"],
+		["Taschendiebstahl","3"],
+		["Verbergen","3"],
+		["Zechen","3"],
+		["Gassenwissen","2"],
+		["Menschenkenntnis","4"],
+		["Überreden","2"],
+		["Verkleiden","2"],
+		["Tierkunde","2"],
+		["Wildnisleben","3"],
+		["Geographie","3"],
+		["Götter& Kulte","2"],
+		["Sagen& Legenden","5"],
+		["Fahrzeuge","4"],
+		["Malen& Zeichnen","2"],
+		["Musizieren","3"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien) I"],
+	"APKosten": 160
+},
+{
+	"Name":"Gaukler (Possenreißer)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","8"],
+		["Wurfwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","7"],
+		["Klettern","4"],
+		["Körperbeherrschung","3"],
+		["Kraftakt","2"],
+		["Reiten","2"],
+		["Tanzen","2"],
+		["Taschendiebstahl","3"],
+		["Verbergen","3"],
+		["Zechen","3"],
+		["Gassenwissen","2"],
+		["Menschenkenntnis","4"],
+		["Überreden","4"],
+		["Verkleiden","7"],
+		["Tierkunde","2"],
+		["Wildnisleben","3"],
+		["Geographie","3"],
+		["Götter& Kulte","2"],
+		["Sagen& Legenden","5"],
+		["Fahrzeuge","4"],
+		["Malen& Zeichnen","2"],
+		["Musizieren","3"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien) I"],
+	"APKosten": 154
+},
+{
+	"Name":"Gaukler (Wahrsager)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","7"],
+		["Klettern","4"],
+		["Kraftakt","2"],
+		["Reiten","2"],
+		["Tanzen","2"],
+		["Taschendiebstahl","3"],
+		["Verbergen","3"],
+		["Zechen","3"],
+		["Gassenwissen","2"],
+		["Menschenkenntnis","6"],
+		["Überreden","4"],
+		["Verkleiden","5"],
+		["Tierkunde","2"],
+		["Wildnisleben","3"],
+		["Geographie","3"],
+		["Götter& Kulte","2"],
+		["Sagen& Legenden","5"],
+		["Fahrzeuge","4"],
+		["Malen& Zeichnen","2"],
+		["Musizieren","3"],
+		["Sternkunde","4"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Menschenkenntnis) I"],
+	"APKosten": 146
+},
+{
+	"Name":"Gladiator",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["GE","13"]
+		],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","12"]
+	],
+	"KampftechnikenAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Hiebwaffen",
+				"Schwerter",
+				"Stangenwaffen"
+			],
+			"ZuWaehlen":1,
+			"Wert":12
+		}
+	],
+	"Talente":[
+		["Körperbeherrschung","4"],
+		["Kraftakt","6"],
+		["Selbstbeherrschung","5"],
+		["Zechen","3"],
+		["Einschüchtern","5"],
+		["Menschenkenntnis","3"],
+		["Götter& Kulte","4"],
+		["Kriegskunst","3"],
+		["Heilkunde Wunden","4"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Menschenkenntnis) I",
+		"Wuchtschlag I",
+		"Finte I"
+	],
+	"APKosten": 164
+},
+{
+	"Name":"Gladiator (Grubenkämpfer)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["GE","13"]
+		],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","12"],
+		["Dolche","10"]
+	],
+	"KampftechnikenAuswahl":[
+	],
+	"Talente":[
+		["Körperbeherrschung","4"],
+		["Kraftakt","6"],
+		["Selbstbeherrschung","5"],
+		["Zechen","3"],
+		["Einschüchtern","5"],
+		["Menschenkenntnis","3"],
+		["Götter& Kulte","4"],
+		["Kriegskunst","3"],
+		["Heilkunde Wunden","4"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Menschenkenntnis) I",
+		"Wuchtschlag I"
+	],
+	"APKosten": 139
+},
+{
+	"Name":"Gladiator (Schaukämpfer)",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[
+			["GE","13"]
+		],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Raufen","12"],
+		["Dolche","10"]
+	],
+	"KampftechnikenAuswahl":[
+	],
+	"Talente":[
+		["Gaukeleien","3"],
+		["Körperbeherrschung","4"],
+		["Kraftakt","6"],
+		["Selbstbeherrschung","2"],
+		["Zechen","4"],
+		["Überreden","4"],
+		["Einschüchtern","5"],
+		["Menschenkenntnis","3"],
+		["Götter& Kulte","4"],
+		["Kriegskunst","3"],
+		["Heilkunde Wunden","4"],
+		["Orientierung","3"]
+	],
+	"Sonderfertigkeiten":[
+		"Fertigkeitsspezialisierung (Menschenkenntnis) I",
+		"Finte I"
+	],
+	"APKosten": 159
+},
+{
+	"Name":"Händler",
+	"Kommentar": "Sprachen und Schriften für 10 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Stangenwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Sinnesschärfe","3"],
+		["Etikette","4"],
+		["Gassenwissen","3"],
+		["Menschenkenntnis","5"],
+		["Überreden","5"],
+		["Willenskraft","4"],
+		["Geographie","2"],
+		["Götter& Kulte","3"],
+		["Rechnen","6"],
+		["Rechtskunde","4"],
+		["Sagen& Legenden","3"],
+		["Fahrzeuge","3"],
+		["Handel","7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"APKosten": 136
+},
+{
+	"Name":"Händler (Fahrender Händler)",
+	"Kommentar": "Sprachen und Schriften für 10 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Stangenwaffen","8"],
+		["Hiebwaffen","8"],
+		["Raufen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Sinnesschärfe","3"],
+		["Etikette","4"],
+		["Gassenwissen","3"],
+		["Menschenkenntnis","5"],
+		["Überreden","5"],
+		["Willenskraft","4"],
+		["Orientierung","4"],
+		["Wildnisleben","3"],
+		["Geographie","2"],
+		["Götter& Kulte","3"],
+		["Rechnen","6"],
+		["Rechtskunde","4"],
+		["Sagen& Legenden","3"],
+		["Fahrzeuge","7"],
+		["Handel","7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"APKosten": 167
+},
+{
+	"Name":"Händler (Fernhändler)",
+	"Kommentar": "Sprachen und Schriften für 10 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Stangenwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Sinnesschärfe","3"],
+		["Etikette","4"],
+		["Gassenwissen","3"],
+		["Menschenkenntnis","5"],
+		["Überreden","5"],
+		["Willenskraft","4"],
+		["Orientierung","3"],
+		["Wildnisleben","4"],
+		["Geographie","7"],
+		["Götter& Kulte","3"],
+		["Rechnen","6"],
+		["Rechtskunde","4"],
+		["Magiekunde","2"],
+		["Sternkunde","2"],
+		["Sagen& Legenden","3"],
+		["Fahrzeuge","3"],
+		["Handel","7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"APKosten": 172
+},
+{
+	"Name":"Händler (Geldwechsler)",
+	"Kommentar": "Sprachen und Schriften für 10 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Dolche","8"],
+		["Hiebwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Sinnesschärfe","3"],
+		["Etikette","4"],
+		["Gassenwissen","7"],
+		["Menschenkenntnis","5"],
+		["Überreden","5"],
+		["Willenskraft","4"],
+		["Geographie","2"],
+		["Götter& Kulte","3"],
+		["Rechnen","8"],
+		["Rechtskunde","4"],
+		["Sagen& Legenden","3"],
+		["Fahrzeuge","3"],
+		["Handel","7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Rechnen) I"],
+	"APKosten": 153
+},
+{
+	"Name":"Händler (Hausierer)",
+	"Kommentar": "Sprachen und Schriften für 10 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+	],
+	"KampftechnikenAuswahl":[
+	],
+	"Talente":[
+		["Sinnesschärfe","3"],
+		["Etikette","4"],
+		["Gassenwissen","7"],
+		["Menschenkenntnis","7"],
+		["Überreden","7"],
+		["Willenskraft","4"],
+		["Geographie","2"],
+		["Götter& Kulte","3"],
+		["Rechnen","6"],
+		["Rechtskunde","4"],
+		["Sagen& Legenden","3"],
+		["Fahrzeuge","3"],
+		["Handel","7"],
+		["Orientierung","4"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"APKosten": 162
+},
+{
+	"Name":"Händler",
+	"Kommentar": "Sprachen und Schriften für 10 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":["Fjarninger", "Mohas", "Nivesen"],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Stangenwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Sinnesschärfe","3"],
+		["Etikette","4"],
+		["Gassenwissen","3"],
+		["Menschenkenntnis","5"],
+		["Überreden","5"],
+		["Willenskraft","4"],
+		["Geographie","2"],
+		["Götter& Kulte","3"],
+		["Rechnen","6"],
+		["Rechtskunde","4"],
+		["Sagen& Legenden","3"],
+		["Fahrzeuge","1"],
+		["Handel","7"],
+		["Fährtensuche","4"],
+		["Orientierung","4"],
+		["Wildnisleben","4"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"APKosten": 166
+},
+{
+	"Name":"Heiler",
+	"Kommentar": "Sprachen und Schriften für 8 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Dolche","8"],
+		["Hiebwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Selbstbeherrschung","6"],
+		["Sinnesschärfe","4"],
+		["Etikette","4"],
+		["Menschenkenntnis","5"],
+		["Überreden","4"],
+		["Fesseln","4"],
+		["Pflanzenkunde","6"],
+		["Tierkunde","6"],
+		["Götter& Kultur","4"],
+		["Rechnen","5"],
+		["Rechtskunde","3"],
+		["Sagen& Legenden","2"],
+		["Heilkunde Gift","5"],
+		["Heilkunde Krankheit","6"],
+		["Heilkunde Wunden","7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden) I"],
+	"APKosten": 207
+},
+{
+	"Name":"Heiler (Hebamme)",
+	"Kommentar": "Sprachen und Schriften für 8 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Dolche","8"],
+		["Hiebwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Selbstbeherrschung","6"],
+		["Sinnesschärfe","4"],
+		["Menschenkenntnis","5"],
+		["Überreden","4"],
+		["Fesseln","4"],
+		["Pflanzenkunde","7"],
+		["Tierkunde","6"],
+		["Götter& Kultur","4"],
+		["Rechnen","5"],
+		["Rechtskunde","3"],
+		["Sagen& Legenden","6"],
+		["Heilkunde Gift","4"],
+		["Heilkunde Krankheit","7"],
+		["Heilkunde Wunden","7"],
+		["Heilkunde Seele","4"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden) I"],
+	"APKosten": 218
+},
+{
+	"Name":"Heiler (Medicus)",
+	"Kommentar": "Sprachen und Schriften für 8 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Dolche","8"],
+		["Hiebwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Selbstbeherrschung","6"],
+		["Sinnesschärfe","4"],
+		["Etikette","7"],
+		["Menschenkenntnis","5"],
+		["Überreden","4"],
+		["Fesseln","4"],
+		["Pflanzenkunde","8"],
+		["Tierkunde","6"],
+		["Götter& Kultur","4"],
+		["Rechnen","5"],
+		["Rechtskunde","3"],
+		["Sagen& Legenden","2"],
+		["Heilkunde Gift","5"],
+		["Heilkunde Krankheit","8"],
+		["Heilkunde Wunden","7"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Krankheit) I"],
+	"APKosten": 221
+},
+{
+	"Name":"Heiler (Quacksalber)",
+	"Kommentar": "Sprachen und Schriften für 8 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Dolche","8"],
+		["Hiebwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Gaukeleien","2"],
+		["Fahrzeuge","4"],
+		["Selbstbeherrschung","6"],
+		["Sinnesschärfe","4"],
+		["Etikette","4"],
+		["Menschenkenntnis","5"],
+		["Überreden","7"],
+		["Fesseln","4"],
+		["Pflanzenkunde","6"],
+		["Tierkunde","6"],
+		["Götter& Kultur","4"],
+		["Rechnen","5"],
+		["Rechtskunde","3"],
+		["Sagen& Legenden","2"],
+		["Heilkunde Gift","2"],
+		["Heilkunde Krankheit","2"],
+		["Heilkunde Wunden","4"]
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden) I"],
+	"APKosten": 196
 }
-
 ]
