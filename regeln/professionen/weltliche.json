@@ -31,7 +31,7 @@
 		["Holzbearbeitung", "3"],
 		["Musizieren", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
 	"APKosten":	150
 },
 {
@@ -64,7 +64,7 @@
 		["Rechtskunde", "2"],
 		["Sagen& Legenden", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
 	"APKosten":	144
 },
 {
@@ -97,7 +97,7 @@
 		["Rechtskunde", "2"],
 		["Sagen& Legenden", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Sagen& Legenden)"],
 	"APKosten":	144
 },
 {
@@ -133,7 +133,7 @@
 		["Holzbearbeitung", "3"],
 		["Musizieren", "7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Musizieren)"],
 	"APKosten":	162
 },
 {
@@ -182,7 +182,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen) I",
+		"Fertigkeitsspezialisierung (Gassenwissen)",
 		"Belastungsgewöhnung I",
 		"Wuchtschlag I"
 	],
@@ -234,7 +234,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen) I",
+		"Fertigkeitsspezialisierung (Gassenwissen)",
 		"Wuchtschlag I"
 	],
 	"APKosten":	235
@@ -286,7 +286,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen) I",
+		"Fertigkeitsspezialisierung (Gassenwissen)",
 		"Wuchtschlag I"
 	],
 	"APKosten":	246
@@ -337,7 +337,7 @@
 		["Heilkunde Wunden", "4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Gassenwissen) I",
+		"Fertigkeitsspezialisierung (Gassenwissen)",
 		"Belastungsgewöhnung I",
 		"Wuchtschlag I"
 	],
@@ -381,7 +381,7 @@
 		["Malen& Zeichnen","2"],
 		["Musizieren","3"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien)"],
 	"APKosten": 160
 },
 {
@@ -422,7 +422,7 @@
 		["Malen& Zeichnen","2"],
 		["Musizieren","3"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Körperbeherrschung) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Körperbeherrschung)"],
 	"APKosten": 173
 },
 {
@@ -463,7 +463,7 @@
 		["Malen& Zeichnen","2"],
 		["Musizieren","3"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Tierkunde) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Tierkunde)"],
 	"APKosten": 171
 },
 {
@@ -504,7 +504,7 @@
 		["Malen& Zeichnen","2"],
 		["Musizieren","3"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien)"],
 	"APKosten": 160
 },
 {
@@ -545,7 +545,7 @@
 		["Malen& Zeichnen","2"],
 		["Musizieren","3"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Gaukeleien)"],
 	"APKosten": 154
 },
 {
@@ -585,7 +585,7 @@
 		["Musizieren","3"],
 		["Sternkunde","4"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Menschenkenntnis) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Menschenkenntnis)"],
 	"APKosten": 146
 },
 {
@@ -624,7 +624,7 @@
 		["Heilkunde Wunden","4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Menschenkenntnis) I",
+		"Fertigkeitsspezialisierung (Menschenkenntnis)",
 		"Wuchtschlag I",
 		"Finte I"
 	],
@@ -658,7 +658,7 @@
 		["Heilkunde Wunden","4"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Menschenkenntnis) I",
+		"Fertigkeitsspezialisierung (Menschenkenntnis)",
 		"Wuchtschlag I"
 	],
 	"APKosten": 139
@@ -694,7 +694,7 @@
 		["Orientierung","3"]
 	],
 	"Sonderfertigkeiten":[
-		"Fertigkeitsspezialisierung (Menschenkenntnis) I",
+		"Fertigkeitsspezialisierung (Menschenkenntnis)",
 		"Finte I"
 	],
 	"APKosten": 159
@@ -728,7 +728,7 @@
 		["Fahrzeuge","3"],
 		["Handel","7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel)"],
 	"APKosten": 136
 },
 {
@@ -764,7 +764,7 @@
 		["Fahrzeuge","7"],
 		["Handel","7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel)"],
 	"APKosten": 167
 },
 {
@@ -800,7 +800,7 @@
 		["Fahrzeuge","3"],
 		["Handel","7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel)"],
 	"APKosten": 172
 },
 {
@@ -833,7 +833,7 @@
 		["Fahrzeuge","3"],
 		["Handel","7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Rechnen) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Rechnen)"],
 	"APKosten": 153
 },
 {
@@ -864,7 +864,7 @@
 		["Handel","7"],
 		["Orientierung","4"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel)"],
 	"APKosten": 162
 },
 {
@@ -899,7 +899,7 @@
 		["Orientierung","4"],
 		["Wildnisleben","4"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Handel)"],
 	"APKosten": 166
 },
 {
@@ -934,7 +934,7 @@
 		["Heilkunde Krankheit","6"],
 		["Heilkunde Wunden","7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden)"],
 	"APKosten": 207
 },
 {
@@ -969,7 +969,7 @@
 		["Heilkunde Wunden","7"],
 		["Heilkunde Seele","4"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden)"],
 	"APKosten": 218
 },
 {
@@ -1004,7 +1004,7 @@
 		["Heilkunde Krankheit","8"],
 		["Heilkunde Wunden","7"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Krankheit) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Krankheit)"],
 	"APKosten": 221
 },
 {
@@ -1041,7 +1041,7 @@
 		["Heilkunde Krankheit","2"],
 		["Heilkunde Wunden","4"]
 	],
-	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden) I"],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Heilkunde Wunden)"],
 	"APKosten": 196
 }
 ]
