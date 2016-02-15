@@ -167,5 +167,206 @@
             ["Zechen","1"]
         ],
         "APKosten": 25
+    },
+    {
+        "Name": "Nostrier",
+        "Talente": [
+          ["Fischen& Angeln","2"],
+          ["Orientierung","1"],
+          ["Pflanzenkunde","1"],
+          ["Sagen& Legenden","1"],
+          ["Tierkunde","1"],
+          ["Wildnisleben","1"]
+        ],
+        "APKosten": 15
+    },
+    {
+        "Name": "Novadis",
+        "Talente": [
+          ["Einschüchtern","2"],
+          ["Fährtensuchen","1"],
+          ["Orientierung","2"],
+          ["Rechtskunde","1"],
+          ["Reiten","2"],
+          ["Tierkunde","1"],
+          ["Wildnisleben","2"]
+        ],
+        "APKosten": 25
+    },
+    {
+        "Name": "Südaventurier",
+        "Talente": [
+            ["Betören","1"],
+            ["Boote& Schiffe","1"],
+            ["Fischen& Angeln","1"],
+            ["Gassenwissen","2"],
+            ["Heilkunde Gift","1"],
+            ["Menschenkenntnis","2"],
+            ["Überreden","1"],
+            ["Willenskraft","1"]
+        ],
+        "APKosten": 26
+    },
+    {
+        "Name": "Svelttaler",
+        "Talente": [
+          ["Fährtensuchen","2"],
+          ["Fahrzeuge","2"],
+          ["Orientierung","1"],
+          ["Pflanzenkunde","1"],
+          ["Sagen& Legenden","1"],
+          ["Tierkunde","1"],
+          ["Wildnisleben","1"]
+        ],
+        "APKosten": 21
+    },
+    {
+        "Name": "Thorwaler",
+        "Talente": [
+          ["Boote& Schiffe","2"],
+          ["Einschüchtern","1"],
+          ["Fischen& Angeln","2"],
+          ["Geographie","1"],
+          ["Holzbearbeitung","2"],
+          ["Kraftakt","2"],
+          ["Orientierung","1"],
+          ["Sagen& Legenden","1"],
+          ["Zechen","2"]
+        ],
+        "APKosten": 24
+    },
+    {
+        "Name": "Zyklopäer",
+        "Talente": [
+          ["Boote& Schiffe","1"],
+          ["Fischen& Angeln","2"],
+          ["Geschichtswissen","1"],
+          ["Götter& Kulte","2"],
+          ["Musizieren","1"],
+          ["Rechnen","1"],
+          ["Rechtskunde","1"],
+          ["Sagen& Legenden","1"],
+          ["Tanzen","1"]
+        ],
+        "APKosten": 16
+    },
+    {
+        "Name": "Auelfen",
+        "Talente": [
+          ["Betören","1"],
+          ["Boote& Schiffe","1"],
+          ["Fährtensuchen","1"],
+          ["Fischen& Angeln","2"],
+          ["Körperbeherrschung","2"],
+          ["Musizieren","2"],
+          ["Orientierung","1"],
+          ["Pflanzenkunde","1"],
+          ["Schwimmen","2"],
+          ["Singen","2"],
+          ["Sinnenschärfe","1"],
+          ["Tierkunde","1"],
+          ["Verbergen","1"],
+          ["Wildnisleben","1"]
+        ],
+        "APKosten": 43
+    },
+    {
+        "Name": "Firnelefen",
+        "Talente": [
+          ["Fährtensuchen","2"],
+          ["Fischen& Angeln","1"],
+          ["Klettern","1"],
+          ["Körperbeherrschung","2"],
+          ["Musizieren","2"],
+          ["Orientierung","2"],
+          ["Selbstbeherrschung","1"],
+          ["Singen","2"],
+          ["Sinnenschärfe","2"],
+          ["Tierkunde","2"],
+          ["Verbergen","2"],
+          ["Wildnisleben","2"]
+        ],
+        "APKosten": 55
+    },
+    {
+        "Name": "Waldelfen",
+        "Talente": [
+          ["Fährtensuchen","2"],
+          ["Klettern","1"],
+          ["Körperbeherrschung","2"],
+          ["Musizieren","2"],
+          ["Orientierung","1"],
+          ["Pflanzenkunde","2"],
+          ["Singen","2"],
+          ["Sinnenschärfe","1"],
+          ["Tierkunde","2"],
+          ["Verbergen","2"],
+          ["Wildnisleben","1"]
+        ],
+        "APKosten": 47
+    },
+    {
+        "Name": "Ambosszwerge",
+        "Talente": [
+          ["Einschüchtern","1"],
+          ["Geschichtswissen","1"],
+          ["Kraftakt","2"],
+          ["Kriegskunst","2"],
+          ["Mechanik","1"],
+          ["Metallbearbeitung","2"],
+          ["Orientierung","1"],
+          ["Sagen& Legenden","1"],
+          ["Steinbearbeitung","2"],
+          ["Verbergen","1"],
+          ["Zechen","2"]
+        ],
+        "APKosten": 31
+    },
+    {
+        "Name": "Brilliantzwerge",
+        "Talente": [
+          ["Betören","1"],
+          ["Geographie","2"],
+          ["Geschichtswissen","1"],
+          ["Metallbearbeitung","2"],
+          ["Musizieren","1"],
+          ["Sagen& Legenden","1"],
+          ["Schlösserknacken","2"],
+          ["Steinbearbeitung","1"],
+          ["Tanzen","1"],
+          ["Verbergen","2"],
+          ["Zechen","1"]
+        ],
+        "APKosten": 29
+    },
+    {
+        "Name": "Erzzwerge",
+        "Talente": [
+          ["Geschichtswissen","2"],
+          ["Götter& Kulte","2"],
+          ["Mechanik","2"],
+          ["Metallbearbeitung","1"],
+          ["Rechnen","2"],
+          ["Rechtskunde","1"],
+          ["Sagen& Legenden","2"],
+          ["Selbstbeherrschung","1"],
+          ["Steinbearbeitung","1"],
+          ["Verbergen","2"],
+          ["Zechen","1"]
+        ],
+        "APKosten": 34
+    },
+    {
+        "Name": "Hügelzwerge",
+        "Talente": [
+          ["Fahrzeuge","1"],
+          ["Fischen& Angeln","1"],
+          ["Lebensmittelbearbeitung","2"],
+          ["Singen","1"],
+          ["Tanzen","1"],
+          ["Verbergen","2"],
+          ["Zechen","2"]
+        ],
+        "APKosten": 13
     }
 ]
