@@ -124,10 +124,8 @@ function addNachteil() {
 }
 
 function addSF(bereich) {
-  console.log(bereich)
 	var e = document.getElementById(bereich)	
 	var selectedItem = e.options[e.selectedIndex].value;
-	console.log(selectedItem)
   doStuff("add", bereich, selectedItem);
 }
 
@@ -141,8 +139,6 @@ function removeSF(bereich, name) {
 
 function checkForRedirect(data, status)
 {
-	//var obj = $.parseJSON(data);
-	console.log(data);
 	if (data.hasOwnProperty('redirectTo'))
 	{
 		if (data['redirectTo'] != "") {
@@ -167,11 +163,8 @@ function checkForRedirect(data, status)
 	var notification = "";
 	if (data.hasOwnProperty('notificationMsg'))
 	{
-		console.log("found notification msg");
-		console.log(data['notificationMsg']);
 		notification = data['notificationMsg'];
 	}
-	console.log(notification);
 	if (notification != "") {
 		$.notify({
 			// options
@@ -220,11 +213,10 @@ function checkForRedirect(data, status)
 
 // this is a hack - each click replaces the whole page. Rework this after switchung to a sensible API
 function doStuff(action, group, item) {	
-  console.log(action, group, item)
-	$.post("/held/action/"+action+"/"+group+"/"+item,
+    $.post("/held/action/"+action+"/"+group+"/"+item,
     	{},
     	checkForRedirect
-	);
+    );
 };
 
 function extractSelectedNewHeld() {
@@ -256,6 +248,7 @@ function extractSelectedProfession() {
   toggleMenuitemVisibility('Kampftechniken', true);
   toggleMenuitemVisibility('Talente', true);
 }
+
 function extractSelectedUpdateEigenschaften() {
 	var request = new Object();
 	var i = 0
@@ -266,6 +259,20 @@ function extractSelectedUpdateEigenschaften() {
 	}
 	request.type = "modEigenschaften"
 	sendPostWithJSONTo("/held/complexaction", request)
+}
+
+function extractSelectedKampfwertAuswahl() {
+    var request = new Object();
+    var i = 0
+    while (!(!document.getElementById("kampfwertSelect"+i.toString()))) {
+        var e = document.getElementById("kampfwertSelect"+i.toString());
+        var w = document.getElementById("kampfwertSelect"+i.toString()+"_Wert");
+        request["kw" + i.toString()] = e.options[e.selectedIndex].value;
+        request["kw_wert_" + i.toString()] = w.innerHTML;
+        i++
+    }
+    request.type = "selectKampfwerte"
+    sendPostWithJSONTo("/held/complexaction", request)
 }
 
 

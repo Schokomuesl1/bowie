@@ -26,6 +26,7 @@ type KampftechnikWahlPack struct {
 	ZuWaehlen          int
 	Wert               int
 }
+
 type VoraussetzungenProfession struct {
 	Eigenschaften [][2]string
 	Kultur        []string

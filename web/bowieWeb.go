@@ -48,6 +48,11 @@ type EigenschaftenModSet struct {
 	Modifikation basiswerte.EigenschaftenModSpezies
 }
 
+type KampftechnikModSet struct {
+	Label        int
+	Modifikation basiswerte.KampftechnikWahlPack
+}
+
 type apData struct {
 	AP       int `json:"ap"`
 	AP_spent int `json:"ap_spent"`
@@ -449,7 +454,6 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (s
 		}
 	case "SFToAddAllgemein", "SFToAddKarmal", "SFToAddMagisch", "SFToAddKampf", "SFToAddSprache", "SFToAddSchrift":
 		{
-			fmt.Println("SF-Gruppe")
 			var bereich *[]*basiswerte.Sonderfertigkeit
 			switch group {
 			case "SFToAddAllgemein":
@@ -467,11 +471,9 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (s
 			default:
 				return "", ""
 			}
-			fmt.Println(bereich)
 			sf := basiswerte.GetSF(item)
 			if sf != nil {
 				for _, v := range *bereich {
-					fmt.Println(v, item)
 					if v.Name == sf.Name {
 						return "", ""
 					}
@@ -507,9 +509,7 @@ func addItem(c web.C, w http.ResponseWriter, r *http.Request, addTo []string) (s
 			zauber, _ := basiswerte.AlleZauber[item]
 			// first we need to check if there are still zauber left to add in this category...
 			ownCategory := false
-			fmt.Println(zauber)
 			for _, v := range zauber.Verbreitung {
-				fmt.Println(v)
 				if v == "allgemein" || v == "Allgemein" {
 					ownCategory = true
 					break
@@ -579,8 +579,6 @@ func runActionParams(c web.C, w http.ResponseWriter, r *http.Request, action str
 		}
 	case "add":
 		{
-			fmt.Println("add")
-			fmt.Println(params)
 			return addItem(c, w, r, params)
 		}
 	case "remove":
@@ -655,12 +653,6 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 		if len(PageData.Held.Spezies.EigenschaftsModifikationen) == 0 {
 			PageData.Available.ProfessionenNachKulturUndSpezies = PageData.Available.ProfessionenNachKulturUndSpezies[:0]
 			PageData.Available.ProfessionenNachKulturUndSpezies = basiswerte.AlleProfessionen.NachKulturUndSpezies(PageData.Held.Kultur.Name, PageData.Held.Spezies.Name)
-			fmt.Println("Jetzt professionsauswahl")
-			fmt.Println(len(PageData.Available.ProfessionenNachKulturUndSpezies))
-			fmt.Println(PageData.Available.ProfessionenNachKulturUndSpezies)
-			for _, v := range PageData.Available.ProfessionenNachKulturUndSpezies {
-				fmt.Println(v)
-			}
 			redirectToURI = "/held/page/professionsAuswahl"
 		} else {
 			redirectToURI = "/held/page/modEigenschaften"
@@ -670,16 +662,17 @@ func runComplexActionAndRedirect(c web.C, w http.ResponseWriter, r *http.Request
 		doModEigenschaften(r)
 		PageData.Available.ProfessionenNachKulturUndSpezies = PageData.Available.ProfessionenNachKulturUndSpezies[:0]
 		PageData.Available.ProfessionenNachKulturUndSpezies = basiswerte.AlleProfessionen.NachKulturUndSpezies(PageData.Held.Kultur.Name, PageData.Held.Spezies.Name)
-		fmt.Println("Jetzt professionsauswahl")
-		fmt.Println(len(PageData.Available.ProfessionenNachKulturUndSpezies))
-		fmt.Println(PageData.Available.ProfessionenNachKulturUndSpezies)
-		for _, v := range PageData.Available.ProfessionenNachKulturUndSpezies {
-			fmt.Println(v)
-		}
 		redirectToURI = "/held/page/professionsAuswahl"
+	} else if r.FormValue("type") == "selectKampfwerte" {
+		doModSelektion(r)
+		redirectToURI = "/held/page/allgemeines"
 	} else if r.FormValue("type") == "selectProfession" {
 		doSelectProfession(r)
-		redirectToURI = "/held/page/allgemeines"
+		if len(PageData.Held.Profession.KampftechnikenAuswahl) > 0 {
+			redirectToURI = "/held/page/selectKampftechniken"
+		} else {
+			redirectToURI = "/held/page/allgemeines"
+		}
 	}
 
 	calculateAvailable()
@@ -730,9 +723,31 @@ func doModEigenschaften(r *http.Request) {
 	}
 }
 
+func doModSelektion(r *http.Request) {
+	currentLabel := 0
+	for _, v := range PageData.Held.Profession.KampftechnikenAuswahl {
+		for c := 0; c < v.ZuWaehlen; c++ {
+			ktName := r.FormValue("kw" + strconv.Itoa(currentLabel))
+			ktWert := r.FormValue("kw_wert_" + strconv.Itoa(currentLabel))
+			t := PageData.Held.Kampftechniken.Get(ktName)
+			if t != nil {
+				neuerKampftechnikWert, err := strconv.Atoi(ktWert)
+				if err == nil {
+					toAdd := neuerKampftechnikWert - t.Value()
+					if toAdd > 0 {
+						t.AddValue(toAdd)
+					}
+				} else {
+					fmt.Println("Error parsing kt results: ", ktName, ktWert)
+				}
+			}
+			currentLabel++
+		}
+	}
+}
+
 func doSelectProfession(r *http.Request) {
 	profession := r.FormValue("profession")
-	fmt.Println("Ausgewählte Profession: ", profession)
 	if profession == "__none__" {
 		return
 	}
@@ -762,6 +777,26 @@ func pageModEigenschaften(c web.C, w http.ResponseWriter, r *http.Request) {
 
 	}
 	t.Execute(w, &eigenMod)
+}
+
+func pageSelectKampftechiken(c web.C, w http.ResponseWriter, r *http.Request) {
+	if PageData.Held == nil {
+		return // empty page if no held...
+	}
+	t, _ := template.ParseFiles("template/partials/multiKampftechnikwahl.tpl")
+
+	ktSelection := make([]KampftechnikModSet, 0)
+	currentLabel := 0
+	for _, v := range PageData.Held.Profession.KampftechnikenAuswahl {
+		for c := 0; c < v.ZuWaehlen; c++ {
+			var kms KampftechnikModSet
+			kms.Label = currentLabel
+			kms.Modifikation = v
+			ktSelection = append(ktSelection, kms)
+			currentLabel++
+		}
+	}
+	t.Execute(w, &ktSelection)
 }
 
 func pageAllgemeines(c web.C, w http.ResponseWriter, r *http.Request) {
@@ -858,6 +893,7 @@ func initRoutes() {
 	// partial html stuff - sub-pages
 	goji.Get("/held/page/new", pageNew)
 	goji.Get("/held/page/modEigenschaften", pageModEigenschaften)
+	goji.Get("/held/page/selectKampftechniken", pageSelectKampftechiken)
 	goji.Get("/held/page/allgemeines", pageAllgemeines)
 	goji.Get("/held/page/professionsAuswahl", pageAuswahlProfession)
 	goji.Get("/held/page/kampftechniken", pageKampftechniken)
