@@ -32,7 +32,7 @@ func (e ValidatorMessageType) String() string {
 }
 
 type Validator interface {
-	Validate(*Erfahrungsgrad, *held.Held) (bool, ValidatorMessage)
+	Validate(*basiswerte.Erfahrungsgrad, *held.Held) (bool, ValidatorMessage)
 }
 
 type ValidatorMessage struct {
@@ -41,13 +41,13 @@ type ValidatorMessage struct {
 }
 
 type ErschaffungsValidator struct {
-	Grad        Erfahrungsgrad
+	Grad        basiswerte.Erfahrungsgrad
 	Held        *held.Held
 	Validatoren []Validator
 }
 
 func MakeErschaffungsValidator(held *held.Held, erfahrungsgrad string) *ErschaffungsValidator {
-	_, exists := AlleErfahrungsgrade[erfahrungsgrad]
+	_, exists := basiswerte.AlleErfahrungsgrade[erfahrungsgrad]
 	if !exists {
 		return nil
 	}
@@ -55,7 +55,7 @@ func MakeErschaffungsValidator(held *held.Held, erfahrungsgrad string) *Erschaff
 		return nil
 	}
 	return &ErschaffungsValidator{
-		Grad:        AlleErfahrungsgrade[erfahrungsgrad],
+		Grad:        basiswerte.AlleErfahrungsgrade[erfahrungsgrad],
 		Held:        held,
 		Validatoren: make([]Validator, 0)}
 }
@@ -119,7 +119,7 @@ func (e *ErschaffungsValidator) AddAllValidators() {
 type EPValidator struct {
 }
 
-func (e EPValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e EPValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -142,7 +142,7 @@ func (e EPValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result boo
 type FertigkeitsValidator struct {
 }
 
-func (e FertigkeitsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e FertigkeitsValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -173,7 +173,7 @@ func (e FertigkeitsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (r
 type ZauberUndLiturgieValidator struct {
 }
 
-func (e ZauberUndLiturgieValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e ZauberUndLiturgieValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -196,7 +196,7 @@ type VorteilUndNachteilValidator struct {
 	vorteil bool
 }
 
-func (e VorteilUndNachteilValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e VorteilUndNachteilValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -226,7 +226,7 @@ func (e VorteilUndNachteilValidator) Validate(grad *Erfahrungsgrad, held *held.H
 type APValidator struct {
 }
 
-func (e APValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e APValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -242,7 +242,7 @@ func (e APValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result boo
 type VorraussetzungsValidator struct {
 }
 
-func (e VorraussetzungsValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e VorraussetzungsValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE
@@ -322,7 +322,7 @@ func (e VorraussetzungsValidator) Validate(grad *Erfahrungsgrad, held *held.Held
 type ProfessionValidator struct {
 }
 
-func (e ProfessionValidator) Validate(grad *Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
+func (e ProfessionValidator) Validate(grad *basiswerte.Erfahrungsgrad, held *held.Held) (result bool, message ValidatorMessage) {
 	result = true
 	message.Msg = ""
 	message.Type = NONE

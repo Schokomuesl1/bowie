@@ -14,7 +14,7 @@ type Profession struct {
 	Voraussetzungen       VoraussetzungenProfession
 	Kampftechniken        [][2]string
 	KampftechnikenAuswahl []WahlPack
-	Zauber                [][2]string
+	Zauber                [][3]string
 	ZauberAuswahl         []WahlPack
 	Liturgien             [][2]string
 	LiturgienAuswahl      []WahlPack
@@ -35,6 +35,7 @@ type VoraussetzungenProfession struct {
 	Eigenschaften      [][2]string
 	Kultur             []string
 	Sonderfertigkeiten []string
+	Vorteil            []string
 	Spezies            []string
 }
 

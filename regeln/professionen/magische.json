@@ -6,6 +6,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":["Tradition (Elfen)"],
+		"Vorteil":[],
 		"Spezies":["Elf"]		
 	},
 	"Kampftechniken":[
@@ -30,12 +31,12 @@
 		["Musizieren","4"]
 	],
 	"Zauber":[
-		["Armatrutz","6"],
-		["Fulminictus","5"],
-		["Odem","3"],
-		["Silentium","6"],
-		["Visibili","5"],
-		["Wasseratem","3"]
+		["Armatrutz","6",""],
+		["Fulminictus","5",""],
+		["Odem Arcanum","3",""],
+		["Silentium","6",""],
+		["Visibili","5",""],
+		["Wasseratem","3",""]
 	],
 	"ZauberAuswahl":[
 		{
@@ -55,4 +56,74 @@
 	],
 	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fährtensuchen)", "Freundschaftslied 4"],
 	"APKosten":256
-}]
+},
+{
+	"Name":"Graumagier (Schule der Verformungen zu Lowangen)",
+	"Kommentar": "Sprachen und Schriften für 12 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Sonderfertigkeiten":["Tradition (Gildenmagier)"],
+		"Vorteil":["Zauberer"],
+		"Spezies":[]
+	},
+	"Kampftechniken":[
+		["Stangenwaffen","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Körperbeherrschung","2"],
+		["Selbstbeherrschung","3"],
+		["Sinnesschärfe","3"],
+		["Etikette","2"],
+		["Menschenkenntnis","4"],
+		["Willenskraft","3"],
+		["Orientierung","3"],
+		["Wildnisleben","2"],
+		["Geographie","4"],
+		["Geschichtswissen","4"],
+		["Götter& Kulte","4"],
+		["Magiekunde","6"],
+		["Rechnen","4"],
+		["Sagen& Legenden","3"],
+		["Sphärenkunde","3"],
+		["Alchemie","4"],
+		["Heilkunde Gift","4"],
+		["Heilkunde Krankheiten","5"],
+		["Heilkunde Wunden","4"],
+		["Malen& Zeichnen","4"]
+	],
+	"Zauber":[
+		["Armatrutz","5", ""],
+		["Bannbaladin","4", ""],
+		["Corpofesso","6", ""],
+		["Paralysis","6", ""],
+		["Penetrizzel","4", ""],
+		["Salander","5", ""],
+		["Visibili","4", "Elfen"]
+	],
+	"ZauberAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Glücksgriff",
+				"Handwärmer",
+				"Lockruf",
+				"Regenbogenaugen",
+				"Signatur"
+			],
+			"ZuWaehlen":1,
+			"Wert":0
+		}
+	],
+	"Liturgien":[
+		
+	],
+	"LiturgienAuswahl":[
+		
+	],
+	"Sonderfertigkeiten":["Bindung des Stabes"],
+	"APKosten": 310
+}
+]

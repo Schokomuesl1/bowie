@@ -24,7 +24,7 @@ type PageDataType struct {
 	AlleZauber        *map[string]basiswerte.ZauberType
 	AlleProfessionen  *basiswerte.ProfessionsListe
 	Kosten            *map[string][26]int
-	Grade             *map[string]erschaffung.Erfahrungsgrad
+	Grade             *map[string]basiswerte.Erfahrungsgrad
 	Held              *held.Held
 	Validator         *erschaffung.ErschaffungsValidator
 	ValidatorMsg      []erschaffung.ValidatorMessage
@@ -81,7 +81,7 @@ func initPageData() {
 		AlleLiturgien: &basiswerte.AlleLiturgien,
 		AlleZauber:    &basiswerte.AlleZauber,
 		Kosten:        &basiswerte.Kostentable,
-		Grade:         &erschaffung.AlleErfahrungsgrade,
+		Grade:         &basiswerte.AlleErfahrungsgrade,
 		Held:          nil,
 		Validator:     nil}
 }

@@ -33,6 +33,7 @@ type Held struct {
 	Zauber             basiswerte.ZauberHandler
 	ZauberCount        [2]int
 	ZauberCountMax     [2]int
+	Erfahrungsgrad     basiswerte.Erfahrungsgrad
 }
 
 func NewHeld() *Held {
@@ -101,7 +102,7 @@ func (h *Held) SetProfession(profession *basiswerte.Profession) error {
 		talent := v[0]
 		t_num, err := strconv.Atoi(v[1])
 		if err != nil {
-			return errors.New("Error converting number in profession! Check regeln/professionsn for bugs in data.")
+			return errors.New("Error converting number in profession! Check regeln/profession for bugs in data.")
 		}
 		h.Talente.Get(talent).AddValue(t_num)
 	}
@@ -109,10 +110,49 @@ func (h *Held) SetProfession(profession *basiswerte.Profession) error {
 		kt := v[0]
 		k_num, err := strconv.Atoi(v[1])
 		if err != nil {
-			return errors.New("Error converting number in profession! Check regeln/professionsn for bugs in data.")
+			return errors.New("Error converting number in profession! Check regeln/profession for bugs in data.")
 		}
 		h.Kampftechniken.Get(kt).AddValue(k_num - 6)
 	}
+	for _, v := range h.Profession.Zauber {
+		fmt.Println(v)
+		kt := v[0]
+		k_num, err := strconv.Atoi(v[1])
+		if err != nil {
+			return errors.New("Error converting number in profession! Check regeln/profession for bugs in data.")
+		}
+		_, exists := basiswerte.AlleZauber[kt]
+		if !exists {
+			return errors.New("Unknown Zauber! Check regeln/profession for bugs in data.")
+		}
+		zauber, _ := basiswerte.AlleZauber[kt]
+		h.NewZauber(&zauber)
+		z := h.Zauber.Get(kt)
+		if z != nil {
+			z.SetMaxErschaffung(h.Erfahrungsgrad.Fertigkeit)
+			z.AddValue(k_num)
+		}
+	}
+	for _, v := range h.Profession.Liturgien {
+		fmt.Println(v)
+		kt := v[0]
+		k_num, err := strconv.Atoi(v[1])
+		if err != nil {
+			return errors.New("Error converting number in profession! Check regeln/profession for bugs in data.")
+		}
+		_, exists := basiswerte.AlleLiturgien[kt]
+		if !exists {
+			return errors.New("Unknown Liturgie! Check regeln/profession for bugs in data.")
+		}
+		liturgie, _ := basiswerte.AlleLiturgien[kt]
+		h.NewLiturgie(&liturgie)
+		l := h.Liturgien.Get(kt)
+		if l != nil {
+			l.SetMaxErschaffung(h.Erfahrungsgrad.Fertigkeit)
+			l.AddValue(k_num)
+		}
+	}
+
 	for _, v := range h.Profession.Sonderfertigkeiten {
 		var bereich *[]*basiswerte.Sonderfertigkeit
 		switch basiswerte.GetSFType(v) {

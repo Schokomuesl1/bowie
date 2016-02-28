@@ -13,6 +13,7 @@ func ErschaffeHeld(erfahrungsgrad string) (*held.Held, *ErschaffungsValidator) {
 	if e == nil {
 		return nil, nil
 	}
+	h.Erfahrungsgrad = e.Grad
 	h.AP = e.Grad.AP
 	h.ZauberCountMax = e.Grad.Zauber
 	return h, e

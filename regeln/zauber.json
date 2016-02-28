@@ -36,6 +36,84 @@
   "Merkmale": ["Verwandlung"],
   "Verbreitung": ["Gildenmagier"],
   "Steigerungsfaktor": "C"
+},
+{
+  "Name": "Armatrutz",
+  "Probe": {"Eigenschaften": ["KL", "IN", "FF"], "Mod": ""},
+  "Wirkung": "",
+  "Dauer": "1 Aktion",
+  "Kosten": ["", ""],
+  "Reichweite": {"Reichweite": "selbst", "Mod": ""},
+  "Wirkungsdauer": "3*QS Minuten",
+  "Zielkategorie": ["Wesen"],
+  "Merkmale": ["Heilung"],
+  "Verbreitung": ["allgemein"],
+  "Steigerungsfaktor": "C"
+},
+{
+  "Name": "Fulminictus",
+  "Probe": {"Eigenschaften": ["KL", "IN", "KO"], "Mod": "+ZK"},
+  "Wirkung": "",
+  "Dauer": "1 Aktion",
+  "Kosten": ["8", ""],
+  "Reichweite": {"Reichweite": "8 Schritt", "Mod": ""},
+  "Wirkungsdauer": "sofort",
+  "Zielkategorie": ["Lebewesen"],
+  "Merkmale": ["Verwandlung"],
+  "Verbreitung": ["Elfen"],
+  "Steigerungsfaktor": "C"
+},
+{
+  "Name": "Odem Arcanum",
+  "Probe": {"Eigenschaften": ["KL", "IN", "IN"], "Mod": ""},
+  "Wirkung": "",
+  "Dauer": "2 Aktionen",
+  "Kosten": ["4", ""],
+  "Reichweite": {"Reichweite": "8 Schritt", "Mod": ""},
+  "Wirkungsdauer": "1 Minute",
+  "Zielkategorie": ["Wesen", "Objekt"],
+  "Merkmale": ["Hellsicht"],
+  "Verbreitung": ["allgemein"],
+  "Steigerungsfaktor": "A"
+},
+{
+  "Name": "Silentium",
+  "Probe": {"Eigenschaften": ["KL", "FF", "KK"], "Mod": ""},
+  "Wirkung": "",
+  "Dauer": "8 Aktionen",
+  "Kosten": ["4", "+2 pro 5 Minuten"],
+  "Reichweite": {"Reichweite": "selbst", "Mod": ""},
+  "Wirkungsdauer": "aufrechterhalten",
+  "Zielkategorie": ["Zone"],
+  "Merkmale": ["Telekinese"],
+  "Verbreitung": ["Elfen"],
+  "Steigerungsfaktor": "B"
+},
+{
+  "Name": "Visibili",
+  "Probe": {"Eigenschaften": ["KL", "IN", "KO"], "Mod": ""},
+  "Wirkung": "",
+  "Dauer": "4 Aktionen",
+  "Kosten": ["8", "+4 pro 5 Minuten"],
+  "Reichweite": {"Reichweite": "Berührung", "Mod": ""},
+  "Wirkungsdauer": "aufrechterhalten",
+  "Zielkategorie": ["Lebewesen"],
+  "Merkmale": ["Verwandlung"],
+  "Verbreitung": ["Elfen"],
+  "Steigerungsfaktor": "B"
+},
+{
+  "Name": "Wasseratem",
+  "Probe": {"Eigenschaften": ["KL", "IN", "KO"], "Mod": ""},
+  "Wirkung": "",
+  "Dauer": "8 Aktionen",
+  "Kosten": ["4", "+2 pro 5 Minuten"],
+  "Reichweite": {"Reichweite": "Berührung", "Mod": ""},
+  "Wirkungsdauer": "aufrechterhalten",
+  "Zielkategorie": ["Lebewesen"],
+  "Merkmale": ["Verwandlung"],
+  "Verbreitung": ["Elfen"],
+  "Steigerungsfaktor": "B"
 }
 
 ]

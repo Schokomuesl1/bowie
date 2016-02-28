@@ -6,6 +6,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -50,6 +51,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -92,6 +94,7 @@
 		"Eigenschaften":[],
 		"Kultur": ["Aranier", "Mhanadistani", "Novadis"],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -134,6 +137,7 @@
 		"Eigenschaften":[],
 		"Kultur": ["Thorwaler"],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -182,6 +186,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -243,6 +248,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -303,6 +309,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -364,6 +371,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -422,6 +430,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -472,6 +481,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -522,6 +532,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -572,6 +583,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -622,6 +634,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -672,6 +685,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -723,6 +737,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -774,6 +789,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -816,6 +832,7 @@
 		],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -859,6 +876,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -900,6 +918,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -945,6 +964,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -990,6 +1010,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1032,6 +1053,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1072,6 +1094,7 @@
 		"Eigenschaften":[],
 		"Kultur":["Fjarninger", "Mohas", "Nivesen"],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1116,6 +1139,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1134,12 +1158,12 @@
 		["Fesseln","4"],
 		["Pflanzenkunde","6"],
 		["Tierkunde","6"],
-		["Götter& Kultur","4"],
+		["Götter& Kulte","4"],
 		["Rechnen","5"],
 		["Rechtskunde","3"],
 		["Sagen& Legenden","2"],
 		["Heilkunde Gift","5"],
-		["Heilkunde Krankheit","6"],
+		["Heilkunde Krankheiten","6"],
 		["Heilkunde Wunden","7"]
 	],
 	"Zauber":[
@@ -1160,6 +1184,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1177,12 +1202,12 @@
 		["Fesseln","4"],
 		["Pflanzenkunde","7"],
 		["Tierkunde","6"],
-		["Götter& Kultur","4"],
+		["Götter& Kulte","4"],
 		["Rechnen","5"],
 		["Rechtskunde","3"],
 		["Sagen& Legenden","6"],
 		["Heilkunde Gift","4"],
-		["Heilkunde Krankheit","7"],
+		["Heilkunde Krankheiten","7"],
 		["Heilkunde Wunden","7"],
 		["Heilkunde Seele","4"]
 	],
@@ -1204,6 +1229,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1222,12 +1248,12 @@
 		["Fesseln","4"],
 		["Pflanzenkunde","8"],
 		["Tierkunde","6"],
-		["Götter& Kultur","4"],
+		["Götter& Kulte","4"],
 		["Rechnen","5"],
 		["Rechtskunde","3"],
 		["Sagen& Legenden","2"],
 		["Heilkunde Gift","5"],
-		["Heilkunde Krankheit","8"],
+		["Heilkunde Krankheiten","8"],
 		["Heilkunde Wunden","7"]
 	],
 	"Zauber":[
@@ -1248,6 +1274,7 @@
 		"Eigenschaften":[],
 		"Kultur":[],
 		"Sonderfertigkeiten":[],
+		"Vorteil":[],
 		"Spezies":[]
 	},
 	"Kampftechniken":[
@@ -1268,12 +1295,12 @@
 		["Fesseln","4"],
 		["Pflanzenkunde","6"],
 		["Tierkunde","6"],
-		["Götter& Kultur","4"],
+		["Götter& Kulte","4"],
 		["Rechnen","5"],
 		["Rechtskunde","3"],
 		["Sagen& Legenden","2"],
 		["Heilkunde Gift","2"],
-		["Heilkunde Krankheit","2"],
+		["Heilkunde Krankheiten","2"],
 		["Heilkunde Wunden","4"]
 	],
 	"Zauber":[

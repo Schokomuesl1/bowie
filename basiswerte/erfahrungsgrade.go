@@ -1,4 +1,4 @@
-package erschaffung
+package basiswerte
 
 import (
 	"encoding/json"
