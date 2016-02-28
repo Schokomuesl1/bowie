@@ -1,0 +1,58 @@
+[
+{
+	"Name":"Wildnisläufer",
+	"Kommentar": "Sprachen und Schriften für 2 AP",
+	"Voraussetzungen":{
+		"Eigenschaften":[],
+		"Kultur":[],
+		"Sonderfertigkeiten":["Tradition (Elfen)"],
+		"Spezies":["Elf"]		
+	},
+	"Kampftechniken":[
+		["Bögen","12"],
+		["Dolche","8"]
+	],
+	"KampftechnikenAuswahl":[
+		
+	],
+	"Talente":[
+		["Körperbeherrschung","4"],
+		["Schwimmen","2"],
+		["Singen","4"],
+		["Sinnesschärfe","4"],
+		["Verbergen","4"],
+		["Fährtensuchen","7"],
+		["Orientierung","4"],
+		["Pflanzenkunde","5"],
+		["Tierkunde","5"],
+		["Wildnisleben","7"],
+		["Holzbearbeitung","5"],
+		["Musizieren","4"]
+	],
+	"Zauber":[
+		["Armatrutz","6"],
+		["Fulminictus","5"],
+		["Odem","3"],
+		["Silentium","6"],
+		["Visibili","5"],
+		["Wasseratem","3"]
+	],
+	"ZauberAuswahl":[
+		{
+			"Wahlmoeglichkeiten":[
+				"Feuerfinger",
+				"Handwärmer",
+				"Lockruf",
+				"Trocken"
+			],
+			"ZuWaehlen":1,
+			"Wert":0
+		}
+	],
+	"Liturgien":[
+	],
+	"LiturgienAuswahl":[
+	],
+	"Sonderfertigkeiten":["Fertigkeitsspezialisierung (Fährtensuchen)", "Freundschaftslied 4"],
+	"APKosten":256
+}]

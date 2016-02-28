@@ -50,7 +50,7 @@ type EigenschaftenModSet struct {
 
 type KampftechnikModSet struct {
 	Label        int
-	Modifikation basiswerte.KampftechnikWahlPack
+	Modifikation basiswerte.WahlPack
 }
 
 type apData struct {

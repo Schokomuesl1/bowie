@@ -13,7 +13,11 @@ type Profession struct {
 	Kommentar             string
 	Voraussetzungen       VoraussetzungenProfession
 	Kampftechniken        [][2]string
-	KampftechnikenAuswahl []KampftechnikWahlPack
+	KampftechnikenAuswahl []WahlPack
+	Zauber                [][2]string
+	ZauberAuswahl         []WahlPack
+	Liturgien             [][2]string
+	LiturgienAuswahl      []WahlPack
 	Talente               [][2]string
 	Sonderfertigkeiten    []string
 	APKosten              int
@@ -21,16 +25,17 @@ type Profession struct {
 
 var DummyProfession Profession
 
-type KampftechnikWahlPack struct {
+type WahlPack struct {
 	Wahlmoeglichkeiten []string
 	ZuWaehlen          int
 	Wert               int
 }
 
 type VoraussetzungenProfession struct {
-	Eigenschaften [][2]string
-	Kultur        []string
-	Spezies       []string
+	Eigenschaften      [][2]string
+	Kultur             []string
+	Sonderfertigkeiten []string
+	Spezies            []string
 }
 
 func init() {
@@ -64,6 +69,7 @@ func (vp *VoraussetzungenProfession) SpeziesOK(spezies string) bool {
 func init() {
 	AlleProfessionen = make([]Profession, 0)
 	readAndAddToProfessionen("regeln/professionen/weltliche.json")
+	readAndAddToProfessionen("regeln/professionen/magische.json")
 }
 
 func readAndAddToProfessionen(filename string) {
