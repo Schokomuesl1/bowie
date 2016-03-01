@@ -2,6 +2,7 @@ package held
 
 import (
 	"fmt"
+	"github.com/Schokomuesl1/bowie/basiswerte"
 	"github.com/jung-kurt/gofpdf"
 	"strconv"
 )
@@ -13,6 +14,17 @@ func strDelimit(str string, sepstr string, sepcount int) string {
 		pos = pos - sepcount
 	}
 	return str
+}
+
+func addHeader(pdf *gofpdf.Fpdf, text string, size int) {
+	if pdf == nil {
+		return
+	}
+	pdf.SetFillColor(255, 255, 255)
+	pdf.SetTextColor(0, 0, 0)
+	pdf.SetFont("Arial", "", (float64)(size))
+	pdf.CellFormat((float64)(len(text)*5), (float64)(size/2), text, "0", 0, "L", true, 0, "")
+	pdf.Ln(-1)
 }
 
 func createTable(pdf *gofpdf.Fpdf, header []string, data [][]string, columnSize []float64) {
@@ -45,7 +57,7 @@ func createTable(pdf *gofpdf.Fpdf, header []string, data [][]string, columnSize 
 	pdf.SetTextColor(255, 255, 255)
 	pdf.SetDrawColor(128, 0, 0)
 	pdf.SetLineWidth(.3)
-	pdf.SetFont("Arial", "", 14)
+	pdf.SetFont("Arial", "", 12)
 	// display header fields
 	for i, str := range header {
 		pdf.CellFormat(columnSize[i], 7, str, "1", 0, "C", true, 0, "")
@@ -131,7 +143,7 @@ func (h *Held) nkPDFData() (header []string, data [][]string, cols []float64) {
 			data[idx][2] = ""
 			for i, w := range v.Leiteigenschaften {
 				data[idx][2] += w.Name
-				if i < len(v.Leiteigenschaften) {
+				if i < len(v.Leiteigenschaften)-1 {
 					data[idx][2] += " "
 				}
 			}
@@ -148,23 +160,84 @@ func (h *Held) nkPDFData() (header []string, data [][]string, cols []float64) {
 	return
 }
 
+type TalentKategorie int
+
+const (
+	KOERPER TalentKategorie = iota
+	GESELLSCHAFT
+	HANDWERK
+	NATUR
+	WISSEN
+)
+
+func (h *Held) talentPDFData(kat TalentKategorie) (header []string, data [][]string, cols []float64) {
+	header = []string{"Talent", "SK", "Wert", "Eigenschaften", "Werte"}
+	cols = []float64{70, 20, 20, 40, 20}
+	var tl basiswerte.TalentListe
+	switch kat {
+	case KOERPER:
+		tl = h.Talente.Koerpertalente()
+	case GESELLSCHAFT:
+		tl = h.Talente.Gesellschaftstalente()
+	case HANDWERK:
+		tl = h.Talente.Handwerkstalente()
+	case NATUR:
+		tl = h.Talente.Naturtalente()
+	case WISSEN:
+		tl = h.Talente.Wissenstalente()
+	}
+	data = make([][]string, len(tl))
+	for i, v := range tl {
+		data[i] = make([]string, 5)
+		data[i][0] = v.Name
+		data[i][1] = v.SK
+		data[i][2] = strconv.Itoa(v.Wert)
+		for j, w := range v.Eigenschaften {
+			data[i][3] += w.Name
+			data[i][4] += strconv.Itoa(w.Wert)
+			if j < len(v.Eigenschaften)-1 {
+				data[i][3] += "/"
+				data[i][4] += "/"
+			}
+		}
+	}
+	return
+}
+
 func (h *Held) ToFile(fname string) error {
 	pdf := gofpdf.New("P", "mm", "A4", "")
 	// first page
 	pdf.AddPage()
 	// allgemeine helden-informationen:
+	addHeader(pdf, "Allgemeines", 16)
 	header, data, cols := h.allgemeineInformationenPDFData()
 	createTable(pdf, header, data, cols)
+	addHeader(pdf, "Eigenschaften", 16)
 	header, data, cols = h.eigenschaftenPDFData()
 	createTable(pdf, header, data, cols)
-
-	//pdf.AddPage()
+	addHeader(pdf, "Kampftechniken", 16)
 	header, data, cols = h.fkPDFData()
 	createTable(pdf, header, data, cols)
 	header, data, cols = h.nkPDFData()
 	createTable(pdf, header, data, cols)
 
-	fmt.Println("/tmp/" + fname + ".x.pdf")
+	pdf.AddPage()
+	addHeader(pdf, "Talente", 18)
+	addHeader(pdf, "Körperlich", 14)
+	header, data, cols = h.talentPDFData(KOERPER)
+	createTable(pdf, header, data, cols)
+	addHeader(pdf, "Gesellschaft", 14)
+	header, data, cols = h.talentPDFData(GESELLSCHAFT)
+	createTable(pdf, header, data, cols)
+	addHeader(pdf, "Handwerk", 14)
+	header, data, cols = h.talentPDFData(HANDWERK)
+	createTable(pdf, header, data, cols)
+	addHeader(pdf, "Natur", 14)
+	header, data, cols = h.talentPDFData(NATUR)
+	createTable(pdf, header, data, cols)
+	addHeader(pdf, "Wissen", 14)
+	header, data, cols = h.talentPDFData(WISSEN)
+	createTable(pdf, header, data, cols)
 	err := pdf.OutputFileAndClose("/tmp/" + fname + "x.pdf")
 	fmt.Println(err)
 	return err
