@@ -91,6 +91,17 @@ func (h *Held) allgemeineInformationenPDFData() (header []string, data [][]strin
 	return
 }
 
+func (h *Held) basiswertePDFData() (header []string, data [][]string, cols []float64) {
+	header = make([]string, 0)
+	data = make([][]string, 4)
+	cols = []float64{60, 20, 60, 20}
+	data[0] = []string{"Lebensenergie", strconv.Itoa(h.Basiswerte.Lebensenergie.Value()), "Zaehigkeit", strconv.Itoa(h.Basiswerte.Zaehigkeit.Value())}
+	data[1] = []string{"Astralenergie", strconv.Itoa(h.Basiswerte.Astralenergie.Value()), "Ausweichen", strconv.Itoa(h.Basiswerte.Ausweichen.Value())}
+	data[2] = []string{"Karmaenergie", strconv.Itoa(h.Basiswerte.Karmaenergie.Value()), "Initiative", strconv.Itoa(h.Basiswerte.Initiative.Value())}
+	data[3] = []string{"Seelenkraft", strconv.Itoa(h.Basiswerte.Seelenkraft.Value()), "Geschwindigkeit", strconv.Itoa(h.Basiswerte.Geschwindigkeit.Value())}
+	return
+}
+
 func (h *Held) eigenschaftenPDFData() (header []string, data [][]string, cols []float64) {
 	header = []string{"Eigenschaft", "Wert"}
 	cols = []float64{70, 35}
@@ -204,18 +215,94 @@ func (h *Held) talentPDFData(kat TalentKategorie) (header []string, data [][]str
 	return
 }
 
+type EintragsListe int
+
+const (
+	ALLGEMEINE EintragsListe = iota
+	KARMALE
+	MAGISCHE
+	KAMPF
+	SCHRIFTEN
+	SPRACHEN
+	VORTEIL
+	NACHTEIL
+)
+
+func (h *Held) sfUndVTNTPDFData(kat EintragsListe) (header []string, data [][]string, cols []float64) {
+	header = []string{""}
+	cols = []float64{140}
+	switch kat {
+	case ALLGEMEINE:
+		header[0] = "Allgemeine SF"
+		data = make([][]string, len(h.Sonderfertigkeiten.Allgemeine))
+		for i, v := range h.Sonderfertigkeiten.Allgemeine {
+			data[i] = []string{v.Name}
+		}
+	case KARMALE:
+		header[0] = "Karmale SF"
+		data = make([][]string, len(h.Sonderfertigkeiten.Karmale))
+		for i, v := range h.Sonderfertigkeiten.Karmale {
+			data[i] = []string{v.Name}
+		}
+	case MAGISCHE:
+		header[0] = "Magische SF"
+		data = make([][]string, len(h.Sonderfertigkeiten.Magische))
+		for i, v := range h.Sonderfertigkeiten.Magische {
+			data[i] = []string{v.Name}
+		}
+	case KAMPF:
+		header[0] = "Kampf SF"
+		data = make([][]string, len(h.Sonderfertigkeiten.Kampf))
+		for i, v := range h.Sonderfertigkeiten.Kampf {
+			data[i] = []string{v.Name}
+		}
+	case SCHRIFTEN:
+		header[0] = "Schriften"
+		data = make([][]string, len(h.Sonderfertigkeiten.Schriften))
+		for i, v := range h.Sonderfertigkeiten.Schriften {
+			data[i] = []string{v.Name}
+		}
+	case SPRACHEN:
+		header[0] = "Sprachen"
+		data = make([][]string, len(h.Sonderfertigkeiten.Sprachen))
+		for i, v := range h.Sonderfertigkeiten.Sprachen {
+			data[i] = []string{v.Name}
+		}
+	case VORTEIL:
+		header[0] = "Vorteil"
+		data = make([][]string, len(h.Vorteile))
+		for i, v := range h.Vorteile {
+			data[i] = []string{v.Name}
+		}
+	case NACHTEIL:
+		header[0] = "Nachteil"
+		data = make([][]string, len(h.Nachteile))
+		for i, v := range h.Nachteile {
+			data[i] = []string{v.Name}
+		}
+	}
+	return
+}
+
 func (h *Held) ToFile(fname string) error {
 	pdf := gofpdf.New("P", "mm", "A4", "")
 	// first page
 	pdf.AddPage()
 	// allgemeine helden-informationen:
 	addHeader(pdf, "Allgemeines", 16)
+	addHeader(pdf, "", 5)
 	header, data, cols := h.allgemeineInformationenPDFData()
 	createTable(pdf, header, data, cols)
 	addHeader(pdf, "Eigenschaften", 16)
+	addHeader(pdf, "", 5)
 	header, data, cols = h.eigenschaftenPDFData()
 	createTable(pdf, header, data, cols)
+	addHeader(pdf, "Basiswerte", 16)
+	addHeader(pdf, "", 5)
+	header, data, cols = h.basiswertePDFData()
+	createTable(pdf, header, data, cols)
 	addHeader(pdf, "Kampftechniken", 16)
+	addHeader(pdf, "", 5)
 	header, data, cols = h.fkPDFData()
 	createTable(pdf, header, data, cols)
 	header, data, cols = h.nkPDFData()
@@ -223,20 +310,40 @@ func (h *Held) ToFile(fname string) error {
 
 	pdf.AddPage()
 	addHeader(pdf, "Talente", 18)
+	addHeader(pdf, "", 5)
 	addHeader(pdf, "Körperlich", 14)
 	header, data, cols = h.talentPDFData(KOERPER)
 	createTable(pdf, header, data, cols)
 	addHeader(pdf, "Gesellschaft", 14)
 	header, data, cols = h.talentPDFData(GESELLSCHAFT)
 	createTable(pdf, header, data, cols)
-	addHeader(pdf, "Handwerk", 14)
-	header, data, cols = h.talentPDFData(HANDWERK)
-	createTable(pdf, header, data, cols)
 	addHeader(pdf, "Natur", 14)
 	header, data, cols = h.talentPDFData(NATUR)
 	createTable(pdf, header, data, cols)
+	pdf.AddPage()
+	addHeader(pdf, "Handwerk", 14)
+	header, data, cols = h.talentPDFData(HANDWERK)
+	createTable(pdf, header, data, cols)
 	addHeader(pdf, "Wissen", 14)
 	header, data, cols = h.talentPDFData(WISSEN)
+	createTable(pdf, header, data, cols)
+	pdf.AddPage()
+	addHeader(pdf, "Sonderfertigkeiten und Vor/Nachteile", 18)
+	header, data, cols = h.sfUndVTNTPDFData(ALLGEMEINE)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(KARMALE)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(MAGISCHE)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(KAMPF)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(SCHRIFTEN)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(SPRACHEN)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(VORTEIL)
+	createTable(pdf, header, data, cols)
+	header, data, cols = h.sfUndVTNTPDFData(NACHTEIL)
 	createTable(pdf, header, data, cols)
 	err := pdf.OutputFileAndClose("/tmp/" + fname + "x.pdf")
 	fmt.Println(err)
