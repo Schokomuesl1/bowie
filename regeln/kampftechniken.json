@@ -4,7 +4,7 @@
     {"Name": "Dolche",             "Typ": "Nahkampf",  "Leiteigenschaft": ["GE"],       "Steigerungsfaktor":"B"},
     {"Name": "Fechtwaffen",        "Typ": "Nahkampf",  "Leiteigenschaft": ["GE"],       "Steigerungsfaktor":"C"},
     {"Name": "Hiebwaffen",         "Typ": "Nahkampf",  "Leiteigenschaft": ["KK"],       "Steigerungsfaktor":"C"},
-    {"Name": "Kettenwaffen",       "Typ": "Nahkampf",  "Leiteigenschaft": ["KK"],       "Steigerungsfaktor":"C"},
+    {"Name": "Kettenwaffen",       "Typ": "NahkampfNurAT",  "Leiteigenschaft": ["KK"],       "Steigerungsfaktor":"C"},
     {"Name": "Lanzen",             "Typ": "Nahkampf",  "Leiteigenschaft": ["KK"],       "Steigerungsfaktor":"B"},
     {"Name": "Raufen",             "Typ": "Nahkampf",  "Leiteigenschaft": ["GE", "KK"], "Steigerungsfaktor":"B"},
     {"Name": "Schilde",            "Typ": "Nahkampf",  "Leiteigenschaft": ["KO"],       "Steigerungsfaktor":"C"},

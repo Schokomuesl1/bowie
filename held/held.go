@@ -45,7 +45,7 @@ func NewHeld() *Held {
 		h.NewTalent(v.Name, v.Probe, v.Steigerungsfaktor, v.Kategorie)
 	}
 	for _, v := range basiswerte.AlleKampftechniken {
-		h.NewKampftechnik(v.Name, v.Typ == "Fernkampf", v.Leiteigenschaft, v.Steigerungsfaktor)
+		h.NewKampftechnik(v.Name, v.Typ == "Fernkampf", v.Typ == "NahkampfNurAT", v.Leiteigenschaft, v.Steigerungsfaktor)
 	}
 	return &h
 }
@@ -99,6 +99,7 @@ func (h *Held) SetKultur(kultur string) error {
 func (h *Held) SetProfession(profession *basiswerte.Profession) error {
 	h.Profession = *profession
 	for _, v := range h.Profession.Talente {
+		fmt.Println(v)
 		talent := v[0]
 		t_num, err := strconv.Atoi(v[1])
 		if err != nil {
@@ -307,7 +308,7 @@ func (h *Held) NewTalent(name string, eigenschaften [3]string, sf string, kat st
 	return h.Talente.Exists(name)
 }
 
-func (h *Held) NewKampftechnik(name string, isFernkampf bool, leiteigenschaften []string, sf string) bool {
+func (h *Held) NewKampftechnik(name string, isFernkampf bool, isNurAT bool, leiteigenschaften []string, sf string) bool {
 	if h.Kampftechniken.Exists(name) {
 		return false
 	}
@@ -318,7 +319,7 @@ func (h *Held) NewKampftechnik(name string, isFernkampf bool, leiteigenschaften 
 	if isFernkampf {
 		h.Kampftechniken.Add(basiswerte.MakeFernkampf(name, 6, lt, h.Eigenschaften.Eigenschaften["FF"], sf))
 	} else {
-		h.Kampftechniken.Add(basiswerte.MakeNahkampf(name, 6, lt, h.Eigenschaften.Eigenschaften["MU"], sf))
+		h.Kampftechniken.Add(basiswerte.MakeNahkampf(name, 6, lt, h.Eigenschaften.Eigenschaften["MU"], sf, isNurAT))
 	}
 	return h.Kampftechniken.Exists(name)
 }

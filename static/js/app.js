@@ -210,6 +210,9 @@ function checkForRedirect(data, status)
 	}
 }
 
+function saveHeld() {
+    $.post("/held/save");
+};
 
 // this is a hack - each click replaces the whole page. Rework this after switchung to a sensible API
 function doStuff(action, group, item) {	

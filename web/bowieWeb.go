@@ -877,6 +877,13 @@ func getAP(c web.C, w http.ResponseWriter, r *http.Request) {
 	w.Write(js)
 }
 
+func saveHeld(c web.C, w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Save held")
+	if PageData.Held != nil {
+		PageData.Held.ToFile("tester")
+	}
+}
+
 func initRoutes() {
 
 	// Setup static files
@@ -889,6 +896,8 @@ func initRoutes() {
 	goji.Get("/", startPage)
 	goji.Post("/held/action/:action/*", runActionAndRedirect)
 	goji.Post("/held/complexaction", runComplexActionAndRedirect)
+	goji.Post("/held/save", saveHeld)
+
 	goji.Get("/held/isValid", isValid)
 	// partial html stuff - sub-pages
 	goji.Get("/held/page/new", pageNew)

@@ -12,15 +12,11 @@ type KampftechnikType struct {
 	Steigerungsfaktor string
 }
 
-//"Name": "Armbrüste"
-//"Typ": "Fernkampf"
-//"Leiteigenschaft": ["FF"]
-//"Steigerungsfaktor":"B"}
-
 type Kampftechnik struct {
 	Name              string
 	Wert              int
 	IsFernkampf       bool
+	NurAttacke        bool
 	Leiteigenschaften []*Eigenschaft
 	SK                string
 	mut               *Eigenschaft
@@ -59,7 +55,7 @@ func (k *Kampftechnik) AT() int {
 }
 
 func (k *Kampftechnik) PA() int {
-	if k.IsFernkampf {
+	if k.IsFernkampf || k.NurAttacke {
 		return 0
 	}
 	extra := 0
@@ -115,16 +111,19 @@ func (k *Kampftechnik) String() string {
 	if k.IsFernkampf {
 		return fmt.Sprintf("%25s: %2d [%2d,%2d] - FK: %2d", k.Name, k.Value(), k.Min(), k.Max(), k.FK())
 	}
-	return fmt.Sprintf("%25s: %2d [%2d,%2d] - AT/PA: %2d/%2d", k.Name, k.Value(), k.Min(), k.Max(), k.AT(), k.PA())
+	if !k.NurAttacke {
+		return fmt.Sprintf("%25s: %2d [%2d,%2d] - AT/PA: %2d/%2d", k.Name, k.Value(), k.Min(), k.Max(), k.AT(), k.PA())
+	}
+	return fmt.Sprintf("%25s: %2d [%2d,%2d] - AT: %2d/%2d", k.Name, k.Value(), k.Min(), k.Max(), k.AT())
 }
 
-func MakeNahkampf(name string, wert int, leiteigenschaften []*Eigenschaft, mut *Eigenschaft, sf string) *Kampftechnik {
+func MakeNahkampf(name string, wert int, leiteigenschaften []*Eigenschaft, mut *Eigenschaft, sf string, nurAT bool) *Kampftechnik {
 	var kt Kampftechnik
 	kt.Name = name
 	kt.Wert = wert
 	kt.IsFernkampf = false
+	kt.NurAttacke = nurAT
 	kt.Leiteigenschaften = make([]*Eigenschaft, len(leiteigenschaften))
-	//	kt.Leiteigenschaften = leiteigenschaften
 	for i, v := range leiteigenschaften {
 		kt.Leiteigenschaften[i] = v
 	}
@@ -140,13 +139,9 @@ func MakeNahkampf(name string, wert int, leiteigenschaften []*Eigenschaft, mut *
 
 func MakeFernkampf(name string, wert int, leiteigenschaften []*Eigenschaft, fingerfertigkeit *Eigenschaft, sf string) *Kampftechnik {
 	var kt Kampftechnik
-	fmt.Println("kt.Name = name")
 	kt.Name = name
-	fmt.Println("kt.Wert = wert")
 	kt.Wert = wert
-	fmt.Println("kt.IsFernkampf = true")
 	kt.IsFernkampf = true
-	fmt.Println("kt.Leiteigenschaften = make([]*Eigenschaft, len(leiteigenschaften))")
 	kt.Leiteigenschaften = make([]*Eigenschaft, len(leiteigenschaften))
 	//kt.Leiteigenschaften = leiteigenschaften
 	for i, v := range leiteigenschaften {

@@ -33,6 +33,7 @@
             <li id="nav_Talente" class="hidden"><a href="javascript:jumpToPage('Talente')">Talente</a></li>
             <li id="nav_Magie" class="hidden"><a href="javascript:jumpToPage('Magie')">Magie</a></li>
             <li id="nav_Karmales" class="hidden"><a href="javascript:jumpToPage('Karmales')">Karmales</a></li>
+            <li id="nav_Save"><a href="javascript:saveHeld()">Held speichern</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
