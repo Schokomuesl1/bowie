@@ -345,7 +345,7 @@ func (h *Held) ToFile(fname string) error {
 	createTable(pdf, header, data, cols)
 	header, data, cols = h.sfUndVTNTPDFData(NACHTEIL)
 	createTable(pdf, header, data, cols)
-	err := pdf.OutputFileAndClose("/tmp/" + fname + "x.pdf")
+	err := pdf.OutputFileAndClose(fname + "x.pdf")
 	fmt.Println(err)
 	return err
 }
